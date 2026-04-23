@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入第三套题目</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .question-form {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+        }
+        
+        .question-form h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .options-inputs {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .questions-preview {
+            margin-top: 30px;
+        }
+        
+        .questions-preview h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .question-preview-card {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .question-preview-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stats {
+            background: #fff9e6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .stats span {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f57c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🖊️ 输入第三套题目</h1>
+            <p>根据照片内容输入题目，100题完成后点击"保存到题库"</p>
+        </div>
+        
+        <div class="form-container">
+            <div class="stats">
+                已输入题目：<span id="count">0</span> / 100
+            </div>
+            
+            <div id="formArea">
+                <div class="question-form" id="questionForm">
+                    <h3 id="formTitle">第 1 题</h3>
+                    
+                    <div class="form-group">
+                        <label>题目类型</label>
+                        <select id="questionType">
+                            <option value="single_choice">单选题 (1-20题)</option>
+                            <option value="multiple_choice">多选题 (21-60题)</option>
+                            <option value="true_false">判断题 (61-80题)</option>
+                            <option value="fill_blank">填空题 (81-100题)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>题目内容</label>
+                        <textarea id="questionText" rows="3" placeholder="请输入题目内容"></textarea>
+                    </div>
+                    
+                    <div class="form-group" id="optionsGroup">
+                        <label>选项 (A, B, C, D)</label>
+                        <div class="options-inputs">
+                            <input type="text" id="optionA" placeholder="选项 A">
+                            <input type="text" id="optionB" placeholder="选项 B">
+                            <input type="text" id="optionC" placeholder="选项 C">
+                            <input type="text" id="optionD" placeholder="选项 D">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="tfGroup" style="display: none;">
+                        <label>判断题</label>
+                        <select id="tfAnswer">
+                            <option value="true">正确</option>
+                            <option value="false">错误</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="fillGroup" style="display: none;">
+                        <label>填空答案</label>
+                        <input type="text" id="fillAnswer" placeholder="请输入填空答案">
+                    </div>
+                    
+                    <div class="form-group" id="choiceAnswerGroup">
+                        <label>正确答案</label>
+                        <input type="text" id="answerText" placeholder="例如: A 或 ABC">
+                    </div>
+                    
+                    <div class="button-group">
+                        <button class="btn btn-primary" id="prevBtn" style="display: none;" onclick="prevQuestion()">上一题</button>
+                        <button class="btn btn-success" onclick="saveAndNext()">保存 & 下一题</button>
+                        <button class="btn btn-primary" onclick="skipQuestion()">跳过</button>
+                        <button class="btn btn-danger" onclick="clearCurrent()">清空当前</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-group" style="border-top: 2px solid #eee; padding-top: 20px; margin-top: 20px;">
+                <button class="btn btn-success" onclick="saveAllToJSON()" style="flex: 1;">✅ 保存到题库 (更新 questions.json)</button>
+                <button class="btn btn-primary" onclick="exportJSON()" style="flex: 1;">📥 导出为JSON文件</button>
+            </div>
+            
+            <div class="questions-preview" id="previewArea">
+                <h3>已输入的题目预览</h3>
+                <div id="previewList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let questions = [];
+        let currentIndex = 0;
+        let maxQuestions = 100;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTypeDisplay();
+            updateTitle();
+        });
+        
+        document.getElementById('questionType').addEventListener('change', function() {
+            updateTypeDisplay();
+        });
+        
+        function updateTypeDisplay() {
+            const type = document.getElementById('questionType').value;
+            
+            if (type === 'true_false') {
+                document.getElementById('optionsGroup').style.display = 'none';
+                document.getElementById('tfGroup').style.display = 'block';
+                document.getElementById('fillGroup').style.display = 'none';
+                document.getElementById('choiceAnswerGroup').style.display = 'none';
+            } else if (type === 'fill_blank') {
+                document.getElementById('optionsGroup').style.display = 'none';
+                document.getElementById('tfGroup').style.display = 'none';
+                document.getElementById('fillGroup').style.display = 'block';
+                document.getElementById('choiceAnswerGroup').style.display = 'none';
+            } else {
+                document.getElementById('optionsGroup').style.display = 'block';
+                document.getElementById('tfGroup').style.display = 'none';
+                document.getElementById('fillGroup').style.display = 'none';
+                document.getElementById('choiceAnswerGroup').style.display = 'block';
+            }
+            
+            // 根据题号自动设置题型
+            if (currentIndex < 20) {
+                document.getElementById('questionType').value = 'single_choice';
+            } else if (currentIndex < 60) {
+                document.getElementById('questionType').value = 'multiple_choice';
+            } else if (currentIndex < 80) {
+                document.getElementById('questionType').value = 'true_false';
+            } else {
+                document.getElementById('questionType').value = 'fill_blank';
+            }
+            
+            updateTypeDisplayActual();
+        }
+        
+        function updateTypeDisplayActual() {
+            const type = document.getElementById('questionType').value;
+            
+            if (type === 'true_false') {
+                document.getElementById('optionsGroup').style.display = 'none';
+                document.getElementById('tfGroup').style.display = 'block';
+                document.getElementById('fillGroup').style.display = 'none';
+                document.getElementById('choiceAnswerGroup').style.display = 'none';
+            } else if (type === 'fill_blank') {
+                document.getElementById('optionsGroup').style.display = 'none';
+                document.getElementById('tfGroup').style.display = 'none';
+                document.getElementById('fillGroup').style.display = 'block';
+                document.getElementById('choiceAnswerGroup').style.display = 'none';
+            } else {
+                document.getElementById('optionsGroup').style.display = 'block';
+                document.getElementById('tfGroup').style.display = 'none';
+                document.getElementById('fillGroup').style.display = 'none';
+                document.getElementById('choiceAnswerGroup').style.display = 'block';
+            }
+        }
+        
+        function updateTitle() {
+            document.getElementById('formTitle').textContent = `第 ${currentIndex + 1} 题`;
+            document.getElementById('count').textContent = questions.length;
+            document.getElementById('prevBtn').style.display = currentIndex > 0 ? 'inline-block' : 'none';
+            
+            // 如果已有题目内容，加载到表单
+            if (questions[currentIndex]) {
+                loadQuestionToForm(questions[currentIndex]);
+            } else {
+                clearForm();
+            }
+        }
+        
+        function loadQuestionToForm(q) {
+            document.getElementById('questionType').value = q.type;
+            document.getElementById('questionText').value = q.question;
+            
+            if (q.type === 'true_false') {
+                document.getElementById('tfAnswer').value = q.answer ? 'true' : 'false';
+            } else if (q.type === 'fill_blank') {
+                document.getElementById('fillAnswer').value = q.answer;
+            } else {
+                if (q.options && q.options.length >= 4) {
+                    document.getElementById('optionA').value = q.options[0];
+                    document.getElementById('optionB').value = q.options[1];
+                    document.getElementById('optionC').value = q.options[2];
+                    document.getElementById('optionD').value = q.options[3];
+                }
+                document.getElementById('answerText').value = q.answer;
+            }
+            
+            updateTypeDisplayActual();
+        }
+        
+        function clearForm() {
+            document.getElementById('questionText').value = '';
+            document.getElementById('optionA').value = '';
+            document.getElementById('optionB').value = '';
+            document.getElementById('optionC').value = '';
+            document.getElementById('optionD').value = '';
+            document.getElementById('answerText').value = '';
+            document.getElementById('tfAnswer').value = 'true';
+            document.getElementById('fillAnswer').value = '';
+        }
+        
+        function clearCurrent() {
+            clearForm();
+            if (questions[currentIndex]) {
+                questions.splice(currentIndex, 1);
+                updatePreview();
+            }
+        }
+        
+        function saveAndNext() {
+            saveCurrentQuestion();
+            
+            if (currentIndex < maxQuestions - 1) {
+                currentIndex++;
+                updateTitle();
+            } else {
+                alert('已经到最后一题 (100题)！可以点击"保存到题库"按钮！');
+            }
+        }
+        
+        function skipQuestion() {
+            if (currentIndex < maxQuestions - 1) {
+                currentIndex++;
+                updateTitle();
+            }
+        }
+        
+        function prevQuestion() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateTitle();
+            }
+        }
+        
+        function saveCurrentQuestion() {
+            const type = document.getElementById('questionType').value;
+            const questionText = document.getElementById('questionText').value.trim();
+            
+            if (!questionText) {
+                alert('请输入题目内容！');
+                return;
+            }
+            
+            let answer, options = [];
+            
+            if (type === 'true_false') {
+                answer = document.getElementById('tfAnswer').value === 'true';
+            } else if (type === 'fill_blank') {
+                answer = document.getElementById('fillAnswer').value.trim();
+                if (!answer) {
+                    alert('请输入填空答案！');
+                    return;
+                }
+            } else {
+                options = [
+                    document.getElementById('optionA').value.trim(),
+                    document.getElementById('optionB').value.trim(),
+                    document.getElementById('optionC').value.trim(),
+                    document.getElementById('optionD').value.trim()
+                ].filter(opt => opt);
+                
+                if (options.length < 2) {
+                    alert('请至少输入2个选项！');
+                    return;
+                }
+                
+                answer = document.getElementById('answerText').value.trim().toUpperCase();
+                if (!answer) {
+                    alert('请输入正确答案！');
+                    return;
+                }
+            }
+            
+            // 保存或替换题目
+            const q = {
+                id: currentIndex + 1,
+                set: 3,
+                type: type,
+                question: questionText,
+                options: options,
+                answer: answer,
+                explanation: '',
+                uid: 200 + currentIndex + 1
+            };
+            
+            const existingIndex = questions.findIndex(x => x.id === q.id);
+            if (existingIndex >= 0) {
+                questions[existingIndex] = q;
+            } else {
+                questions.push(q);
+            }
+            
+            // 按id排序
+            questions.sort((a, b) => a.id - b.id);
+            
+            updatePreview();
+        }
+        
+        function updatePreview() {
+            document.getElementById('count').textContent = questions.length;
+            
+            const listEl = document.getElementById('previewList');
+            listEl.innerHTML = '';
+            
+            questions.forEach(q => {
+                const typeNames = {
+                    'single_choice': '单选题',
+                    'multiple_choice': '多选题',
+                    'true_false': '判断题',
+                    'fill_blank': '填空题'
+                };
+                
+                const card = document.createElement('div');
+                card.className = 'question-preview-card';
+                
+                let answerText = '';
+                if (q.type === 'true_false') {
+                    answerText = q.answer ? '正确' : '错误';
+                } else {
+                    answerText = q.answer;
+                }
+                
+                card.innerHTML = `
+                    <h4>第 ${q.id} 题 (${typeNames[q.type]})</h4>
+                    <p>${q.question.substring(0, 100)}${q.question.length > 100 ? '...' : ''}</p>
+                    <p style="color: #667eea; font-weight: bold;">答案: ${answerText}</p>
+                `;
+                
+                card.onclick = function() {
+                    currentIndex = q.id - 1;
+                    loadQuestionToForm(q);
+                    updateTitle();
+                    window.scrollTo(0, 0);
+                };
+                
+                listEl.appendChild(card);
+            });
+        }
+        
+        async function saveAllToJSON() {
+            if (confirm(`确定要保存 ${questions.length} 道题目到题库吗？这将合并到现有的 questions.json 文件中。`)) {
+                try {
+                    const response = await fetch('/api/questions?type=all');
+                    const existingQuestions = await response.json();
+                    
+                    const filteredExisting = existingQuestions.filter(q => q.set !== 3);
+                    const allQuestions = [...filteredExisting, ...questions];
+                    
+                    allQuestions.sort((a, b) => (a.set - b.set) || (a.id - b.id));
+                    
+                    let uid = 1;
+                    allQuestions.forEach(q => q.uid = uid++);
+                    
+                    const dataStr = JSON.stringify(allQuestions, null, 2);
+                    const blob = new Blob([dataStr], {type: 'application/json'});
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'questions_new.json';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    
+                    alert('文件已下载！请将 questions_new.json 重命名为 questions.json 替换旧文件，然后刷新页面！');
+                } catch (e) {
+                    const dataStr = JSON.stringify(questions, null, 2);
+                    const blob = new Blob([dataStr], {type: 'application/json'});
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = '第三套题目.json';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    
+                    alert('第三套题目已导出！你需要手动合并到题库中。');
+                }
+            }
+        }
+        
+        function exportJSON() {
+            const dataStr = JSON.stringify(questions, null, 2);
+            const blob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '第三套题目.json';
+            a.click();
+            URL.revokeObjectURL(url);
+            alert('已导出第三套题目！');
+        }
+    </script>
+</body>
+</html>

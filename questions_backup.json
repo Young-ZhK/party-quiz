@@ -1,0 +1,2422 @@
+[
+  {
+    "id": 1,
+    "set": 1,
+    "type": "single_choice",
+    "question": "在国际事务中，坚持正确义利观，维护我国的独立和主权，反对霸权主义和强权政治，维护世界和平，促进人类进步，推动构建（），推动建设持久和平、共同繁荣的和谐世界。",
+    "options": [
+      "人类互助共赢机制",
+      "人类共同体",
+      "人类命运共同体",
+      "人类知识共享平台"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 1
+  },
+  {
+    "id": 2,
+    "set": 1,
+    "type": "single_choice",
+    "question": "坚决维护党中央权威、保证全党令行禁止，是党和国家前途命运所系，是全国各族人民根本利益所在，也是加强和规范党内政治生活的（）。",
+    "options": [
+      "重要目的",
+      "重要保障",
+      "重要举措",
+      "以上都不是"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 2
+  },
+  {
+    "id": 3,
+    "set": 1,
+    "type": "single_choice",
+    "question": "《党内监督条例》规定，（）党和国家机关党员领导干部应当按照规定参加双重组织生活会。",
+    "options": [
+      "县以上",
+      "市以上",
+      "省、直辖市以上",
+      "乡镇以上"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 3
+  },
+  {
+    "id": 4,
+    "set": 1,
+    "type": "single_choice",
+    "question": "（）是中国特色社会主义最本质特征，是中国特色社会主义制度的最大优势。",
+    "options": [
+      "中国共产党领导",
+      "党的政治建设",
+      "党的思想建设",
+      "改革开放"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 4
+  },
+  {
+    "id": 5,
+    "set": 1,
+    "type": "single_choice",
+    "question": "习近平总书记指出，改革开放是我们党的一次伟大觉醒，正是这个伟大觉醒孕育了我们党从理论到实践的（）。",
+    "options": [
+      "伟大创造",
+      "伟大理论",
+      "伟大探索",
+      "伟大实践"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 5
+  },
+  {
+    "id": 6,
+    "set": 1,
+    "type": "single_choice",
+    "question": "二十大党章指出，不断发展我国同周边国家的睦邻友好关系，加强同（）的团结与合作。",
+    "options": [
+      "西方国家",
+      "发达国家",
+      "亚非拉国家",
+      "发展中国家"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 6
+  },
+  {
+    "id": 7,
+    "set": 1,
+    "type": "single_choice",
+    "question": "（）指出，在社会主义改造基本完成以后，我国所要解决的主要矛盾，是人民日益增长的物质文化需要同落后的社会生产之间的矛盾。",
+    "options": [
+      "党的十一届三中全会",
+      "党的十一届六中全会",
+      "党的十九大",
+      "党的二十大"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 7
+  },
+  {
+    "id": 8,
+    "set": 1,
+    "type": "single_choice",
+    "question": "二十大党章规定，党必须保证国家的立法、司法、行政、（），经济、文化组织和人民团体积极主动地、独立负责地、协调一致地工作。",
+    "options": [
+      "监察机关",
+      "公安机关",
+      "纪检机关",
+      "检察机关"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 8
+  },
+  {
+    "id": 9,
+    "set": 1,
+    "type": "single_choice",
+    "question": "邓小平提出，社会主义的本质，是解放生产力，发展生产力，消灭剥削，消除两极分化，最终达到（）。",
+    "options": [
+      "共产社会",
+      "社会主义现代化",
+      "社会主义现代化强国",
+      "共同富裕"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 9
+  },
+  {
+    "id": 10,
+    "set": 1,
+    "type": "single_choice",
+    "question": "二十大党章规定，要保证党的领导人的活动处于（）的监督之下，同时维护一切代表党和人民利益的领导人的威信。",
+    "options": [
+      "党和人民",
+      "政府",
+      "党组织",
+      "各级党委"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 10
+  },
+  {
+    "id": 11,
+    "set": 1,
+    "type": "single_choice",
+    "question": "各级领导干部要正确行使（）赋予的权力，（），依法办事，清正廉洁，勤政为民，以身作则，艰苦朴素，密切联系群众，坚持党的群众路线，自觉地接受党和群众的批评和监督。",
+    "options": [
+      "领导　追求卓越",
+      "人民 坚持原则",
+      "国家 敢于担当",
+      "社会 勇挑重担"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 11
+  },
+  {
+    "id": 12,
+    "set": 1,
+    "type": "single_choice",
+    "question": "二十大党章规定，党内严格禁止用违反（）和国家法律的手段对待党员，严格禁止打击报复和诬告陷害。",
+    "options": [
+      "党章",
+      "党规",
+      "党纪",
+      "党史"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 12
+  },
+  {
+    "id": 13,
+    "set": 1,
+    "type": "single_choice",
+    "question": "中央八项规定要求，要改进调查研究，到基层调研要深入了解真实情况，总结经验、研究问题、解决困难、指导工作，向群众学习、向实践学习，多同群众座谈，多同干部谈心，多商量讨论，多解剖典型，多（）。",
+    "options": [
+      "听取汇报",
+      "实地察看",
+      "下发文件",
+      "组织会议"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 13
+  },
+  {
+    "id": 14,
+    "set": 1,
+    "type": "single_choice",
+    "question": "我们党的三大历史任务是推进现代化建设、（）、维护世界和平与促进共同发展。",
+    "options": [
+      "实现社会主义",
+      "实现民族复兴",
+      "完成祖国统一",
+      "实现中国梦"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 14
+  },
+  {
+    "id": 15,
+    "set": 1,
+    "type": "single_choice",
+    "question": "习近平在党的二十大报告中指出，我们提出并贯彻（），着力推进高质量发展，推动构建新发展格局，实施供给侧结构性改革，制定一系列具有全局性意义的区域重大战略，我国经济实力实现历史性跃升。",
+    "options": [
+      "新发展理念",
+      "绿色发展理念",
+      "创新发展理念",
+      "节约发展理念"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 15
+  },
+  {
+    "id": 16,
+    "set": 1,
+    "type": "single_choice",
+    "question": "习近平在党的二十大报告中指出，我们持之以恒正风肃纪，以（）纠治“四风”，反对特权思想和特权现象，坚决整治群众身边的不正之风和腐败问题，刹住了一些长期没有刹住的歪风，纠治了一些多年未除的顽瘴痼疾。",
+    "options": [
+      "钉钉子精神",
+      "螺丝钉精神",
+      "老黄牛精神",
+      "搬石头精神"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 16
+  },
+  {
+    "id": 17,
+    "set": 1,
+    "type": "single_choice",
+    "question": "习近平总书记在庆祝建党95周年大会讲话中要求全党同志要增强政治意识、大局意识、（）、看齐意识，切实做到对党忠诚、为党分忧、为党担责、为党尽责。",
+    "options": [
+      "担当意识",
+      "责任意识",
+      "有为意识",
+      "核心意识"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 17
+  },
+  {
+    "id": 18,
+    "set": 1,
+    "type": "single_choice",
+    "question": "习近平在党的二十大报告中指出，我们提出新时代解决台湾问题的总体方略，促进两岸交流合作，坚决反对“台独”分裂行径，坚决反对外部势力干涉，牢牢把握两岸关系（）和主动权。",
+    "options": [
+      "主导权",
+      "领导权",
+      "决定权",
+      "组织权"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 18
+  },
+  {
+    "id": 19,
+    "set": 1,
+    "type": "single_choice",
+    "question": "（）是党的二十大的一项重要任务。",
+    "options": [
+      "党的二十大代表选举工作",
+      "党的二十大相关工作网络征求意见",
+      "起草好党的二十大报告",
+      "对党章进行修改"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 19
+  },
+  {
+    "id": 20,
+    "set": 1,
+    "type": "single_choice",
+    "question": "2013年1月22日，习近平总书记在十八届中央纪委二次全会上的重要讲话中指出：从严治党，惩治这一手决不能放松。要坚持“老虎”“苍蝇”一起打，既坚决查处领导干部违纪违法案件，又切实解决（）。",
+    "options": [
+      "党员干部理想信念不坚定的问题",
+      "侵占群众利益问题",
+      "发生在群众身边的不正之风和腐败问题",
+      "人品修养问题"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 20
+  },
+  {
+    "id": 21,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "从严管党治党，首先就要（）。",
+    "options": [
+      "营造风清气正的外部环境",
+      "自觉提升品德修养",
+      "坚定党员干部的理想信念",
+      "强化党员干部的法治思维"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 21
+  },
+  {
+    "id": 22,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "中国共产党坚持（）的和平外交政策，坚持（）道路，坚持（）的开放战略，统筹（）两个大局，积极发展对外关系，努力为我国的改革开放和现代化建设争取有利的国际环境。",
+    "options": [
+      "亲诚惠容，以我为主，互利共赢，国内国际",
+      "共建共享，和平发展，友好往来，内地外地",
+      "独立自主，和平发展，互利共赢，国内国际",
+      "亲诚惠容，和平发展，互利共赢，内地外地"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 22
+  },
+  {
+    "id": 23,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "下列关于构建社会主义和谐社会的说法，不符合的是（）。",
+    "options": [
+      "共同建设、共同享有的原则",
+      "建设资源节约型社会",
+      "以保障和改善民生为重点",
+      "加强和创新社会治理"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 23
+  },
+  {
+    "id": 24,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的工作重心由乡村转移到城市的决定是在（）上作出的。",
+    "options": [
+      "中共七大",
+      "中共七届二中全会",
+      "中共七届三中全会",
+      "中共七届四中全会"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 24
+  },
+  {
+    "id": 25,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "习近平指出，我们党领导人民进行社会主义建设，有改革开放前和改革开放后两个历史时期，这是两个相互联系又有重大区别的时期，但本质上都是我们党领导人民进行社会主义建设的实践探索。中国特色社会主义是在（）开创的，但也是在新中国已经建立起社会主义基本制度、并进行了20多年建设的基础上开创的。",
+    "options": [
+      "改革开放历史新时期",
+      "改革开放前",
+      "改革开放后",
+      "土地改革时期"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 25
+  },
+  {
+    "id": 26,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的二十大报告指出，要实施公民道德建设工程，弘扬中华传统美德，加强家庭家教家风建设，加强和改进未成年人思想道德建设，推动（），提高人民道德水准和文明素养。",
+    "options": [
+      "明大德、守公德、严私德",
+      "弘大德，倡公德，守私德",
+      "明大德、守公德、倡私德",
+      "守大德、护公德、严私德"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 26
+  },
+  {
+    "id": 27,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党必须加强对工会、共产主义青年团、妇女联合会等群团组织的领导，使它们保持和增强政治性、先进性、（），充分发挥作用。",
+    "options": [
+      "服务性",
+      "组织性",
+      "纯洁性",
+      "群众性"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 27
+  },
+  {
+    "id": 28,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的二十届四中全会指出，实现社会主义现代化是一个（）的历史过程。",
+    "options": [
+      "一蹴而就",
+      "阶梯式递进、不断发展进步",
+      "充满曲折",
+      "高速飞跃"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 28
+  },
+  {
+    "id": 29,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的二十届四中全会公报中，下列哪一项不属于“四个全面”战略布局的内容？（） E、全面建设社会主义现代化国家",
+    "options": [
+      "全面深化改革",
+      "全面依法治国",
+      "全面从严治党",
+      "全面建设小康社会"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 29
+  },
+  {
+    "id": 30,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "（）认为：“毛泽东同志在延安为中央党校题了‘实事求是’四个大字，毛泽东思想的精髓就是这四个字。毛泽东同志所以伟大，能把中国革命引导到胜利，归根到底，就是靠这个。”",
+    "options": [
+      "谢觉哉",
+      "黄炎培",
+      "周恩来",
+      "邓小平"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 30
+  },
+  {
+    "id": 31,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "习近平总书记指出，组织纪律性是党性修养的重要内容。加强组织纪律性必须增强（）。",
+    "options": [
+      "政治性",
+      "规范性",
+      "党性",
+      "自觉性"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 31
+  },
+  {
+    "id": 32,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "（）把毛泽东思想确立为党的指导思想并写入党章。",
+    "options": [
+      "中国共产党第六次全国代表大会",
+      "中国共产党第七次全国代表大会",
+      "中国共产党第八次全国代表大会",
+      "中国共产党第九次全国代表大会"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 32
+  },
+  {
+    "id": 33,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的二十届四中全会提出，要建设取得新的重大进展的是（）。",
+    "options": [
+      "法治中国",
+      "美丽中国",
+      "健康中国",
+      "数字中国"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 33
+  },
+  {
+    "id": 34,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "下列哪项是“增强国内大循环内生动力和可靠性”的直接举措？",
+    "options": [
+      "深入推进中国特色大国外交",
+      "大力提振消费，扩大有效投资",
+      "加强国防和军队现代化建设",
+      "做好港澳工作和对台工作"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 34
+  },
+  {
+    "id": 35,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "要坚持把（）作为依法治国的长期基础性工作，采取有力措施加强法制宣传教育。",
+    "options": [
+      "全民守法",
+      "全民普法",
+      "全民普法和守法",
+      "全民法治观念"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 35
+  },
+  {
+    "id": 36,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "全会提出，要健全因地制宜发展新质生产力体制机制，推动哪些方面的突破和创新？",
+    "options": [
+      "仅技术革命性突破",
+      "仅生产要素创新性配置",
+      "仅产业深度转型升级",
+      "技术革命性突破、生产要素创新性配置、产业深度转型升级"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 36
+  },
+  {
+    "id": 37,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "二十届四中全会再次强调，必须坚持把解决好（）问题作为全党工作的重中之重。",
+    "options": [
+      "粮食安全",
+      "“三农”",
+      "城乡差距",
+      "农村环境"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 37
+  },
+  {
+    "id": 38,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "共享理念实质就是坚持（）的发展思想，体现的是逐步实现共同富裕的要求。",
+    "options": [
+      "成果共享",
+      "以人民为中心",
+      "为人民服务",
+      "公平公正"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 38
+  },
+  {
+    "id": 39,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "文化建设的战略目标是（）。",
+    "options": [
+      "满足基本文化需求",
+      "扎实推进文化强国建设",
+      "实现文化产品自给自足",
+      "推广单一文化模式"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 39
+  },
+  {
+    "id": 40,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "（）是成功的引力。",
+    "options": [
+      "积极的行动",
+      "先进的思想",
+      "广泛的民意",
+      "强有力的组织"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 40
+  },
+  {
+    "id": 41,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "全会提出要完善推进高质量共建“一带一路”机制，包括哪些方面？",
+    "options": [
+      "继续实施“一带一路”科技创新行动计划",
+      "加强绿色发展、数字经济、人工智能等领域的多边合作平台建设",
+      "完善陆海天网一体化布局",
+      "统筹推进重大标志性工程和“小而美”民生项目"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 41
+  },
+  {
+    "id": 42,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "推进城乡发展一体化，是（）发展到一定阶段的必然要求，是国家现代化的重要标志。",
+    "options": [
+      "工业化",
+      "城镇化",
+      "农业现代化",
+      "服务业现代化"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 42
+  },
+  {
+    "id": 43,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的二十届三中全会指出，建立政府投资支持（）重大项目建设长效机制。",
+    "options": [
+      "基础性",
+      "公益性",
+      "长远性",
+      "长期性"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 43
+  },
+  {
+    "id": 44,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "《中国共产党纪律处分条例》落实“三个区分开来”要求，完善纪律处分运用规则，区分（）等不同情形，给予相应处理，切实把从严管理监督和鼓励担当作为统一起来。",
+    "options": [
+      "一般违纪",
+      "轻微违纪",
+      "刑事犯罪",
+      "不追究纪律责任"
+    ],
+    "answer": "ABD",
+    "explanation": "",
+    "uid": 44
+  },
+  {
+    "id": 45,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "为促进区域协调发展，党的二十届四中全会提出要发挥其叠加效应的战略包括（）。",
+    "options": [
+      "区域协调发展战略",
+      "区域重大战略",
+      "主体功能区战略",
+      "新型城镇化战略"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 45
+  },
+  {
+    "id": 46,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "在党史学习教育中，要“重点学习党史，同时学习（）”",
+    "options": [
+      "新中国史",
+      "改革开放史",
+      "社会主义发展史",
+      "经济史"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 46
+  },
+  {
+    "id": 47,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的二十届四中全会指出，牢固树立和践行绿水青山就是金山银山的理念，以碳达峰碳中和为牵引，协同推进（），筑牢生态安全屏障，增强绿色发展动能。",
+    "options": [
+      "降碳",
+      "减污",
+      "扩绿",
+      "增长"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 47
+  },
+  {
+    "id": 48,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "习近平指出，我们说的道路自信、理论自信、制度自信，来源于（）、来源于（）、来源于（）。",
+    "options": [
+      "实践",
+      "人民",
+      "真理",
+      "认识"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 48
+  },
+  {
+    "id": 49,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "《中共中央关于进一步全面深化改革、推进中国式现代化的决定》提出，统一预算分配权，提高预算管理（），完善预算公开和监督制度。",
+    "options": [
+      "统一性",
+      "规范性",
+      "有效性",
+      "可操作性"
+    ],
+    "answer": "AB",
+    "explanation": "",
+    "uid": 49
+  },
+  {
+    "id": 50,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "《党史学习教育工作条例》规定，教育引导党员深刻领悟中国共产党为什么能、马克思主义为什么行、中国特色社会主义为什么好等道理，从历史中（），坚定对党的领导的自信，坚定贯彻落实党的创新理论，坚定不移走中国特色社会主义道路。",
+    "options": [
+      "找问题",
+      "寻经验",
+      "求规律",
+      "启智慧"
+    ],
+    "answer": "BCD",
+    "explanation": "",
+    "uid": 50
+  },
+  {
+    "id": 51,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "《党史学习教育工作条例》规定，按照（）的原则，建设一支结构合理、专兼结合的高素质党史学习教育工作队伍。",
+    "options": [
+      "政治强",
+      "纪律严",
+      "业务精",
+      "作风正"
+    ],
+    "answer": "ACD",
+    "explanation": "",
+    "uid": 51
+  },
+  {
+    "id": 52,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "二十大党章指出：十八大以来，以习近平同志为主要代表的中国共产党人，坚持（）等重大时代课题，创立了习近平新时代中国特色社会主义思想。",
+    "options": [
+      "坚持把马克思主义基本原理同中国具体实际相结合",
+      "同中华优秀传统文化相结合",
+      "科学回答了新时代坚持和发展什么样的中国特色社会主义",
+      "怎样坚持和发展中国特色社会主义"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 52
+  },
+  {
+    "id": 53,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "下列属于中国共产党在艰辛探索中形成的优良传统的是（）。",
+    "options": [
+      "全心全意为人民服务",
+      "艰苦奋斗",
+      "调查研究",
+      "思想政治工作"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 53
+  },
+  {
+    "id": 54,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "坚持和发展中国特色社会主义，总任务是（）和（）。",
+    "options": [
+      "改革开放",
+      "实现社会主义现代化",
+      "中华民族伟大复兴",
+      "实现共产主义"
+    ],
+    "answer": "BC",
+    "explanation": "",
+    "uid": 54
+  },
+  {
+    "id": 55,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "邓小平指出，党章的总纲是我们党的最基本的（）。",
+    "options": [
+      "政治纲领",
+      "组织纲领",
+      "法律制度",
+      "行动纲领"
+    ],
+    "answer": "AB",
+    "explanation": "",
+    "uid": 55
+  },
+  {
+    "id": 56,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "完善权力运行制约和监督机制，形成（）的制度安排。",
+    "options": [
+      "适当自由裁量",
+      "有权必有责",
+      "用权必担责",
+      "滥权必追责"
+    ],
+    "answer": "BCD",
+    "explanation": "",
+    "uid": 56
+  },
+  {
+    "id": 57,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党章提出要建设“三型”政党，即建设（）的马克思主义执政党。",
+    "options": [
+      "学习型",
+      "服务型",
+      "创新型",
+      "战斗型"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 57
+  },
+  {
+    "id": 58,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "建立健全党的领导干部插手干预重大事项记录制度，发现利用职务便利（）等问题，应当及时向上级党组织报告。",
+    "options": [
+      "违规干预干部选拔任用",
+      "违规干预工程建设",
+      "违规干预执纪执法",
+      "违规干预司法活动"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 58
+  },
+  {
+    "id": 59,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "为了保持党和人民群众的密切联系，防治党的领导干部和党员由人民的公仆变成骑在人民头上的老爷，必须采取（）的方法，加强党组织和群众对党的领导干部和党员的监督。",
+    "options": [
+      "自下而上和自上而下相结合",
+      "党内和党外相结合",
+      "由内而外和由外而内相结合",
+      "理论学习和具体实践相结合"
+    ],
+    "answer": "AB",
+    "explanation": "",
+    "uid": 59
+  },
+  {
+    "id": 60,
+    "set": 1,
+    "type": "multiple_choice",
+    "question": "党的各级组织、全体党员特别是高级干部都要（），做到党中央提倡的坚决响应、党中央决定的坚决执行、党中央禁止的坚决不做。",
+    "options": [
+      "向党中央看齐",
+      "向党的理论和路线方针政策看齐",
+      "向党中央决策部署看齐",
+      "向党的各项制度看齐"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 60
+  },
+  {
+    "id": 61,
+    "set": 1,
+    "type": "true_false",
+    "question": "在梁家河，青年习近平为提高个人生活自理能力打下了坚实的基础。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 61
+  },
+  {
+    "id": 62,
+    "set": 1,
+    "type": "true_false",
+    "question": "党的二十届四中全会指出，要坚决维护党中央权威和集中统一领导，提高党把方向、谋大局、定政策、促改革能力，把党的领导贯穿经济社会发展各方面全过程，为我国社会主义现代化建设提供根本保证。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 62
+  },
+  {
+    "id": 63,
+    "set": 1,
+    "type": "true_false",
+    "question": "党内禁止任何形式的个人崇拜。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 63
+  },
+  {
+    "id": 64,
+    "set": 1,
+    "type": "true_false",
+    "question": "党的领导机关和领导干部，特别是主要领导干部是党内监督的重点对象。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 64
+  },
+  {
+    "id": 65,
+    "set": 1,
+    "type": "true_false",
+    "question": "述责述廉报告应当载入廉洁档案，组织部门不公开。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 65
+  },
+  {
+    "id": 66,
+    "set": 1,
+    "type": "true_false",
+    "question": "毛泽东思想实现了马克思主义中国化的第一次飞跃。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 66
+  },
+  {
+    "id": 67,
+    "set": 1,
+    "type": "true_false",
+    "question": "纪律是指社会组织为了保证其存在和发展并实现其目标，要求其全体成员必须遵守的行为规则。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 67
+  },
+  {
+    "id": 68,
+    "set": 1,
+    "type": "true_false",
+    "question": "习近平总书记指出，对那些在为民务实清廉方面有严重问题的党员、干部，要在教育的基础上视情节依纪依法处理。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 68
+  },
+  {
+    "id": 69,
+    "set": 1,
+    "type": "true_false",
+    "question": "团的县级和县级以下各级委员会书记，企业事业单位的团委员会书记，是党员的，可以列席上级党的委员会和常务委员会的会议。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 69
+  },
+  {
+    "id": 70,
+    "set": 1,
+    "type": "true_false",
+    "question": "党的二十大报告指出：实践告诉我们，中国共产党为什么能，中国特色社会主义为什么好，归根到底是马克思主义行，是中国化时代化的马克思主义行。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 70
+  },
+  {
+    "id": 71,
+    "set": 1,
+    "type": "true_false",
+    "question": "发展是我们党执政兴国的第一要务，必须坚持以人民为中心的发展思想，坚持创新、均衡、绿色、开放、共享的发展理念。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 71
+  },
+  {
+    "id": 72,
+    "set": 1,
+    "type": "true_false",
+    "question": "马克思曾说：“批判的武器当然不能代替武器的批判，物质力量只能用物质力量来摧毁；但是，理论一经掌握群众，也会变成物质力量。”",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 72
+  },
+  {
+    "id": 73,
+    "set": 1,
+    "type": "true_false",
+    "question": "全党学习贯彻党章的水平，决定着党员队伍党性修养的水平，决定着各级党组织凝聚力和战斗力的水平，决定着全面从严治党的水平。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 73
+  },
+  {
+    "id": 74,
+    "set": 1,
+    "type": "true_false",
+    "question": "党历来坚持独立自主开拓前进道路，坚持把国家和民族发展放在自己力量的基点上，坚持中国的事情必须由中国人民自己作主张、自己来处理。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 74
+  },
+  {
+    "id": 75,
+    "set": 1,
+    "type": "true_false",
+    "question": "超标准接待只要不花公款就不违反中央八项规定精神。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 75
+  },
+  {
+    "id": 76,
+    "set": 1,
+    "type": "true_false",
+    "question": "习近平总书记指出，空谈误国、实干兴邦，一分部署、九分落实。不注重抓落实，不认真抓好落实，再好的规划和部署都会沦为空中楼阁。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 76
+  },
+  {
+    "id": 77,
+    "set": 1,
+    "type": "true_false",
+    "question": "学习习近平新时代中国特色社会主义思想的世界观和方法论，要做到知其言更知其义、知其然更知其所以然。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 77
+  },
+  {
+    "id": 78,
+    "set": 1,
+    "type": "true_false",
+    "question": "生态文明观的核心是从“人统治自然”过渡到“人与自然协调发展”。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 78
+  },
+  {
+    "id": 79,
+    "set": 1,
+    "type": "true_false",
+    "question": "政党是讲政治的组织，忠诚是任何政党对其党员的政治要求。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 79
+  },
+  {
+    "id": 80,
+    "set": 1,
+    "type": "true_false",
+    "question": "党章规定，共产党员必须全心全意为人民服务。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 80
+  },
+  {
+    "id": 81,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "做合格共产党员，就要把____和政治规矩摆在首位，要时刻、自觉、坚决向党中央看齐。",
+    "options": [],
+    "answer": "政治纪律",
+    "explanation": "",
+    "uid": 81
+  },
+  {
+    "id": 82,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "《共产党宣言》是科学社会主义第一个纲领性的文献，它的发表标志着____的诞生。",
+    "options": [],
+    "answer": "马克思主义",
+    "explanation": "",
+    "uid": 82
+  },
+  {
+    "id": 83,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "党的二十届四中全会指出，要坚定不移走中国特色社会主义政治发展道路，坚持党的领导、人民当家作主、依法治国有机统一，发展全过程人民民主，完善____体系。",
+    "options": [],
+    "answer": "中国特色社会主义法治",
+    "explanation": "",
+    "uid": 83
+  },
+  {
+    "id": 84,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "人民军队建设的最根本原则是坚持党对军队的____领导，即党指挥枪的原则。",
+    "options": [],
+    "answer": "绝对",
+    "explanation": "",
+    "uid": 84
+  },
+  {
+    "id": 85,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "新形势下加强和规范党内政治生活，重点是各级领导机关和领导干部，关键是____特别是中央委员会、中央政治局、中央政治局常务委员会。",
+    "options": [],
+    "answer": "高级干部",
+    "explanation": "",
+    "uid": 85
+  },
+  {
+    "id": 86,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "新形势下加强和规范党内政治生活，必须以党章为根本遵循，坚持党的____、思想路线、组织路线、群众路线。",
+    "options": [],
+    "answer": "政治路线",
+    "explanation": "",
+    "uid": 86
+  },
+  {
+    "id": 87,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "开展党史学习教育，应当坚持____，充分利用当地条件就地组织开展相关活动，严禁以学习教育为名变相公款旅游。",
+    "options": [],
+    "answer": "勤俭节约",
+    "explanation": "",
+    "uid": 87
+  },
+  {
+    "id": 88,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "考察识别干部特别是高级干部必须首先看是否坚定不移____。",
+    "options": [],
+    "answer": "贯彻党的基本路线",
+    "explanation": "",
+    "uid": 88
+  },
+  {
+    "id": 89,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "组织党员认真学习马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想，推进“两学一做”学习教育、____常态化制度化，学习党的路线、方针、政策和决议，学习党的基本知识，学习科学、文化、法律和业务知识。",
+    "options": [],
+    "answer": "党史学习教育",
+    "explanation": "",
+    "uid": 89
+  },
+  {
+    "id": 90,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "坚持和完善领导干部个人有关事项报告制度，领导干部应当按规定如实报告____，及时报告个人及家庭重大情况。",
+    "options": [],
+    "answer": "个人有关事项",
+    "explanation": "",
+    "uid": 90
+  },
+  {
+    "id": 91,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "坚持党的领导、人民当家作主、依法治国____，走中国特色社会主义政治发展道路，扩大社会主义民主，建设中国特色社会主义法治体系，建设社会主义法治国家，巩固人民民主专政，建设社会主义政治文明。",
+    "options": [],
+    "answer": "有机统一",
+    "explanation": "",
+    "uid": 91
+  },
+  {
+    "id": 92,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "在国际事务中，坚持正确义利观，维护我国的独立和主权，反对霸权主义和强权政治，维护世界和平，促进人类进步，推动构建____，推动建设持久和平、共同繁荣的和谐世界。",
+    "options": [],
+    "answer": "人类命运共同体",
+    "explanation": "",
+    "uid": 92
+  },
+  {
+    "id": 93,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "党在社会主义初级阶段的基本路线是党和国家的____、人民的幸福线，也是党内政治生活正常开展的根本保证。",
+    "options": [],
+    "answer": "生命线",
+    "explanation": "",
+    "uid": 93
+  },
+  {
+    "id": 94,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "党的二十大报告指出：为民造福是立党为公、执政为民的____要求。",
+    "options": [],
+    "answer": "本质",
+    "explanation": "",
+    "uid": 94
+  },
+  {
+    "id": 95,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "____、党同人民群众联系问题是关系党生死存亡的问题。",
+    "options": [],
+    "answer": "党风问题",
+    "explanation": "",
+    "uid": 95
+  },
+  {
+    "id": 96,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "党内监督必须把____，运用监督执纪“四种形态”，经常开展批评和自我批评、约谈函询，让“红红脸、出出汗”成为常态。",
+    "options": [],
+    "answer": "纪律挺在前面",
+    "explanation": "",
+    "uid": 96
+  },
+  {
+    "id": 97,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "新形势下，党面临的____考验、改革开放考验、市场经济考验、外部环境考验是长期的、复杂的、严峻的。",
+    "options": [],
+    "answer": "执政",
+    "explanation": "",
+    "uid": 97
+  },
+  {
+    "id": 98,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "必须把坚持____的根本宗旨、保持党同人民群众的血肉联系作为加强和规范党内政治生活的根本要求。",
+    "options": [],
+    "answer": "全心全意为人民服务",
+    "explanation": "",
+    "uid": 98
+  },
+  {
+    "id": 99,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "中国共产党自成立以来，始终把为____、为中华民族谋复兴作为自己的初心使命，历经百年奋斗，从根本上改变了中国人民的前途命运，开辟了实现中华民族伟大复兴的正确道路，展示了马克思主义的强大生命力，深刻影响了世界历史进程，锻造了走在时代前列的中国共产党。",
+    "options": [],
+    "answer": "中国人民谋幸福",
+    "explanation": "",
+    "uid": 99
+  },
+  {
+    "id": 100,
+    "set": 1,
+    "type": "fill_blank",
+    "question": "建设____，坚决反对腐败，是加强和规范党内政治生活的重要任务。",
+    "options": [],
+    "answer": "廉洁政治",
+    "explanation": "",
+    "uid": 100
+  },
+  {
+    "id": 1,
+    "set": 2,
+    "type": "single_choice",
+    "question": "教育公平是社会公平的重要基础，要不断促进教育发展成果更多更公平惠及（），以教育公平促进社会公平正义。",
+    "options": [
+      "全体人民 B、城乡居民 C、更广泛的群体 D、农村和贫困人口"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 101
+  },
+  {
+    "id": 2,
+    "set": 2,
+    "type": "single_choice",
+    "question": "二十届四中全会提出，加大保障和改善民生力度，必须坚持（）的原则。",
+    "options": [
+      "全力以赴、满足一切需求 B、尽力而为、量力而行 C、高速推进、全面覆盖 D、政府主导、市场退出"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 102
+  },
+  {
+    "id": 3,
+    "set": 2,
+    "type": "single_choice",
+    "question": "保障和改善民生的最终目标是（）。",
+    "options": [
+      "解决绝对贫困问题 B、提高社会保障水平 C、扎实推进全体人民共同富裕 D、扩大公共服务范围"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 103
+  },
+  {
+    "id": 4,
+    "set": 2,
+    "type": "single_choice",
+    "question": "进行派性活动，必然会阻碍党的路线、方针、政策的贯彻执行，破坏安定团结的政治局面，如果不加以坚决制止而任其发展，就会导致党的（）。",
+    "options": [
+      "分裂 B、灭亡 C、间隙 D、松散"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 104
+  },
+  {
+    "id": 5,
+    "set": 2,
+    "type": "single_choice",
+    "question": "《关于建国以来党的若干历史问题的决议》是（）在党的十一届六中全会上通过的重要文件。",
+    "options": [
+      "1987年 B、1989年 C、1981年 D、1984年"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 105
+  },
+  {
+    "id": 6,
+    "set": 2,
+    "type": "single_choice",
+    "question": "领导干部特别是高级干部必须带头践行（），继承和发扬党的优良传统和作风，弘扬中华民族传统美德，讲修养、讲道德、讲诚信、讲廉耻，养成共产党人的高风亮节，自觉远离低级趣味。",
+    "options": [
+      "“三严三实” B、社会主义核心价值观 C、科学发展观 D、“两学一做”"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 106
+  },
+  {
+    "id": 7,
+    "set": 2,
+    "type": "single_choice",
+    "question": "人民军队之所以不断发展壮大，关键在于始终坚持先进（）的指导。",
+    "options": [
+      "军事理论 B、政治思想 C、强军目标 D、军队文化"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 107
+  },
+  {
+    "id": 8,
+    "set": 2,
+    "type": "single_choice",
+    "question": "党领导人民解放思想、锐意进取，创造了（）的伟大成就。",
+    "options": [
+      "新时代中国特色社会主义 B、改革开放和社会主义现代化建设 C、社会主义革命和建设 D、新民主主义革命"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 108
+  },
+  {
+    "id": 9,
+    "set": 2,
+    "type": "single_choice",
+    "question": "在开展批评与自我批评的时候，既要坚持原则，又要（）。",
+    "options": [
+      "独善其身 B、与人为善 C、机动灵活 D、互相谅解"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 109
+  },
+  {
+    "id": 10,
+    "set": 2,
+    "type": "single_choice",
+    "question": "党的二十届四中全会提出，大力繁荣文化事业。营造良好文化生态，提升（），推动新闻出版、广播影视、文学艺术等领域精品创作。",
+    "options": [
+      "社会文明程度 B、文化原创能力 C、科技创新能力 D、服务保障能力"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 110
+  },
+  {
+    "id": 11,
+    "set": 2,
+    "type": "single_choice",
+    "question": "纠正形式主义、官僚主义，（）要负总责。",
+    "options": [
+      "一把手 B、省部级领导干部 C、市县级领导干部 D、各级领导干部"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 111
+  },
+  {
+    "id": 12,
+    "set": 2,
+    "type": "single_choice",
+    "question": "（）是历史的创造者，是决定党和国家前途命运的根本力量。",
+    "options": [
+      "群众 B、军队 C、英雄 D、人民"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 112
+  },
+  {
+    "id": 13,
+    "set": 2,
+    "type": "single_choice",
+    "question": "二十大报告指出：（），在党史、新中国史、改革开放史、社会主义发展史、中华民族发展史上具有里程碑意义。",
+    "options": [
+      "新时代十年的伟大变革 B、新时代二十年的伟大变革 C、新时代三十年的伟大变革 D、新时代四十年的伟大变革"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 113
+  },
+  {
+    "id": 14,
+    "set": 2,
+    "type": "single_choice",
+    "question": "派驻纪检组应当带着实际情况和具体问题，定期向派出机关汇报工作，至少（）会同被监督单位党组织专题研究1次党风廉政建设和反腐败工作。",
+    "options": [
+      "每半年 B、每年 C、每届 D、每两年"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 114
+  },
+  {
+    "id": 15,
+    "set": 2,
+    "type": "single_choice",
+    "question": "二十大党章规定，中国共产党党员必须（），不惜牺牲个人的一切，为实现共产主义奋斗终身。",
+    "options": [
+      "忠诚于党和人民 B、一心一意为人民服务 C、全心全意为人民服务 D、为人民而奋斗"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 115
+  },
+  {
+    "id": 16,
+    "set": 2,
+    "type": "single_choice",
+    "question": "在我们党内，每个组织和党员（）。",
+    "options": [
+      "主要是监督主体 B、主要是监督对象 C、既是监督主体，又是监督对象 D、互相监督"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 116
+  },
+  {
+    "id": 17,
+    "set": 2,
+    "type": "single_choice",
+    "question": "坚持正确（）导向，是严肃党内政治生活的组织保证。",
+    "options": [
+      "选人用人 B、管党治党 C、政治立场 D、理论立场"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 117
+  },
+  {
+    "id": 18,
+    "set": 2,
+    "type": "single_choice",
+    "question": "党章规定，党员如果没有正当理由，连续（）个月不参加党的组织生活，或不交纳党费，或不做党所分配的工作，就被认为是自行脱党。",
+    "options": [
+      "二 B、六 C、四 D、八"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 118
+  },
+  {
+    "id": 19,
+    "set": 2,
+    "type": "single_choice",
+    "question": "坚持党的领导，首先是坚持（）。",
+    "options": [
+      "集中统一领导 B、党中央的集中统一领导 C、党的政治领导 D、党的组织领导"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 119
+  },
+  {
+    "id": 20,
+    "set": 2,
+    "type": "single_choice",
+    "question": "二十大党章规定，党组织讨论决定问题，如对重要问题发生争论，双方人数接近，除了在紧急情况下必须按多数意见执行外，应当（），进一步调查研究，交换意见，下次再表决。",
+    "options": [
+      "暂缓作出决定 B、不予考虑 C、认真考虑 D、给与批评"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 120
+  },
+  {
+    "id": 21,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "跳出治乱兴衰历史周期率的第二个答案是（）。",
+    "options": [
+      "自我净化 B、自我完善 C、自我革命 D、自我革新"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 121
+  },
+  {
+    "id": 22,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "二十大党章规定，党的省、自治区、直辖市、设区的市和自治州的委员会的委员和候补委员必须有（）年以上的党龄。",
+    "options": [
+      "一 B、二 C、三 D、五"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 122
+  },
+  {
+    "id": 23,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "遵守政治纪律和政治规矩，必须管好亲属和身边工作人员，不得默许他们利用特殊身份谋取（）利益。",
+    "options": [
+      "非法 B、合法 C、正当 D、违法"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 123
+  },
+  {
+    "id": 24,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党的各级领导干部必须具有（），坚决执行党的基本路线和各项方针、政策，立志改革开放，献身现代化事业，在社会主义建设中艰苦创业，树立正确政绩观，做出经得起实践、人民、历史检验的实绩。",
+    "options": [
+      "共产主义远大理想和中国特色社会主义坚定信念 B、中国特色社会主义共同理想和共产主义伟大信念 C、共产主义远大理想 D、中国特色社会主义共同理想"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 124
+  },
+  {
+    "id": 25,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "落实中央八项规定精神，要强化（），严肃查处违规违纪行为。",
+    "options": [
+      "监督执纪问责 B、宣传教育 C、制度建设 D、干部管理"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 125
+  },
+  {
+    "id": 26,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "凡属重大问题，党的各级委员会都要按照集体领导、民主集中、（）、会议决定的原则，由党的委员会集体讨论，作出决定；委员会成员要根据集体的决定和分工，切实履行自己的职责。",
+    "options": [
+      "个别酝酿 B、个别商谈 C、私下酝酿 D、共同协商"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 126
+  },
+  {
+    "id": 27,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "走中国特色社会主义政治发展道路，扩大社会主义民主，建设中国特色社会主义法治体系，建设社会主义法治国家，巩固人民民主专政，建设社会主义（）。",
+    "options": [
+      "政治文明 B、经济文明 C、精神文明 D、制度文明"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 127
+  },
+  {
+    "id": 28,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "中国共产党坚持对人民解放军和其他人民武装力量的（）。",
+    "options": [
+      "绝对领导 B、思想引领 C、政治指导 D、全面领导"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 128
+  },
+  {
+    "id": 29,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "（）对“十四五”时期我国经济社会发展作出系统谋划和战略部署，清晰展望了2035年基本实现社会主义现代化的远景目标。",
+    "options": [
+      "党的十九届四中全会 B、党的十九届五中全会 C、党的十九届六中全会 D、党的十九大"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 129
+  },
+  {
+    "id": 30,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "习近平在党史学习教育动员大会上指出，要教育引导全党大力发扬红色传统、传承红色基因，赓续共产党人精神血脉，始终保持革命者的大无畏（），鼓起迈进新征程、奋进新时代的精气神。",
+    "options": [
+      "奉献精神 B、奋斗精神 C、爱国精神 D、创新精神"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 130
+  },
+  {
+    "id": 31,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党的二十大报告指出，要深化（）体制改革，全面推进严格规范公正文明执法，加大关系群众切身利益的重点领域执法力度，完善行政执法程序，健全行政裁量基准。",
+    "options": [
+      "行政立法 B、行政司法 C、行政执法 D、司法行政"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 131
+  },
+  {
+    "id": 32,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "（）是党的根本组织原则。",
+    "options": [
+      "集体领导 B、民主集中制 C、分工负责 D、少数服从多数"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 132
+  },
+  {
+    "id": 33,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党的二十届三中全会指出，到（）全面建成高水平社会主义市场经济体制。",
+    "options": [
+      "二〇二五年 B、二〇三〇年 C、二〇三五年 D、二〇四〇年"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 133
+  },
+  {
+    "id": 34,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "《关于党内政治生活的若干准则》指出，党内真正实行（），才有可能建立起在党员和群众中有威信的强有力的领导班子。",
+    "options": [
+      "民主决策 B、民主选举 C、民主管理 D、民主投票"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 134
+  },
+  {
+    "id": 35,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "下列哪项是“增强国内大循环内生动力和可靠性”的直接举措？",
+    "options": [
+      "深入推进中国特色大国外交 B、大力提振消费，扩大有效投资 C、加强国防和军队现代化建设 D、做好港澳工作和对台工作"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 135
+  },
+  {
+    "id": 36,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "要坚持把（）作为依法治国的长期基础性工作，采取有力措施加强法制宣传教育。",
+    "options": [
+      "全民守法 B、全民普法 C、全民普法和守法 D、全民法治观念"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 136
+  },
+  {
+    "id": 37,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "（）是维护社会公平正义的最后一道防线。",
+    "options": [
+      "司法 B、社会保障 C、执法 D、立法"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "uid": 137
+  },
+  {
+    "id": 38,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "全会提出，要健全因地制宜发展新质生产力体制机制，推动哪些方面的突破和创新？",
+    "options": [
+      "仅技术革命性突破 B、仅生产要素创新性配置 C、仅产业深度转型升级 D、技术革命性突破、生产要素创新性配置、产业深度转型升级"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "uid": 138
+  },
+  {
+    "id": 39,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "干部是党的宝贵财富，必须既（）、严格管理、严格监督，又在政治上、思想上、工作上、生活上真诚关爱，鼓励干部干事创业、大胆作为。",
+    "options": [
+      "严肃党内政治生活 B、严格教育 C、严格约束 D、严格要求"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "uid": 139
+  },
+  {
+    "id": 40,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "各级（）负责《廉政准则》的贯彻实施。",
+    "options": [
+      "人大 B、纪委 C、党委(党组) D、政府"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "uid": 140
+  },
+  {
+    "id": 41,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "《中国共产党纪律处分条例》规定，党员领导干部对于到任前已经存在且属于其职责范围内的问题，（），造成严重损害或者严重不良影响的，依照前款规定处理。",
+    "options": [
+      "消极回避 B、敷衍应付 C、推卸责任 D、推诿扯皮"
+    ],
+    "answer": "AC",
+    "explanation": "",
+    "uid": 141
+  },
+  {
+    "id": 42,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，聚焦发展全过程人民民主，坚持党的领导、人民当家作主、依法治国有机统一，推动（），社会主义法治国家建设达到更高水平。",
+    "options": [
+      "人民当家作主制度更加健全 B、协商民主广泛多层制度化发展 C、中国特色社会主义法治体系更加完善 D、人民当家作主制度更加完善"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 142
+  },
+  {
+    "id": 43,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党的纪律主要包括政治纪律、组织纪律、（）、工作纪律和生活纪律。",
+    "options": [
+      "廉洁纪律 B、干部纪律 C、作风纪律 D、群众纪律"
+    ],
+    "answer": "AD",
+    "explanation": "",
+    "uid": 143
+  },
+  {
+    "id": 44,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "下列对于党员的纪律处分的说法，正确的有（）。",
+    "options": [
+      "分为批评教育、警告、严重警告、留党察看和开除党籍五种纪律处分 B、纪律处分的精神是“惩前毖后、治病救人” C、处分必须支部大会讨论决定 D、严重触犯刑律的党员必须开除党籍"
+    ],
+    "answer": "BCD",
+    "explanation": "",
+    "uid": 144
+  },
+  {
+    "id": 45,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党的二十届四中全会提出，要加快建设哪些强国？（）",
+    "options": [
+      "制造强国、质量强国 B、航天强国、交通强国 C、网络强国、数字强国 D、海洋强国、文化强国"
+    ],
+    "answer": "AB",
+    "explanation": "",
+    "uid": 145
+  },
+  {
+    "id": 46,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，发挥人民政协作为专门协商机构作用，健全（）的机制，加强人民政协反映社情民意、联系群众、服务人民机制建设。",
+    "options": [
+      "深度协商互动 B、观点恰当阐述 C、意见充分表达 D、广泛凝聚共识"
+    ],
+    "answer": "ACD",
+    "explanation": "",
+    "uid": 146
+  },
+  {
+    "id": 47,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党章规定，党的建设必须坚决实现以下基本要求（）。",
+    "options": [
+      "坚持党的基本路线 B、坚持解放思想，实事求是，与时俱进，求真务实 C、坚持全心全意为人民服务 D、坚持民主集中制，坚持从严管党治党"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 147
+  },
+  {
+    "id": 48,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "厉行勤俭节约要严格遵守财经纪律，做到（）。",
+    "options": [
+      "严格执行住房、车辆配备等有关工作和生活待遇的规定 B、严格控制 “三公” 经费支出 C、杜绝铺张浪费 D、节约使用办公用品"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 148
+  },
+  {
+    "id": 49,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "违反中央八项规定精神问题线索处置的原则有（）。",
+    "options": [
+      "及时受理 B、规范处置 C、快查快结 D、严肃处理"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 149
+  },
+  {
+    "id": 50,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "必须统筹国内国际两个大局，始终做世界和平的（）、全球发展的（）、国际秩序的（）。",
+    "options": [
+      "建设者 B、贡献者 C、维护者 D、遵循者"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 150
+  },
+  {
+    "id": 51,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "《中共中央关于进一步全面深化改革、推进中国式现代化的决定》指出，健全国家经济社会发展规划制度体系，强化规划衔接落实机制，（）。",
+    "options": [
+      "发挥国家发展规划战略导向作用 B、强化国土空间规划基础作用 C、增强专项规划和区域规划实施支撑作用 D、增强专项规划实施支撑作用"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 151
+  },
+  {
+    "id": 52,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "《党史学习教育工作条例》规定，用好革命博物馆、纪念馆、党史馆、烈士纪念设施、革命旧址等红色资源，保护利用好革命文物，精心设计展览陈列、红色旅游线路、学习体验线路，加强（）。",
+    "options": [
+      "革命传统教育 B、爱国主义教育 C、思想道德教育 D、传统文化教育"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 152
+  },
+  {
+    "id": 53,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "习近平总书记指出，（），是五四运动以来我国发生的三大历史性事件，是近代以来实现中华民族伟大复兴的三大里程碑。",
+    "options": [
+      "建立中国共产党 B、成立中华人民共和国 C、推进改革开放和中国特色社会主义事业 D、实现中华民族伟大复兴"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 153
+  },
+  {
+    "id": 54,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党对统一战线的领导主要是政治领导，即（）的领导。",
+    "options": [
+      "政治主张 B、政治原则 C、政治方向 D、重大方针政策"
+    ],
+    "answer": "BCD",
+    "explanation": "",
+    "uid": 154
+  },
+  {
+    "id": 55,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "新时代十年的伟大变革，在（）上具有里程碑意义。",
+    "options": [
+      "党史 B、新中国史 C、改革开放史 D、社会主义发展史 E、中华民族发展史"
+    ],
+    "answer": "ABCDE",
+    "explanation": "",
+    "uid": 155
+  },
+  {
+    "id": 56,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "党的十九大报告指出，实现伟大梦想，必须（）。",
+    "options": [
+      "进行伟大斗争 B、建设伟大工程 C、推进伟大事业 D、高举伟大旗帜"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 156
+  },
+  {
+    "id": 57,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "新时代中国青年要自觉树立和践行社会主义核心价值观，善于从中华民族传统美德中汲取道德滋养，从英雄人物和时代楷模的身上感受道德风范，从自身内省中提升道德修为，明大德、守公德、严私德，自觉抵制（）等错误思想，追求更有高度、更有境界、更有品位的人生，让清风正气、蓬勃朝气遍布全社会！",
+    "options": [
+      "拜金主义 B、享乐主义 C、极端个人主义 D、历史虚无主义"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 157
+  },
+  {
+    "id": 58,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "我们要以识才的慧眼、爱才的诚意、用才的胆识、容才的雅量、聚才的良方，广开进贤之路，把党内和党外、国内和国外等各方面优秀人才吸引过来、凝聚起来，努力形成（）的良好局面。",
+    "options": [
+      "人人渴望成才 B、人人努力成才 C、人人皆可成才 D、人人尽展其才"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 158
+  },
+  {
+    "id": 59,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "青年习近平是在怎样的家庭背景下到梁家河插队的？（）",
+    "options": [
+      "父亲习仲勋受到迫害，正在被审查关押 B、母亲带着弟弟在干校劳动 C、两位姐姐被下放到生产建设兵团 D、大姐被迫害，正在被审查关押"
+    ],
+    "answer": "ABC",
+    "explanation": "",
+    "uid": 159
+  },
+  {
+    "id": 60,
+    "set": 2,
+    "type": "multiple_choice",
+    "question": "关于深化财税体制改革，全会提出了哪些措施？",
+    "options": [
+      "增加地方自主财力 B、拓展地方税源 C、合理扩大地方政府专项债券支持范围 D、适当加强中央事权、提高中央财政支出比例"
+    ],
+    "answer": "ABCD",
+    "explanation": "",
+    "uid": 160
+  },
+  {
+    "id": 61,
+    "set": 2,
+    "type": "true_false",
+    "question": "我们要把研究和解决重大现实问题作为学习的根本出发点，使认认真真学习成为理论联系实际、学以致用，不断提高工作原则性、系统性、预见性和创造性的过程。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 161
+  },
+  {
+    "id": 62,
+    "set": 2,
+    "type": "true_false",
+    "question": "党的二十届四中全会指出，要强化企业科技创新主体地位，推动创新资源向企业集聚，支持企业牵头组建创新联合体、更多承担国家科技攻关任务，鼓励企业加大基础研究投入，促进创新链产业链资金链人才链深度融合。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 162
+  },
+  {
+    "id": 63,
+    "set": 2,
+    "type": "true_false",
+    "question": "党的二十届四中全会指出，要赋予省级政府统筹建设用地更大自主权，探索实施建设用地总量按规划期管控模式，实行统筹存量和增量综合供地。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 163
+  },
+  {
+    "id": 64,
+    "set": 2,
+    "type": "true_false",
+    "question": "坚持党的政治路线和思想路线,是党内政治生活准则中最根本的一条。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 164
+  },
+  {
+    "id": 65,
+    "set": 2,
+    "type": "true_false",
+    "question": "《中共中央关于进一步全面深化改革、推进中国式现代化的决议》指出：完善立德树人机制，推进大学、大专、职业技校思政课一体化改革创新，健全德智体美劳全面培养体系，提升教师教书育人能力，健全师德师风建设长效机制，深化教育评价改革。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 165
+  },
+  {
+    "id": 66,
+    "set": 2,
+    "type": "true_false",
+    "question": "严格党的组织生活制度，民主生活会应当经常化，遇到重要或者普遍性问题应当及时召开。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 166
+  },
+  {
+    "id": 67,
+    "set": 2,
+    "type": "true_false",
+    "question": "新民主主义理论包括新民主主义革命论和新民主主义社会论。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 167
+  },
+  {
+    "id": 68,
+    "set": 2,
+    "type": "true_false",
+    "question": "党的二十大报告提出，继续推进实践基础上的理论创新，首先要把握好习近平新时代中国特色社会主义思想的世界观和方法论，坚持好、运用好贯穿其中的立场观点方法。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 168
+  },
+  {
+    "id": 69,
+    "set": 2,
+    "type": "true_false",
+    "question": "人民立场是中国共产党的根本政治立场，是马克思主义政党区别于其他政党的显著标志。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 169
+  },
+  {
+    "id": 70,
+    "set": 2,
+    "type": "true_false",
+    "question": "党的百年奋斗从根本上改变了中国人民的前途命运。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 170
+  },
+  {
+    "id": 71,
+    "set": 2,
+    "type": "true_false",
+    "question": "1847年初，马克思恩格斯接受正义者同盟邀请加入该同盟并按照他们的主张对同盟进行根本性改造，组建第一个以科学社会主义为指导思想的国际无产阶级政党——共产主义者同盟。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 171
+  },
+  {
+    "id": 72,
+    "set": 2,
+    "type": "true_false",
+    "question": "遵义会议深刻总结党的经验教训，集中解决当时具有决定意义的军事和组织问题，确立新的正确领导，实现伟大的历史转折。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 172
+  },
+  {
+    "id": 73,
+    "set": 2,
+    "type": "true_false",
+    "question": "任何一个领导集体都要有一个核心，没有核心的领导是靠不住的。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 173
+  },
+  {
+    "id": 74,
+    "set": 2,
+    "type": "true_false",
+    "question": "《中国共产党纪律处分条例》规定，对于经济方面共同违纪的，按照个人参与数额及其所起作用，分别给予处分。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 174
+  },
+  {
+    "id": 75,
+    "set": 2,
+    "type": "true_false",
+    "question": "二十大党章规定，各级纪律检查委员会发现同级党的委员会委员有违犯党的纪律的行为，可以先进行初步核实，如果需要立案检查的，应当报告上一级纪律检查委员会，由上一级纪律检查委员会进行初步核实，需要审查的，由上一级纪律检查委员会报它的同级党的委员会批准。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 175
+  },
+  {
+    "id": 76,
+    "set": 2,
+    "type": "true_false",
+    "question": "中国共产党在中国革命事业中的领导地位，是由党的纲领决定的。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 176
+  },
+  {
+    "id": 77,
+    "set": 2,
+    "type": "true_false",
+    "question": "社会主义精神文明建设包括思想道德建设和科学文化建设两个方面。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 177
+  },
+  {
+    "id": 78,
+    "set": 2,
+    "type": "true_false",
+    "question": "根据《中国共产党纪律处分条例》，相互利用职权或者职务上的影响为对方及其配偶、子女及其配偶等亲属、身边工作人员和其他特定关系人谋取利益搞权权交易的，违反了党的廉洁纪律。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 178
+  },
+  {
+    "id": 79,
+    "set": 2,
+    "type": "true_false",
+    "question": "我们要用欣赏和赞许的眼光看待青年的创新创造，积极支持他们在人生中出彩，为青年取得的成就和成绩点赞、喝彩，让青春成为中华民族生气勃发、高歌猛进的持久风景，让青年英雄成为驱动中华民族加速迈向伟大复兴的蓬勃力量！",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 179
+  },
+  {
+    "id": 80,
+    "set": 2,
+    "type": "true_false",
+    "question": "中国梦是国家的梦、民族的梦，也是包括广大青年在内的每个中国人的梦。",
+    "options": [],
+    "answer": true,
+    "explanation": "",
+    "uid": 180
+  },
+  {
+    "id": 81,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "坚持不忘初心、继续前进，就要坚持中国特色社会主义道路自信、____、制度自信、文化自信，坚持党的基本路线不动摇，不断把中国特色社会主义伟大事业推向前进。",
+    "options": [],
+    "answer": "理论自信",
+    "explanation": "",
+    "uid": 181
+  },
+  {
+    "id": 82,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "党员如果没有正当理由，连续六个月不参加党的____或不交纳党费，或不做党所分配的工作，就被认为是自行脱党。",
+    "options": [],
+    "answer": "组织生活",
+    "explanation": "",
+    "uid": 182
+  },
+  {
+    "id": 83,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "要求入党的同志要能够经受住____的考验。",
+    "options": [],
+    "answer": "党组织",
+    "explanation": "",
+    "uid": 183
+  },
+  {
+    "id": 84,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "党禁止任何形式的____。",
+    "options": [],
+    "answer": "个人崇拜",
+    "explanation": "",
+    "uid": 184
+  },
+  {
+    "id": 85,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "申请入党，应遵循____原则。",
+    "options": [],
+    "answer": "自愿|入党自愿",
+    "explanation": "",
+    "uid": 185
+  },
+  {
+    "id": 86,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "马克思主义政治学的开山之作是《共产党宣言》。",
+    "options": [],
+    "answer": "",
+    "explanation": "",
+    "uid": 186
+  },
+  {
+    "id": 87,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "党的二十届四中全会指出，____是中国式现代化的鲜明底色。",
+    "options": [],
+    "answer": "绿色发展理念",
+    "explanation": "",
+    "uid": 187
+  },
+  {
+    "id": 88,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "党的二十届四中全会指出，要严守____，全面推进以国家公园为主体的自然保护地体系建设，有序设立新的国家公园。",
+    "options": [],
+    "answer": "生态保护红线",
+    "explanation": "",
+    "uid": 188
+  },
+  {
+    "id": 89,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "在长期实践中，我们党坚持把开展严肃认真的党内政治生活作为党的建设重要任务来抓，形成了以实事求是、理论联系实际、密切联系群众、____、民主集中制、严明党的纪律等为主要内容的党内政治生活基本规范。",
+    "options": [],
+    "answer": "批评和自我批评",
+    "explanation": "",
+    "uid": 189
+  },
+  {
+    "id": 90,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "《党史学习教育工作条例》规定，教育引导党员坚持在锤炼党性上力行、在____力行、在推动发展上力行，不断提高政治判断力、政治领悟力、政治执行力，增强斗争本领，把握历史主动。",
+    "options": [],
+    "answer": "为民服务上",
+    "explanation": "",
+    "uid": 190
+  },
+  {
+    "id": 91,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "新形势下加强和规范党内政治生活，必须以党章为根本遵循，坚持党的____、思想路线、组织路线、群众路线。",
+    "options": [],
+    "answer": "政治路线",
+    "explanation": "",
+    "uid": 191
+  },
+  {
+    "id": 92,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "进一步发展和壮大由全体社会主义劳动者、社会主义事业的____、拥护社会主义的爱国者、拥护祖国统一和致力于中华民族伟大复兴的爱国者组成的最广泛的爱国统一战线。",
+    "options": [],
+    "answer": "建设者",
+    "explanation": "",
+    "uid": 192
+  },
+  {
+    "id": 93,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "组织党员认真学习马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想，推进“两学一做”学习教育、____常态化制度化，学习党的路线、方针、政策和决议，学习党的基本知识，学习科学、文化、法律和业务知识。",
+    "options": [],
+    "answer": "党史学习教育",
+    "explanation": "",
+    "uid": 193
+  },
+  {
+    "id": 94,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "坚持党内谈话制度，认真开展____、诫勉谈话。",
+    "options": [],
+    "answer": "提醒谈话",
+    "explanation": "",
+    "uid": 194
+  },
+  {
+    "id": 95,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "坚持党的领导、人民当家作主、依法治国____，走中国特色社会主义政治发展道路，扩大社会主义民主，建设中国特色社会主义法治体系，建设社会主义法治国家，巩固人民民主专政，建设社会主义政治文明。",
+    "options": [],
+    "answer": "有机统一",
+    "explanation": "",
+    "uid": 195
+  },
+  {
+    "id": 96,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "纪委派驻纪检组对____负责，加强对被监督单位领导班子及其成员、其他领导干部的监督，发现问题应当及时向派出机关和被监督单位党组织报告，认真负责调查处置，对需要问责的提出建议。",
+    "options": [],
+    "answer": "派出机关",
+    "explanation": "",
+    "uid": 196
+  },
+  {
+    "id": 97,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "党内监督必须把____，运用监督执纪“四种形态”，经常开展批评和自我批评、约谈函询，让“红红脸、出出汗”成为常态。",
+    "options": [],
+    "answer": "纪律挺在前面",
+    "explanation": "",
+    "uid": 197
+  },
+  {
+    "id": 98,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "《党内监督条例》规定，党的地方各级委员会委员有权向上级党组织提出要求罢免或者撤换所在委员会和同级纪委中____的委员、常委。",
+    "options": [],
+    "answer": "不称职",
+    "explanation": "",
+    "uid": 198
+  },
+  {
+    "id": 99,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "《党章》明确，发展是我们党执政兴国的第一要务，必须坚持____的发展思想。",
+    "options": [],
+    "answer": "以人民为中心",
+    "explanation": "",
+    "uid": 199
+  },
+  {
+    "id": 100,
+    "set": 2,
+    "type": "fill_blank",
+    "question": "____是党的根本组织原则，是党内政治生活正常开展的重要制度保障。",
+    "options": [],
+    "answer": "民主集中制",
+    "explanation": "",
+    "uid": 200
+  }
+]
