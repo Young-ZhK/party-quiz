@@ -53,11 +53,23 @@ def submit():
         q = next((x for x in all_questions if str(x.get('uid', x['id'])) == str(uid)), None)
         if q:
             correct = False
+            display_user_answer = user_answer
+            
             if q['type'] == 'true_false':
                 correct = str(user_answer).lower() == str(q['answer']).lower()
             elif q['type'] == 'fill_blank':
                 correct = str(user_answer).strip() == str(q['answer']).strip()
+            elif q['type'] == 'multiple_choice':
+                # 多选题：将用户答案和正确答案都排序后比较
+                if isinstance(user_answer, list):
+                    user_answer_str = ''.join(sorted(user_answer)).upper()
+                    display_user_answer = ''.join(user_answer)
+                else:
+                    user_answer_str = str(user_answer).upper()
+                correct_answer_str = ''.join(sorted(str(q['answer']).upper()))
+                correct = user_answer_str == correct_answer_str
             else:
+                # 单选题
                 correct = str(user_answer).upper() == str(q['answer']).upper()
             
             if correct:
@@ -68,7 +80,7 @@ def submit():
                 'original_id': q['id'],
                 'set': q.get('set', 1),
                 'correct': correct,
-                'user_answer': user_answer,
+                'user_answer': display_user_answer,
                 'correct_answer': q['answer']
             })
     

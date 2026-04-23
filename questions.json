@@ -302,7 +302,7 @@
   {
     "id": 21,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "从严管党治党，首先就要（）。",
     "options": [
       "营造风清气正的外部环境",
@@ -317,7 +317,7 @@
   {
     "id": 22,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "中国共产党坚持（）的和平外交政策，坚持（）道路，坚持（）的开放战略，统筹（）两个大局，积极发展对外关系，努力为我国的改革开放和现代化建设争取有利的国际环境。",
     "options": [
       "亲诚惠容，以我为主，互利共赢，国内国际",
@@ -332,7 +332,7 @@
   {
     "id": 23,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "下列关于构建社会主义和谐社会的说法，不符合的是（）。",
     "options": [
       "共同建设、共同享有的原则",
@@ -347,7 +347,7 @@
   {
     "id": 24,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "党的工作重心由乡村转移到城市的决定是在（）上作出的。",
     "options": [
       "中共七大",
@@ -362,7 +362,7 @@
   {
     "id": 25,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "习近平指出，我们党领导人民进行社会主义建设，有改革开放前和改革开放后两个历史时期，这是两个相互联系又有重大区别的时期，但本质上都是我们党领导人民进行社会主义建设的实践探索。中国特色社会主义是在（）开创的，但也是在新中国已经建立起社会主义基本制度、并进行了20多年建设的基础上开创的。",
     "options": [
       "改革开放历史新时期",
@@ -377,7 +377,7 @@
   {
     "id": 26,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "党的二十大报告指出，要实施公民道德建设工程，弘扬中华传统美德，加强家庭家教家风建设，加强和改进未成年人思想道德建设，推动（），提高人民道德水准和文明素养。",
     "options": [
       "明大德、守公德、严私德",
@@ -392,7 +392,7 @@
   {
     "id": 27,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "党必须加强对工会、共产主义青年团、妇女联合会等群团组织的领导，使它们保持和增强政治性、先进性、（），充分发挥作用。",
     "options": [
       "服务性",
@@ -407,7 +407,7 @@
   {
     "id": 28,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "党的二十届四中全会指出，实现社会主义现代化是一个（）的历史过程。",
     "options": [
       "一蹴而就",
@@ -422,7 +422,7 @@
   {
     "id": 29,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "党的二十届四中全会公报中，下列哪一项不属于“四个全面”战略布局的内容？（） E、全面建设社会主义现代化国家",
     "options": [
       "全面深化改革",
@@ -437,7 +437,7 @@
   {
     "id": 30,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "（）认为：“毛泽东同志在延安为中央党校题了‘实事求是’四个大字，毛泽东思想的精髓就是这四个字。毛泽东同志所以伟大，能把中国革命引导到胜利，归根到底，就是靠这个。”",
     "options": [
       "谢觉哉",
@@ -452,7 +452,7 @@
   {
     "id": 31,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "习近平总书记指出，组织纪律性是党性修养的重要内容。加强组织纪律性必须增强（）。",
     "options": [
       "政治性",
@@ -467,7 +467,7 @@
   {
     "id": 32,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "（）把毛泽东思想确立为党的指导思想并写入党章。",
     "options": [
       "中国共产党第六次全国代表大会",
@@ -482,7 +482,7 @@
   {
     "id": 33,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "党的二十届四中全会提出，要建设取得新的重大进展的是（）。",
     "options": [
       "法治中国",
@@ -497,7 +497,7 @@
   {
     "id": 34,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "下列哪项是“增强国内大循环内生动力和可靠性”的直接举措？",
     "options": [
       "深入推进中国特色大国外交",
@@ -512,7 +512,7 @@
   {
     "id": 35,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "要坚持把（）作为依法治国的长期基础性工作，采取有力措施加强法制宣传教育。",
     "options": [
       "全民守法",
@@ -527,7 +527,7 @@
   {
     "id": 36,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "全会提出，要健全因地制宜发展新质生产力体制机制，推动哪些方面的突破和创新？",
     "options": [
       "仅技术革命性突破",
@@ -542,7 +542,7 @@
   {
     "id": 37,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "二十届四中全会再次强调，必须坚持把解决好（）问题作为全党工作的重中之重。",
     "options": [
       "粮食安全",
@@ -557,7 +557,7 @@
   {
     "id": 38,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "共享理念实质就是坚持（）的发展思想，体现的是逐步实现共同富裕的要求。",
     "options": [
       "成果共享",
@@ -572,7 +572,7 @@
   {
     "id": 39,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "文化建设的战略目标是（）。",
     "options": [
       "满足基本文化需求",
@@ -587,7 +587,7 @@
   {
     "id": 40,
     "set": 1,
-    "type": "multiple_choice",
+    "type": "single_choice",
     "question": "（）是成功的引力。",
     "options": [
       "积极的行动",

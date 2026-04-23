@@ -16,77 +16,11 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
-            -webkit-tap-highlight-color: transparent;
         }
         
         .container {
             max-width: 900px;
             margin: 0 auto;
-        }
-        
-        /* 移动端优化 */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .header p {
-                font-size: 1em;
-            }
-            
-            .menu {
-                padding: 20px;
-                border-radius: 12px;
-            }
-            
-            .menu h2 {
-                font-size: 1.3em;
-            }
-            
-            .set-btn {
-                padding: 10px 20px;
-                font-size: 1em;
-            }
-            
-            .menu-buttons {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-            
-            .menu-btn {
-                padding: 15px;
-                font-size: 1em;
-            }
-            
-            .quiz-container {
-                padding: 20px;
-            }
-            
-            .question {
-                font-size: 1.1em;
-                line-height: 1.8;
-            }
-            
-            .option {
-                padding: 15px;
-                font-size: 1em;
-            }
-            
-            .show-answer-btn {
-                padding: 10px 20px;
-                font-size: 0.95em;
-            }
-            
-            .result-container {
-                padding: 20px;
-            }
-            
-            .score-display {
-                font-size: 3em;
-            }
         }
         
         .header {
@@ -167,18 +101,148 @@
         }
         
         .menu-btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
         
-        .menu-btn.start {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .btn-all { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .btn-single { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+        .btn-multiple { background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%); }
+        .btn-tf { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .btn-fill { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .btn-random { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .btn-browse { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        .browse-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: none;
         }
         
-        .menu-btn.browse {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        .browse-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
-        /* 答题界面 */
+        .browse-title {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .browse-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-select {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .filter-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+        
+        .questions-list {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .browse-question-card {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .browse-question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .browse-question-number {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        .browse-question-badges {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .browse-badge {
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .browse-question-text {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .browse-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .browse-option {
+            padding: 10px 15px;
+            background: white;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+        
+        .browse-option.correct {
+            background: #d4edda;
+            border-left: 3px solid #38ef7d;
+        }
+        
+        .browse-answer-box {
+            background: #fff9e6;
+            border: 2px dashed #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .browse-answer-label {
+            font-weight: bold;
+            color: #f57c00;
+            margin-bottom: 5px;
+        }
+        
+        .browse-answer-text {
+            color: #333;
+            font-size: 1.05em;
+        }
+        
         .quiz-container {
             background: white;
             border-radius: 15px;
@@ -187,47 +251,77 @@
             display: none;
         }
         
-        .question-card {
-            margin-bottom: 30px;
+        .progress {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
         }
         
         .question-number {
-            color: #667eea;
             font-size: 1.2em;
-            margin-bottom: 10px;
-            font-weight: bold;
+            color: #666;
         }
         
+        .question-badges {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .question-type {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: white;
+        }
+        
+        .question-set {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .type-single { background: #11998e; }
+        .type-multiple { background: #eb3349; }
+        .type-tf { background: #f093fb; }
+        .type-fill { background: #4facfe; }
+        
         .question {
-            color: #333;
             font-size: 1.3em;
-            line-height: 1.8;
-            margin-bottom: 25px;
+            color: #333;
+            margin: 25px 0;
+            line-height: 1.6;
         }
         
         .options {
             display: flex;
             flex-direction: column;
             gap: 12px;
+            margin-bottom: 30px;
         }
         
         .option {
-            padding: 18px 20px;
+            padding: 15px 20px;
             border: 2px solid #e0e0e0;
             border-radius: 10px;
-            font-size: 1.1em;
             cursor: pointer;
             transition: all 0.3s;
-            background: white;
+            font-size: 1.05em;
         }
         
         .option:hover {
             border-color: #667eea;
+            background: #f5f5ff;
         }
         
         .option.selected {
             border-color: #667eea;
-            background: #f0f0ff;
+            background: #667eea;
+            color: white;
         }
         
         .option.correct {
@@ -242,59 +336,72 @@
             color: #721c24;
         }
         
-        .show-answer-btn {
-            margin-top: 15px;
-            padding: 12px 25px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .show-answer-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .answer-display {
-            margin-top: 15px;
-            padding: 15px;
-            background: #e8f5e9;
-            border: 1px solid #38ef7d;
-            border-radius: 10px;
-            color: #2e7d32;
-            display: none;
-        }
-        
         .fill-input {
             width: 100%;
             padding: 15px;
             font-size: 1.1em;
             border: 2px solid #e0e0e0;
             border-radius: 10px;
-            margin-top: 15px;
+            margin-bottom: 10px;
         }
         
-        .fill-feedback {
-            margin-top: 10px;
-            padding: 10px;
-            border-radius: 8px;
+        .fill-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .answer-section {
+            background: #fff9e6;
+            border: 2px dashed #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
             display: none;
         }
         
-        /* 按钮区域 */
-        .buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+        .answer-section.show {
+            display: block;
         }
         
-        .btn {
+        .answer-title {
+            font-weight: bold;
+            color: #f57c00;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .answer-content {
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        .show-answer-btn {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            color: #333;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .show-answer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        
+        .nav-btn {
             flex: 1;
-            padding: 15px 25px;
+            padding: 15px;
             border: none;
             border-radius: 10px;
             font-size: 1.1em;
@@ -303,307 +410,650 @@
             font-weight: bold;
         }
         
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .btn-secondary {
+        .btn-prev {
             background: #e0e0e0;
             color: #333;
         }
         
-        .btn:hover {
-            transform: translateY(-2px);
+        .btn-next {
+            background: #667eea;
+            color: white;
         }
         
-        /* 结果界面 */
+        .btn-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-back {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
         .result-container {
             background: white;
             border-radius: 15px;
             padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             display: none;
         }
         
         .score-display {
             font-size: 4em;
             font-weight: bold;
-            color: #667eea;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
         }
         
-        .result-text {
-            font-size: 1.5em;
-            color: #333;
-            margin-bottom: 30px;
+        .result-details {
+            text-align: left;
+            margin-top: 30px;
         }
         
-        /* 浏览题目 */
-        .browse-container {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            display: none;
-        }
-        
-        .browse-filters {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .filter-btn {
-            padding: 10px 20px;
-            border: 2px solid #667eea;
-            border-radius: 8px;
-            background: white;
-            color: #667eea;
-            cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s;
-        }
-        
-        .filter-btn.active {
-            background: #667eea;
-            color: white;
-        }
-        
-        .filter-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .browse-list {
-            max-height: 600px;
-            overflow-y: auto;
-        }
-        
-        .browse-item {
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .browse-question {
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-        
-        .browse-options {
+        .result-item {
+            padding: 15px;
             margin-bottom: 10px;
+            border-radius: 10px;
         }
         
-        .browse-option {
-            color: #666;
-            margin: 5px 0;
+        .result-correct {
+            background: #d4edda;
+            border-left: 4px solid #38ef7d;
         }
         
-        .browse-answer {
-            color: #2e7d32;
-            font-weight: bold;
-            margin-top: 10px;
+        .result-wrong {
+            background: #f8d7da;
+            border-left: 4px solid #f45c43;
         }
         
         .hidden {
             display: none !important;
+        }
+        
+        /* 沉浸式做题的左右布局 */
+        .immersive-container {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .immersive-main {
+            flex: 1;
+        }
+        
+        .immersive-sidebar {
+            width: 220px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .immersive-sidebar h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+        
+        .question-dot {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            transition: all 0.2s;
+        }
+        
+        .question-dot:hover {
+            border-color: #667eea;
+            background: #f0f2ff;
+        }
+        
+        .question-dot.answered {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+        
+        .question-dot.current {
+            border-color: #667eea;
+            background: #f0f2ff;
+            color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* 提交按钮样式 */
+        .btn-submit-immersive {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .btn-submit-immersive:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(235, 51, 73, 0.3);
+        }
+        
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            z-index: 100;
+        }
+        
+        .back-arrow:hover {
+            transform: translateX(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .back-arrow::before {
+            content: '←';
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        @media (max-width: 900px) {
+            .immersive-container {
+                flex-direction: column;
+            }
+            
+            .immersive-sidebar {
+                width: 100%;
+                max-height: 200px;
+            }
+            
+            .question-grid {
+                grid-template-columns: repeat(10, 1fr);
+            }
+            
+            .back-arrow {
+                top: 10px;
+                left: 10px;
+                width: 35px;
+                height: 35px;
+            }
+            
+            .back-arrow::before {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎯 党旗飘飘</h1>
-            <p>在线答题系统</p>
+            <h1>党旗飘飘</h1>
+            <p>入党积极分子发展对象理论测试（共300题）</p>
         </div>
-
-        <!-- 主菜单 -->
-        <div class="menu" id="menu">
-            <h2>选择题目集</h2>
+        
+        <div id="menu" class="menu">
+            <h2>请选择题目集</h2>
             <div class="set-selector">
-                <button class="set-btn active" onclick="selectSet(1)">第一套</button>
-                <button class="set-btn" onclick="selectSet(2)">第二套</button>
-                <button class="set-btn" onclick="selectSet(3)">第三套</button>
-                <button class="set-btn" onclick="selectSet(0)">全部题目</button>
+                <button class="set-btn active" id="set-all" onclick="selectSet('all')">全部题目</button>
+                <button class="set-btn" id="set-1" onclick="selectSet('1')">第一套（100题）</button>
+                <button class="set-btn" id="set-2" onclick="selectSet('2')">第二套（100题）</button>
+                <button class="set-btn" id="set-3" onclick="selectSet('3')">第三套（100题）</button>
             </div>
+            
+            <h2>选择答题模式</h2>
             <div class="menu-buttons">
-                <button class="menu-btn start" onclick="startQuiz()">开始答题</button>
-                <button class="menu-btn browse" onclick="startBrowse()">浏览题目</button>
+                <button class="menu-btn btn-all" onclick="startQuiz('all')">全部题目</button>
+                <button class="menu-btn btn-single" onclick="startQuiz('single_choice')">单选题</button>
+                <button class="menu-btn btn-multiple" onclick="startQuiz('multiple_choice')">多选题</button>
+                <button class="menu-btn btn-tf" onclick="startQuiz('true_false')">判断题</button>
+                <button class="menu-btn btn-fill" onclick="startQuiz('fill_blank')">填空题</button>
+                <button class="menu-btn btn-random" onclick="startQuiz('random')">随机10题</button>
+            </div>
+            
+            <h2 style="margin-top: 30px;">其他功能</h2>
+            <div class="menu-buttons">
+                <button class="menu-btn btn-browse" onclick="startBrowse()">浏览题目和答案</button>
+            </div>
+            
+            <h2 style="margin-top: 30px;">🎯 沉浸式做题</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">不显示答案，不即时反馈，做完100题后统一打分</p>
+            <div class="menu-buttons">
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('1')">第一套100题</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('2')">第二套100题</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('3')">第三套100题</button>
+            </div>
+        </div>
+        
+        <div id="quiz" class="quiz-container">
+            <div class="back-arrow" onclick="backToMenu()"></div>
+            <div class="progress">
+                <span class="question-number" id="q-number">第 1 题 / 共 100 题</span>
+                <div class="question-badges">
+                    <span class="question-set" id="q-set">第一套</span>
+                    <span class="question-type" id="q-type">单选题</span>
+                </div>
+            </div>
+            <div class="question" id="q-text"></div>
+            <div class="options" id="options"></div>
+            
+            <button class="show-answer-btn" id="show-answer-btn" onclick="toggleAnswer()">显示答案</button>
+            
+            <div class="answer-section" id="answer-section">
+                <div class="answer-title">正确答案</div>
+                <div class="answer-content" id="answer-content"></div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="nav-btn btn-prev" id="btn-prev" onclick="prevQuestion()">上一题</button>
+                <button class="nav-btn btn-next" id="btn-next" onclick="nextQuestion()">下一题</button>
+                <button class="nav-btn btn-submit hidden" id="btn-submit" onclick="submitQuiz()">提交答案</button>
+            </div>
+            <div style="margin-top: 20px;">
+                <button class="nav-btn btn-back" onclick="backToMenu()">返回菜单</button>
+            </div>
+        </div>
+        
+        <div id="results" class="result-container">
+            <div class="back-arrow" onclick="backToMenu()"></div>
+            <h2>答题完成！</h2>
+            <div class="score-display" id="score-display">0/100</div>
+            <p style="font-size: 1.2em; color: #666;" id="score-text"></p>
+            <div class="result-details" id="result-details"></div>
+            <div style="margin-top: 30px;">
+                <button class="nav-btn btn-back" onclick="backToMenu()">返回菜单</button>
+                <button class="nav-btn btn-submit" onclick="restartQuiz()">再来一次</button>
+            </div>
+        </div>
+        
+        <div id="browse" class="browse-container">
+            <div class="back-arrow" onclick="backToMenu()"></div>
+            <div class="browse-header">
+                <div class="browse-title">题目浏览</div>
+                <div class="browse-filters">
+                    <select class="filter-select" id="browse-set-filter" onchange="filterBrowseQuestions()">
+                        <option value="all">全部题目集</option>
+                        <option value="1">第一套</option>
+                        <option value="2">第二套</option>
+                        <option value="3">第三套</option>
+                    </select>
+                    <select class="filter-select" id="browse-type-filter" onchange="filterBrowseQuestions()">
+                        <option value="all">全部题型</option>
+                        <option value="single_choice">单选题</option>
+                        <option value="multiple_choice">多选题</option>
+                        <option value="true_false">判断题</option>
+                        <option value="fill_blank">填空题</option>
+                    </select>
+                </div>
+            </div>
+            <div class="questions-list" id="questions-list"></div>
+            <div style="margin-top: 20px;">
+                <button class="nav-btn btn-back" onclick="backToMenu()">返回菜单</button>
             </div>
         </div>
 
-        <!-- 答题界面 -->
-        <div class="quiz-container" id="quiz">
-            <div class="question-card" id="questionCard"></div>
-            <div class="buttons">
-                <button class="btn btn-secondary" onclick="prevQuestion()">上一题</button>
-                <button class="btn btn-primary" onclick="nextQuestion()">下一题</button>
-            </div>
-            <div class="buttons">
-                <button class="btn btn-secondary" onclick="showResult()" style="flex: 1; margin-top: 15px;">查看答案</button>
-                <button class="btn btn-secondary" onclick="backToMenu()">返回菜单</button>
+        <div id="immersive">
+            <div class="back-arrow" onclick="backToMenu()"></div>
+            <div class="immersive-container">
+                <div class="immersive-main">
+                    <div class="quiz-container" style="display: block; margin-bottom: 0;">
+                        <div class="progress">
+                            <span class="question-number" id="im-q-number">第 1 题 / 共 100 题</span>
+                            <div class="question-badges">
+                                <span class="question-set" id="im-q-set">第一套</span>
+                                <span class="question-type" id="im-q-type">单选题</span>
+                            </div>
+                        </div>
+                        <div class="question" id="im-q-text"></div>
+                        <div class="options" id="im-options"></div>
+                        
+                        <div class="nav-buttons">
+                            <button class="nav-btn btn-prev" id="im-btn-prev" onclick="imPrevQuestion()">上一题</button>
+                            <button class="nav-btn btn-next" id="im-btn-next" onclick="imNextQuestion()">下一题</button>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <button class="nav-btn btn-back" onclick="backToMenu()">返回菜单</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="immersive-sidebar">
+                    <h3>题目列表</h3>
+                    <div class="question-grid" id="im-question-grid"></div>
+                    <button class="btn-submit-immersive" onclick="imSubmitQuiz()">提交答案</button>
+                </div>
             </div>
         </div>
 
-        <!-- 结果界面 -->
-        <div class="result-container" id="result">
-            <div class="score-display" id="scoreDisplay">0</div>
-            <div class="result-text" id="resultText"></div>
-            <div class="buttons">
-                <button class="btn btn-primary" onclick="startQuiz()">再来一次</button>
-                <button class="btn btn-secondary" onclick="backToMenu()">返回菜单</button>
-            </div>
-        </div>
-
-        <!-- 浏览题目 -->
-        <div class="browse-container" id="browse">
-            <div class="browse-filters">
-                <button class="filter-btn active" onclick="filterBrowse(0)">全部</button>
-                <button class="filter-btn" onclick="filterBrowse('single_choice')">单选题</button>
-                <button class="filter-btn" onclick="filterBrowse('multiple_choice')">多选题</button>
-                <button class="filter-btn" onclick="filterBrowse('true_false')">判断题</button>
-                <button class="filter-btn" onclick="filterBrowse('fill_blank')">填空题</button>
-            </div>
-            <div class="browse-list" id="browseList"></div>
-            <div class="buttons" style="margin-top: 25px;">
-                <button class="btn btn-secondary" onclick="backToMenu()">返回菜单</button>
+        <div id="im-results" class="result-container">
+            <div class="back-arrow" onclick="backToMenu()"></div>
+            <h2>答题完成！</h2>
+            <div class="score-display" id="im-score-display">0/100</div>
+            <p style="font-size: 1.2em; color: #666;" id="im-score-text"></p>
+            <div class="result-details" id="im-result-details"></div>
+            <div style="margin-top: 30px;">
+                <button class="nav-btn btn-back" onclick="backToMenu()">返回菜单</button>
+                <button class="nav-btn btn-submit" onclick="imRestartQuiz()">再来一次</button>
             </div>
         </div>
     </div>
 
     <script>
-        // 题目数据
-        const allQuestions = [{"id": 1, "set": 1, "type": "single_choice", "question": "在国际事务中，坚持正确义利观，维护我国的独立和主权，反对霸权主义和强权政治，维护世界和平，促进人类进步，推动构建（），推动建设持久和平、共同繁荣的和谐世界。", "options": ["人类互助共赢机制", "人类共同体", "人类命运共同体", "人类知识共享平台"], "answer": "C", "explanation": "", "uid": 1}, {"id": 2, "set": 1, "type": "single_choice", "question": "坚决维护党中央权威、保证全党令行禁止，是党和国家前途命运所系，是全国各族人民根本利益所在，也是加强和规范党内政治生活的（）。", "options": ["重要目的", "重要保障", "重要举措", "以上都不是"], "answer": "A", "explanation": "", "uid": 2}, {"id": 3, "set": 1, "type": "single_choice", "question": "《党内监督条例》规定，（）党和国家机关党员领导干部应当按照规定参加双重组织生活会。", "options": ["县以上", "市以上", "省、直辖市以上", "乡镇以上"], "answer": "A", "explanation": "", "uid": 3}, {"id": 4, "set": 1, "type": "single_choice", "question": "（）是中国特色社会主义最本质特征，是中国特色社会主义制度的最大优势。", "options": ["中国共产党领导", "党的政治建设", "党的思想建设", "改革开放"], "answer": "A", "explanation": "", "uid": 4}, {"id": 5, "set": 1, "type": "single_choice", "question": "习近平总书记指出，改革开放是我们党的一次伟大觉醒，正是这个伟大觉醒孕育了我们党从理论到实践的（）。", "options": ["伟大创造", "伟大理论", "伟大探索", "伟大实践"], "answer": "A", "explanation": "", "uid": 5}, {"id": 6, "set": 1, "type": "single_choice", "question": "二十大党章指出，不断发展我国同周边国家的睦邻友好关系，加强同（）的团结与合作。", "options": ["西方国家", "发达国家", "亚非拉国家", "发展中国家"], "answer": "D", "explanation": "", "uid": 6}, {"id": 7, "set": 1, "type": "single_choice", "question": "（）指出，在社会主义改造基本完成以后，我国所要解决的主要矛盾，是人民日益增长的物质文化需要同落后的社会生产之间的矛盾。", "options": ["党的十一届三中全会", "党的十一届六中全会", "党的十九大", "党的二十大"], "answer": "B", "explanation": "", "uid": 7}, {"id": 8, "set": 1, "type": "single_choice", "question": "二十大党章规定，党必须保证国家的立法、司法、行政、（），经济、文化组织和人民团体积极主动地、独立负责地、协调一致地工作。", "options": ["监察机关", "公安机关", "纪检机关", "检察机关"], "answer": "A", "explanation": "", "uid": 8}, {"id": 9, "set": 1, "type": "single_choice", "question": "邓小平提出，社会主义的本质，是解放生产力，发展生产力，消灭剥削，消除两极分化，最终达到（）。", "options": ["共产社会", "社会主义现代化", "社会主义现代化强国", "共同富裕"], "answer": "D", "explanation": "", "uid": 9}, {"id": 10, "set": 1, "type": "single_choice", "question": "二十大党章规定，要保证党的领导人的活动处于（）的监督之下，同时维护一切代表党和人民利益的领导人的威信。", "options": ["党和人民", "政府", "党组织", "各级党委"], "answer": "A", "explanation": "", "uid": 10}, {"id": 11, "set": 1, "type": "single_choice", "question": "各级领导干部要正确行使（）赋予的权力，（），依法办事，清正廉洁，勤政为民，以身作则，艰苦朴素，密切联系群众，坚持党的群众路线，自觉地接受党和群众的批评和监督。", "options": ["领导　追求卓越", "人民 坚持原则", "国家 敢于担当", "社会 勇挑重担"], "answer": "B", "explanation": "", "uid": 11}, {"id": 12, "set": 1, "type": "single_choice", "question": "二十大党章规定，党内严格禁止用违反（）和国家法律的手段对待党员，严格禁止打击报复和诬告陷害。", "options": ["党章", "党规", "党纪", "党史"], "answer": "A", "explanation": "", "uid": 12}, {"id": 13, "set": 1, "type": "single_choice", "question": "中央八项规定要求，要改进调查研究，到基层调研要深入了解真实情况，总结经验、研究问题、解决困难、指导工作，向群众学习、向实践学习，多同群众座谈，多同干部谈心，多商量讨论，多解剖典型，多（）。", "options": ["听取汇报", "实地察看", "下发文件", "组织会议"], "answer": "B", "explanation": "", "uid": 13}, {"id": 14, "set": 1, "type": "single_choice", "question": "我们党的三大历史任务是推进现代化建设、（）、维护世界和平与促进共同发展。", "options": ["实现社会主义", "实现民族复兴", "完成祖国统一", "实现中国梦"], "answer": "C", "explanation": "", "uid": 14}, {"id": 15, "set": 1, "type": "single_choice", "question": "习近平在党的二十大报告中指出，我们提出并贯彻（），着力推进高质量发展，推动构建新发展格局，实施供给侧结构性改革，制定一系列具有全局性意义的区域重大战略，我国经济实力实现历史性跃升。", "options": ["新发展理念", "绿色发展理念", "创新发展理念", "节约发展理念"], "answer": "A", "explanation": "", "uid": 15}, {"id": 16, "set": 1, "type": "single_choice", "question": "习近平在党的二十大报告中指出，我们持之以恒正风肃纪，以（）纠治“四风”，反对特权思想和特权现象，坚决整治群众身边的不正之风和腐败问题，刹住了一些长期没有刹住的歪风，纠治了一些多年未除的顽瘴痼疾。", "options": ["钉钉子精神", "螺丝钉精神", "老黄牛精神", "搬石头精神"], "answer": "A", "explanation": "", "uid": 16}, {"id": 17, "set": 1, "type": "single_choice", "question": "习近平总书记在庆祝建党95周年大会讲话中要求全党同志要增强政治意识、大局意识、（）、看齐意识，切实做到对党忠诚、为党分忧、为党担责、为党尽责。", "options": ["担当意识", "责任意识", "有为意识", "核心意识"], "answer": "D", "explanation": "", "uid": 17}, {"id": 18, "set": 1, "type": "single_choice", "question": "习近平在党的二十大报告中指出，我们提出新时代解决台湾问题的总体方略，促进两岸交流合作，坚决反对“台独”分裂行径，坚决反对外部势力干涉，牢牢把握两岸关系（）和主动权。", "options": ["主导权", "领导权", "决定权", "组织权"], "answer": "A", "explanation": "", "uid": 18}, {"id": 19, "set": 1, "type": "single_choice", "question": "（）是党的二十大的一项重要任务。", "options": ["党的二十大代表选举工作", "党的二十大相关工作网络征求意见", "起草好党的二十大报告", "对党章进行修改"], "answer": "D", "explanation": "", "uid": 19}, {"id": 20, "set": 1, "type": "single_choice", "question": "2013年1月22日，习近平总书记在十八届中央纪委二次全会上的重要讲话中指出：从严治党，惩治这一手决不能放松。要坚持“老虎”“苍蝇”一起打，既坚决查处领导干部违纪违法案件，又切实解决（）。", "options": ["党员干部理想信念不坚定的问题", "侵占群众利益问题", "发生在群众身边的不正之风和腐败问题", "人品修养问题"], "answer": "C", "explanation": "", "uid": 20}, {"id": 21, "set": 1, "type": "multiple_choice", "question": "从严管党治党，首先就要（）。", "options": ["营造风清气正的外部环境", "自觉提升品德修养", "坚定党员干部的理想信念", "强化党员干部的法治思维"], "answer": "C", "explanation": "", "uid": 21}, {"id": 22, "set": 1, "type": "multiple_choice", "question": "中国共产党坚持（）的和平外交政策，坚持（）道路，坚持（）的开放战略，统筹（）两个大局，积极发展对外关系，努力为我国的改革开放和现代化建设争取有利的国际环境。", "options": ["亲诚惠容，以我为主，互利共赢，国内国际", "共建共享，和平发展，友好往来，内地外地", "独立自主，和平发展，互利共赢，国内国际", "亲诚惠容，和平发展，互利共赢，内地外地"], "answer": "C", "explanation": "", "uid": 22}, {"id": 23, "set": 1, "type": "multiple_choice", "question": "下列关于构建社会主义和谐社会的说法，不符合的是（）。", "options": ["共同建设、共同享有的原则", "建设资源节约型社会", "以保障和改善民生为重点", "加强和创新社会治理"], "answer": "B", "explanation": "", "uid": 23}, {"id": 24, "set": 1, "type": "multiple_choice", "question": "党的工作重心由乡村转移到城市的决定是在（）上作出的。", "options": ["中共七大", "中共七届二中全会", "中共七届三中全会", "中共七届四中全会"], "answer": "B", "explanation": "", "uid": 24}, {"id": 25, "set": 1, "type": "multiple_choice", "question": "习近平指出，我们党领导人民进行社会主义建设，有改革开放前和改革开放后两个历史时期，这是两个相互联系又有重大区别的时期，但本质上都是我们党领导人民进行社会主义建设的实践探索。中国特色社会主义是在（）开创的，但也是在新中国已经建立起社会主义基本制度、并进行了20多年建设的基础上开创的。", "options": ["改革开放历史新时期", "改革开放前", "改革开放后", "土地改革时期"], "answer": "A", "explanation": "", "uid": 25}, {"id": 26, "set": 1, "type": "multiple_choice", "question": "党的二十大报告指出，要实施公民道德建设工程，弘扬中华传统美德，加强家庭家教家风建设，加强和改进未成年人思想道德建设，推动（），提高人民道德水准和文明素养。", "options": ["明大德、守公德、严私德", "弘大德，倡公德，守私德", "明大德、守公德、倡私德", "守大德、护公德、严私德"], "answer": "A", "explanation": "", "uid": 26}, {"id": 27, "set": 1, "type": "multiple_choice", "question": "党必须加强对工会、共产主义青年团、妇女联合会等群团组织的领导，使它们保持和增强政治性、先进性、（），充分发挥作用。", "options": ["服务性", "组织性", "纯洁性", "群众性"], "answer": "D", "explanation": "", "uid": 27}, {"id": 28, "set": 1, "type": "multiple_choice", "question": "党的二十届四中全会指出，实现社会主义现代化是一个（）的历史过程。", "options": ["一蹴而就", "阶梯式递进、不断发展进步", "充满曲折", "高速飞跃"], "answer": "B", "explanation": "", "uid": 28}, {"id": 29, "set": 1, "type": "multiple_choice", "question": "党的二十届四中全会公报中，下列哪一项不属于“四个全面”战略布局的内容？（） E、全面建设社会主义现代化国家", "options": ["全面深化改革", "全面依法治国", "全面从严治党", "全面建设小康社会"], "answer": "D", "explanation": "", "uid": 29}, {"id": 30, "set": 1, "type": "multiple_choice", "question": "（）认为：“毛泽东同志在延安为中央党校题了‘实事求是’四个大字，毛泽东思想的精髓就是这四个字。毛泽东同志所以伟大，能把中国革命引导到胜利，归根到底，就是靠这个。”", "options": ["谢觉哉", "黄炎培", "周恩来", "邓小平"], "answer": "D", "explanation": "", "uid": 30}, {"id": 31, "set": 1, "type": "multiple_choice", "question": "习近平总书记指出，组织纪律性是党性修养的重要内容。加强组织纪律性必须增强（）。", "options": ["政治性", "规范性", "党性", "自觉性"], "answer": "C", "explanation": "", "uid": 31}, {"id": 32, "set": 1, "type": "multiple_choice", "question": "（）把毛泽东思想确立为党的指导思想并写入党章。", "options": ["中国共产党第六次全国代表大会", "中国共产党第七次全国代表大会", "中国共产党第八次全国代表大会", "中国共产党第九次全国代表大会"], "answer": "B", "explanation": "", "uid": 32}, {"id": 33, "set": 1, "type": "multiple_choice", "question": "党的二十届四中全会提出，要建设取得新的重大进展的是（）。", "options": ["法治中国", "美丽中国", "健康中国", "数字中国"], "answer": "B", "explanation": "", "uid": 33}, {"id": 34, "set": 1, "type": "multiple_choice", "question": "下列哪项是“增强国内大循环内生动力和可靠性”的直接举措？", "options": ["深入推进中国特色大国外交", "大力提振消费，扩大有效投资", "加强国防和军队现代化建设", "做好港澳工作和对台工作"], "answer": "B", "explanation": "", "uid": 34}, {"id": 35, "set": 1, "type": "multiple_choice", "question": "要坚持把（）作为依法治国的长期基础性工作，采取有力措施加强法制宣传教育。", "options": ["全民守法", "全民普法", "全民普法和守法", "全民法治观念"], "answer": "C", "explanation": "", "uid": 35}, {"id": 36, "set": 1, "type": "multiple_choice", "question": "全会提出，要健全因地制宜发展新质生产力体制机制，推动哪些方面的突破和创新？", "options": ["仅技术革命性突破", "仅生产要素创新性配置", "仅产业深度转型升级", "技术革命性突破、生产要素创新性配置、产业深度转型升级"], "answer": "D", "explanation": "", "uid": 36}, {"id": 37, "set": 1, "type": "multiple_choice", "question": "二十届四中全会再次强调，必须坚持把解决好（）问题作为全党工作的重中之重。", "options": ["粮食安全", "“三农”", "城乡差距", "农村环境"], "answer": "B", "explanation": "", "uid": 37}, {"id": 38, "set": 1, "type": "multiple_choice", "question": "共享理念实质就是坚持（）的发展思想，体现的是逐步实现共同富裕的要求。", "options": ["成果共享", "以人民为中心", "为人民服务", "公平公正"], "answer": "B", "explanation": "", "uid": 38}, {"id": 39, "set": 1, "type": "multiple_choice", "question": "文化建设的战略目标是（）。", "options": ["满足基本文化需求", "扎实推进文化强国建设", "实现文化产品自给自足", "推广单一文化模式"], "answer": "B", "explanation": "", "uid": 39}, {"id": 40, "set": 1, "type": "multiple_choice", "question": "（）是成功的引力。", "options": ["积极的行动", "先进的思想", "广泛的民意", "强有力的组织"], "answer": "B", "explanation": "", "uid": 40}, {"id": 41, "set": 1, "type": "multiple_choice", "question": "全会提出要完善推进高质量共建“一带一路”机制，包括哪些方面？", "options": ["继续实施“一带一路”科技创新行动计划", "加强绿色发展、数字经济、人工智能等领域的多边合作平台建设", "完善陆海天网一体化布局", "统筹推进重大标志性工程和“小而美”民生项目"], "answer": "ABCD", "explanation": "", "uid": 41}, {"id": 42, "set": 1, "type": "multiple_choice", "question": "推进城乡发展一体化，是（）发展到一定阶段的必然要求，是国家现代化的重要标志。", "options": ["工业化", "城镇化", "农业现代化", "服务业现代化"], "answer": "ABC", "explanation": "", "uid": 42}, {"id": 43, "set": 1, "type": "multiple_choice", "question": "党的二十届三中全会指出，建立政府投资支持（）重大项目建设长效机制。", "options": ["基础性", "公益性", "长远性", "长期性"], "answer": "ABC", "explanation": "", "uid": 43}, {"id": 44, "set": 1, "type": "multiple_choice", "question": "《中国共产党纪律处分条例》落实“三个区分开来”要求，完善纪律处分运用规则，区分（）等不同情形，给予相应处理，切实把从严管理监督和鼓励担当作为统一起来。", "options": ["一般违纪", "轻微违纪", "刑事犯罪", "不追究纪律责任"], "answer": "ABD", "explanation": "", "uid": 44}, {"id": 45, "set": 1, "type": "multiple_choice", "question": "为促进区域协调发展，党的二十届四中全会提出要发挥其叠加效应的战略包括（）。", "options": ["区域协调发展战略", "区域重大战略", "主体功能区战略", "新型城镇化战略"], "answer": "ABCD", "explanation": "", "uid": 45}, {"id": 46, "set": 1, "type": "multiple_choice", "question": "在党史学习教育中，要“重点学习党史，同时学习（）”", "options": ["新中国史", "改革开放史", "社会主义发展史", "经济史"], "answer": "ABC", "explanation": "", "uid": 46}, {"id": 47, "set": 1, "type": "multiple_choice", "question": "党的二十届四中全会指出，牢固树立和践行绿水青山就是金山银山的理念，以碳达峰碳中和为牵引，协同推进（），筑牢生态安全屏障，增强绿色发展动能。", "options": ["降碳", "减污", "扩绿", "增长"], "answer": "ABCD", "explanation": "", "uid": 47}, {"id": 48, "set": 1, "type": "multiple_choice", "question": "习近平指出，我们说的道路自信、理论自信、制度自信，来源于（）、来源于（）、来源于（）。", "options": ["实践", "人民", "真理", "认识"], "answer": "ABC", "explanation": "", "uid": 48}, {"id": 49, "set": 1, "type": "multiple_choice", "question": "《中共中央关于进一步全面深化改革、推进中国式现代化的决定》提出，统一预算分配权，提高预算管理（），完善预算公开和监督制度。", "options": ["统一性", "规范性", "有效性", "可操作性"], "answer": "AB", "explanation": "", "uid": 49}, {"id": 50, "set": 1, "type": "multiple_choice", "question": "《党史学习教育工作条例》规定，教育引导党员深刻领悟中国共产党为什么能、马克思主义为什么行、中国特色社会主义为什么好等道理，从历史中（），坚定对党的领导的自信，坚定贯彻落实党的创新理论，坚定不移走中国特色社会主义道路。", "options": ["找问题", "寻经验", "求规律", "启智慧"], "answer": "BCD", "explanation": "", "uid": 50}, {"id": 51, "set": 1, "type": "multiple_choice", "question": "《党史学习教育工作条例》规定，按照（）的原则，建设一支结构合理、专兼结合的高素质党史学习教育工作队伍。", "options": ["政治强", "纪律严", "业务精", "作风正"], "answer": "ACD", "explanation": "", "uid": 51}, {"id": 52, "set": 1, "type": "multiple_choice", "question": "二十大党章指出：十八大以来，以习近平同志为主要代表的中国共产党人，坚持（）等重大时代课题，创立了习近平新时代中国特色社会主义思想。", "options": ["坚持把马克思主义基本原理同中国具体实际相结合", "同中华优秀传统文化相结合", "科学回答了新时代坚持和发展什么样的中国特色社会主义", "怎样坚持和发展中国特色社会主义"], "answer": "ABCD", "explanation": "", "uid": 52}, {"id": 53, "set": 1, "type": "multiple_choice", "question": "下列属于中国共产党在艰辛探索中形成的优良传统的是（）。", "options": ["全心全意为人民服务", "艰苦奋斗", "调查研究", "思想政治工作"], "answer": "ABCD", "explanation": "", "uid": 53}, {"id": 54, "set": 1, "type": "multiple_choice", "question": "坚持和发展中国特色社会主义，总任务是（）和（）。", "options": ["改革开放", "实现社会主义现代化", "中华民族伟大复兴", "实现共产主义"], "answer": "BC", "explanation": "", "uid": 54}, {"id": 55, "set": 1, "type": "multiple_choice", "question": "邓小平指出，党章的总纲是我们党的最基本的（）。", "options": ["政治纲领", "组织纲领", "法律制度", "行动纲领"], "answer": "AB", "explanation": "", "uid": 55}, {"id": 56, "set": 1, "type": "multiple_choice", "question": "完善权力运行制约和监督机制，形成（）的制度安排。", "options": ["适当自由裁量", "有权必有责", "用权必担责", "滥权必追责"], "answer": "BCD", "explanation": "", "uid": 56}, {"id": 57, "set": 1, "type": "multiple_choice", "question": "党章提出要建设“三型”政党，即建设（）的马克思主义执政党。", "options": ["学习型", "服务型", "创新型", "战斗型"], "answer": "ABC", "explanation": "", "uid": 57}, {"id": 58, "set": 1, "type": "multiple_choice", "question": "建立健全党的领导干部插手干预重大事项记录制度，发现利用职务便利（）等问题，应当及时向上级党组织报告。", "options": ["违规干预干部选拔任用", "违规干预工程建设", "违规干预执纪执法", "违规干预司法活动"], "answer": "ABCD", "explanation": "", "uid": 58}, {"id": 59, "set": 1, "type": "multiple_choice", "question": "为了保持党和人民群众的密切联系，防治党的领导干部和党员由人民的公仆变成骑在人民头上的老爷，必须采取（）的方法，加强党组织和群众对党的领导干部和党员的监督。", "options": ["自下而上和自上而下相结合", "党内和党外相结合", "由内而外和由外而内相结合", "理论学习和具体实践相结合"], "answer": "AB", "explanation": "", "uid": 59}, {"id": 60, "set": 1, "type": "multiple_choice", "question": "党的各级组织、全体党员特别是高级干部都要（），做到党中央提倡的坚决响应、党中央决定的坚决执行、党中央禁止的坚决不做。", "options": ["向党中央看齐", "向党的理论和路线方针政策看齐", "向党中央决策部署看齐", "向党的各项制度看齐"], "answer": "ABC", "explanation": "", "uid": 60}, {"id": 61, "set": 1, "type": "true_false", "question": "在梁家河，青年习近平为提高个人生活自理能力打下了坚实的基础。", "options": [], "answer": true, "explanation": "", "uid": 61}, {"id": 62, "set": 1, "type": "true_false", "question": "党的二十届四中全会指出，要坚决维护党中央权威和集中统一领导，提高党把方向、谋大局、定政策、促改革能力，把党的领导贯穿经济社会发展各方面全过程，为我国社会主义现代化建设提供根本保证。", "options": [], "answer": true, "explanation": "", "uid": 62}, {"id": 63, "set": 1, "type": "true_false", "question": "党内禁止任何形式的个人崇拜。", "options": [], "answer": true, "explanation": "", "uid": 63}, {"id": 64, "set": 1, "type": "true_false", "question": "党的领导机关和领导干部，特别是主要领导干部是党内监督的重点对象。", "options": [], "answer": true, "explanation": "", "uid": 64}, {"id": 65, "set": 1, "type": "true_false", "question": "述责述廉报告应当载入廉洁档案，组织部门不公开。", "options": [], "answer": true, "explanation": "", "uid": 65}, {"id": 66, "set": 1, "type": "true_false", "question": "毛泽东思想实现了马克思主义中国化的第一次飞跃。", "options": [], "answer": true, "explanation": "", "uid": 66}, {"id": 67, "set": 1, "type": "true_false", "question": "纪律是指社会组织为了保证其存在和发展并实现其目标，要求其全体成员必须遵守的行为规则。", "options": [], "answer": true, "explanation": "", "uid": 67}, {"id": 68, "set": 1, "type": "true_false", "question": "习近平总书记指出，对那些在为民务实清廉方面有严重问题的党员、干部，要在教育的基础上视情节依纪依法处理。", "options": [], "answer": true, "explanation": "", "uid": 68}, {"id": 69, "set": 1, "type": "true_false", "question": "团的县级和县级以下各级委员会书记，企业事业单位的团委员会书记，是党员的，可以列席上级党的委员会和常务委员会的会议。", "options": [], "answer": true, "explanation": "", "uid": 69}, {"id": 70, "set": 1, "type": "true_false", "question": "党的二十大报告指出：实践告诉我们，中国共产党为什么能，中国特色社会主义为什么好，归根到底是马克思主义行，是中国化时代化的马克思主义行。", "options": [], "answer": true, "explanation": "", "uid": 70}, {"id": 71, "set": 1, "type": "true_false", "question": "发展是我们党执政兴国的第一要务，必须坚持以人民为中心的发展思想，坚持创新、均衡、绿色、开放、共享的发展理念。", "options": [], "answer": true, "explanation": "", "uid": 71}, {"id": 72, "set": 1, "type": "true_false", "question": "马克思曾说：“批判的武器当然不能代替武器的批判，物质力量只能用物质力量来摧毁；但是，理论一经掌握群众，也会变成物质力量。”", "options": [], "answer": true, "explanation": "", "uid": 72}, {"id": 73, "set": 1, "type": "true_false", "question": "全党学习贯彻党章的水平，决定着党员队伍党性修养的水平，决定着各级党组织凝聚力和战斗力的水平，决定着全面从严治党的水平。", "options": [], "answer": true, "explanation": "", "uid": 73}, {"id": 74, "set": 1, "type": "true_false", "question": "党历来坚持独立自主开拓前进道路，坚持把国家和民族发展放在自己力量的基点上，坚持中国的事情必须由中国人民自己作主张、自己来处理。", "options": [], "answer": true, "explanation": "", "uid": 74}, {"id": 75, "set": 1, "type": "true_false", "question": "超标准接待只要不花公款就不违反中央八项规定精神。", "options": [], "answer": true, "explanation": "", "uid": 75}, {"id": 76, "set": 1, "type": "true_false", "question": "习近平总书记指出，空谈误国、实干兴邦，一分部署、九分落实。不注重抓落实，不认真抓好落实，再好的规划和部署都会沦为空中楼阁。", "options": [], "answer": true, "explanation": "", "uid": 76}, {"id": 77, "set": 1, "type": "true_false", "question": "学习习近平新时代中国特色社会主义思想的世界观和方法论，要做到知其言更知其义、知其然更知其所以然。", "options": [], "answer": true, "explanation": "", "uid": 77}, {"id": 78, "set": 1, "type": "true_false", "question": "生态文明观的核心是从“人统治自然”过渡到“人与自然协调发展”。", "options": [], "answer": true, "explanation": "", "uid": 78}, {"id": 79, "set": 1, "type": "true_false", "question": "政党是讲政治的组织，忠诚是任何政党对其党员的政治要求。", "options": [], "answer": true, "explanation": "", "uid": 79}, {"id": 80, "set": 1, "type": "true_false", "question": "党章规定，共产党员必须全心全意为人民服务。", "options": [], "answer": true, "explanation": "", "uid": 80}, {"id": 81, "set": 1, "type": "fill_blank", "question": "做合格共产党员，就要把____和政治规矩摆在首位，要时刻、自觉、坚决向党中央看齐。", "options": [], "answer": "政治纪律", "explanation": "", "uid": 81}, {"id": 82, "set": 1, "type": "fill_blank", "question": "《共产党宣言》是科学社会主义第一个纲领性的文献，它的发表标志着____的诞生。", "options": [], "answer": "马克思主义", "explanation": "", "uid": 82}, {"id": 83, "set": 1, "type": "fill_blank", "question": "党的二十届四中全会指出，要坚定不移走中国特色社会主义政治发展道路，坚持党的领导、人民当家作主、依法治国有机统一，发展全过程人民民主，完善____体系。", "options": [], "answer": "中国特色社会主义法治", "explanation": "", "uid": 83}, {"id": 84, "set": 1, "type": "fill_blank", "question": "人民军队建设的最根本原则是坚持党对军队的____领导，即党指挥枪的原则。", "options": [], "answer": "绝对", "explanation": "", "uid": 84}, {"id": 85, "set": 1, "type": "fill_blank", "question": "新形势下加强和规范党内政治生活，重点是各级领导机关和领导干部，关键是____特别是中央委员会、中央政治局、中央政治局常务委员会。", "options": [], "answer": "高级干部", "explanation": "", "uid": 85}, {"id": 86, "set": 1, "type": "fill_blank", "question": "新形势下加强和规范党内政治生活，必须以党章为根本遵循，坚持党的____、思想路线、组织路线、群众路线。", "options": [], "answer": "政治路线", "explanation": "", "uid": 86}, {"id": 87, "set": 1, "type": "fill_blank", "question": "开展党史学习教育，应当坚持____，充分利用当地条件就地组织开展相关活动，严禁以学习教育为名变相公款旅游。", "options": [], "answer": "勤俭节约", "explanation": "", "uid": 87}, {"id": 88, "set": 1, "type": "fill_blank", "question": "考察识别干部特别是高级干部必须首先看是否坚定不移____。", "options": [], "answer": "贯彻党的基本路线", "explanation": "", "uid": 88}, {"id": 89, "set": 1, "type": "fill_blank", "question": "组织党员认真学习马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想，推进“两学一做”学习教育、____常态化制度化，学习党的路线、方针、政策和决议，学习党的基本知识，学习科学、文化、法律和业务知识。", "options": [], "answer": "党史学习教育", "explanation": "", "uid": 89}, {"id": 90, "set": 1, "type": "fill_blank", "question": "坚持和完善领导干部个人有关事项报告制度，领导干部应当按规定如实报告____，及时报告个人及家庭重大情况。", "options": [], "answer": "个人有关事项", "explanation": "", "uid": 90}, {"id": 91, "set": 1, "type": "fill_blank", "question": "坚持党的领导、人民当家作主、依法治国____，走中国特色社会主义政治发展道路，扩大社会主义民主，建设中国特色社会主义法治体系，建设社会主义法治国家，巩固人民民主专政，建设社会主义政治文明。", "options": [], "answer": "有机统一", "explanation": "", "uid": 91}, {"id": 92, "set": 1, "type": "fill_blank", "question": "在国际事务中，坚持正确义利观，维护我国的独立和主权，反对霸权主义和强权政治，维护世界和平，促进人类进步，推动构建____，推动建设持久和平、共同繁荣的和谐世界。", "options": [], "answer": "人类命运共同体", "explanation": "", "uid": 92}, {"id": 93, "set": 1, "type": "fill_blank", "question": "党在社会主义初级阶段的基本路线是党和国家的____、人民的幸福线，也是党内政治生活正常开展的根本保证。", "options": [], "answer": "生命线", "explanation": "", "uid": 93}, {"id": 94, "set": 1, "type": "fill_blank", "question": "党的二十大报告指出：为民造福是立党为公、执政为民的____要求。", "options": [], "answer": "本质", "explanation": "", "uid": 94}, {"id": 95, "set": 1, "type": "fill_blank", "question": "____、党同人民群众联系问题是关系党生死存亡的问题。", "options": [], "answer": "党风问题", "explanation": "", "uid": 95}, {"id": 96, "set": 1, "type": "fill_blank", "question": "党内监督必须把____，运用监督执纪“四种形态”，经常开展批评和自我批评、约谈函询，让“红红脸、出出汗”成为常态。", "options": [], "answer": "纪律挺在前面", "explanation": "", "uid": 96}, {"id": 97, "set": 1, "type": "fill_blank", "question": "新形势下，党面临的____考验、改革开放考验、市场经济考验、外部环境考验是长期的、复杂的、严峻的。", "options": [], "answer": "执政", "explanation": "", "uid": 97}, {"id": 98, "set": 1, "type": "fill_blank", "question": "必须把坚持____的根本宗旨、保持党同人民群众的血肉联系作为加强和规范党内政治生活的根本要求。", "options": [], "answer": "全心全意为人民服务", "explanation": "", "uid": 98}, {"id": 99, "set": 1, "type": "fill_blank", "question": "中国共产党自成立以来，始终把为____、为中华民族谋复兴作为自己的初心使命，历经百年奋斗，从根本上改变了中国人民的前途命运，开辟了实现中华民族伟大复兴的正确道路，展示了马克思主义的强大生命力，深刻影响了世界历史进程，锻造了走在时代前列的中国共产党。", "options": [], "answer": "中国人民谋幸福", "explanation": "", "uid": 99}, {"id": 100, "set": 1, "type": "fill_blank", "question": "建设____，坚决反对腐败，是加强和规范党内政治生活的重要任务。", "options": [], "answer": "廉洁政治", "explanation": "", "uid": 100}, {"id": 1, "set": 2, "type": "single_choice", "question": "教育公平是社会公平的重要基础，要不断促进教育发展成果更多更公平惠及（），以教育公平促进社会公平正义。", "options": ["全体人民", "城乡居民", "更广泛的群体", "农村和贫困人口"], "answer": "A", "explanation": "", "uid": 101}, {"id": 2, "set": 2, "type": "single_choice", "question": "二十届四中全会提出，加大保障和改善民生力度，必须坚持（）的原则。", "options": ["全力以赴、满足一切需求", "尽力而为、量力而行", "高速推进、全面覆盖", "政府主导、市场退出"], "answer": "B", "explanation": "", "uid": 102}, {"id": 3, "set": 2, "type": "single_choice", "question": "保障和改善民生的最终目标是（）。", "options": ["解决绝对贫困问题", "提高社会保障水平", "扎实推进全体人民共同富裕", "扩大公共服务范围"], "answer": "C", "explanation": "", "uid": 103}, {"id": 4, "set": 2, "type": "single_choice", "question": "进行派性活动，必然会阻碍党的路线、方针、政策的贯彻执行，破坏安定团结的政治局面，如果不加以坚决制止而任其发展，就会导致党的（）。", "options": ["分裂", "灭亡", "间隙", "松散"], "answer": "A", "explanation": "", "uid": 104}, {"id": 5, "set": 2, "type": "single_choice", "question": "《关于建国以来党的若干历史问题的决议》是（）在党的十一届六中全会上通过的重要文件。", "options": ["1987年", "1989年", "1981年", "1984年"], "answer": "C", "explanation": "", "uid": 105}, {"id": 6, "set": 2, "type": "single_choice", "question": "领导干部特别是高级干部必须带头践行（），继承和发扬党的优良传统和作风，弘扬中华民族传统美德，讲修养、讲道德、讲诚信、讲廉耻，养成共产党人的高风亮节，自觉远离低级趣味。", "options": ["“三严三实”", "社会主义核心价值观", "科学发展观", "“两学一做”"], "answer": "B", "explanation": "", "uid": 106}, {"id": 7, "set": 2, "type": "single_choice", "question": "人民军队之所以不断发展壮大，关键在于始终坚持先进（）的指导。", "options": ["军事理论", "政治思想", "强军目标", "军队文化"], "answer": "A", "explanation": "", "uid": 107}, {"id": 8, "set": 2, "type": "single_choice", "question": "党领导人民解放思想、锐意进取，创造了（）的伟大成就。", "options": ["新时代中国特色社会主义", "改革开放和社会主义现代化建设", "社会主义革命和建设", "新民主主义革命"], "answer": "B", "explanation": "", "uid": 108}, {"id": 9, "set": 2, "type": "single_choice", "question": "在开展批评与自我批评的时候，既要坚持原则，又要（）。", "options": ["独善其身", "与人为善", "机动灵活", "互相谅解"], "answer": "B", "explanation": "", "uid": 109}, {"id": 10, "set": 2, "type": "single_choice", "question": "党的二十届四中全会提出，大力繁荣文化事业。营造良好文化生态，提升（），推动新闻出版、广播影视、文学艺术等领域精品创作。", "options": ["社会文明程度", "文化原创能力", "科技创新能力", "服务保障能力"], "answer": "B", "explanation": "", "uid": 110}, {"id": 11, "set": 2, "type": "single_choice", "question": "纠正形式主义、官僚主义，（）要负总责。", "options": ["一把手", "省部级领导干部", "市县级领导干部", "各级领导干部"], "answer": "A", "explanation": "", "uid": 111}, {"id": 12, "set": 2, "type": "single_choice", "question": "（）是历史的创造者，是决定党和国家前途命运的根本力量。", "options": ["群众", "军队", "英雄", "人民"], "answer": "D", "explanation": "", "uid": 112}, {"id": 13, "set": 2, "type": "single_choice", "question": "二十大报告指出：（），在党史、新中国史、改革开放史、社会主义发展史、中华民族发展史上具有里程碑意义。", "options": ["新时代十年的伟大变革", "新时代二十年的伟大变革", "新时代三十年的伟大变革", "新时代四十年的伟大变革"], "answer": "A", "explanation": "", "uid": 113}, {"id": 14, "set": 2, "type": "single_choice", "question": "派驻纪检组应当带着实际情况和具体问题，定期向派出机关汇报工作，至少（）会同被监督单位党组织专题研究1次党风廉政建设和反腐败工作。", "options": ["每半年", "每年", "每届", "每两年"], "answer": "A", "explanation": "", "uid": 114}, {"id": 15, "set": 2, "type": "single_choice", "question": "二十大党章规定，中国共产党党员必须（），不惜牺牲个人的一切，为实现共产主义奋斗终身。", "options": ["忠诚于党和人民", "一心一意为人民服务", "全心全意为人民服务", "为人民而奋斗"], "answer": "C", "explanation": "", "uid": 115}, {"id": 16, "set": 2, "type": "single_choice", "question": "在我们党内，每个组织和党员（）。", "options": ["主要是监督主体", "主要是监督对象", "既是监督主体，又是监督对象", "互相监督"], "answer": "C", "explanation": "", "uid": 116}, {"id": 17, "set": 2, "type": "single_choice", "question": "坚持正确（）导向，是严肃党内政治生活的组织保证。", "options": ["选人用人", "管党治党", "政治立场", "理论立场"], "answer": "A", "explanation": "", "uid": 117}, {"id": 18, "set": 2, "type": "single_choice", "question": "党章规定，党员如果没有正当理由，连续（）个月不参加党的组织生活，或不交纳党费，或不做党所分配的工作，就被认为是自行脱党。", "options": ["二", "六", "四", "八"], "answer": "B", "explanation": "", "uid": 118}, {"id": 19, "set": 2, "type": "single_choice", "question": "坚持党的领导，首先是坚持（）。", "options": ["集中统一领导", "党中央的集中统一领导", "党的政治领导", "党的组织领导"], "answer": "B", "explanation": "", "uid": 119}, {"id": 20, "set": 2, "type": "single_choice", "question": "二十大党章规定，党组织讨论决定问题，如对重要问题发生争论，双方人数接近，除了在紧急情况下必须按多数意见执行外，应当（），进一步调查研究，交换意见，下次再表决。", "options": ["暂缓作出决定", "不予考虑", "认真考虑", "给与批评"], "answer": "A", "explanation": "", "uid": 120}, {"id": 21, "set": 2, "type": "multiple_choice", "question": "跳出治乱兴衰历史周期率的第二个答案是（）。", "options": ["自我净化", "自我完善", "自我革命", "自我革新"], "answer": "C", "explanation": "", "uid": 121}, {"id": 22, "set": 2, "type": "multiple_choice", "question": "二十大党章规定，党的省、自治区、直辖市、设区的市和自治州的委员会的委员和候补委员必须有（）年以上的党龄。", "options": ["一", "二", "三", "五"], "answer": "D", "explanation": "", "uid": 122}, {"id": 23, "set": 2, "type": "multiple_choice", "question": "遵守政治纪律和政治规矩，必须管好亲属和身边工作人员，不得默许他们利用特殊身份谋取（）利益。", "options": ["非法", "合法", "正当", "违法"], "answer": "A", "explanation": "", "uid": 123}, {"id": 24, "set": 2, "type": "multiple_choice", "question": "党的各级领导干部必须具有（），坚决执行党的基本路线和各项方针、政策，立志改革开放，献身现代化事业，在社会主义建设中艰苦创业，树立正确政绩观，做出经得起实践、人民、历史检验的实绩。", "options": ["共产主义远大理想和中国特色社会主义坚定信念", "中国特色社会主义共同理想和共产主义伟大信念", "共产主义远大理想", "中国特色社会主义共同理想"], "answer": "A", "explanation": "", "uid": 124}, {"id": 25, "set": 2, "type": "multiple_choice", "question": "落实中央八项规定精神，要强化（），严肃查处违规违纪行为。", "options": ["监督执纪问责", "宣传教育", "制度建设", "干部管理"], "answer": "A", "explanation": "", "uid": 125}, {"id": 26, "set": 2, "type": "multiple_choice", "question": "凡属重大问题，党的各级委员会都要按照集体领导、民主集中、（）、会议决定的原则，由党的委员会集体讨论，作出决定；委员会成员要根据集体的决定和分工，切实履行自己的职责。", "options": ["个别酝酿", "个别商谈", "私下酝酿", "共同协商"], "answer": "A", "explanation": "", "uid": 126}, {"id": 27, "set": 2, "type": "multiple_choice", "question": "走中国特色社会主义政治发展道路，扩大社会主义民主，建设中国特色社会主义法治体系，建设社会主义法治国家，巩固人民民主专政，建设社会主义（）。", "options": ["政治文明", "经济文明", "精神文明", "制度文明"], "answer": "A", "explanation": "", "uid": 127}, {"id": 28, "set": 2, "type": "multiple_choice", "question": "中国共产党坚持对人民解放军和其他人民武装力量的（）。", "options": ["绝对领导", "思想引领", "政治指导", "全面领导"], "answer": "A", "explanation": "", "uid": 128}, {"id": 29, "set": 2, "type": "multiple_choice", "question": "（）对“十四五”时期我国经济社会发展作出系统谋划和战略部署，清晰展望了2035年基本实现社会主义现代化的远景目标。", "options": ["党的十九届四中全会", "党的十九届五中全会", "党的十九届六中全会", "党的十九大"], "answer": "B", "explanation": "", "uid": 129}, {"id": 30, "set": 2, "type": "multiple_choice", "question": "习近平在党史学习教育动员大会上指出，要教育引导全党大力发扬红色传统、传承红色基因，赓续共产党人精神血脉，始终保持革命者的大无畏（），鼓起迈进新征程、奋进新时代的精气神。", "options": ["奉献精神", "奋斗精神", "爱国精神", "创新精神"], "answer": "B", "explanation": "", "uid": 130}, {"id": 31, "set": 2, "type": "multiple_choice", "question": "党的二十大报告指出，要深化（）体制改革，全面推进严格规范公正文明执法，加大关系群众切身利益的重点领域执法力度，完善行政执法程序，健全行政裁量基准。", "options": ["行政立法", "行政司法", "行政执法", "司法行政"], "answer": "C", "explanation": "", "uid": 131}, {"id": 32, "set": 2, "type": "multiple_choice", "question": "（）是党的根本组织原则。", "options": ["集体领导", "民主集中制", "分工负责", "少数服从多数"], "answer": "B", "explanation": "", "uid": 132}, {"id": 33, "set": 2, "type": "multiple_choice", "question": "党的二十届三中全会指出，到（）全面建成高水平社会主义市场经济体制。", "options": ["二〇二五年", "二〇三〇年", "二〇三五年", "二〇四〇年"], "answer": "C", "explanation": "", "uid": 133}, {"id": 34, "set": 2, "type": "multiple_choice", "question": "《关于党内政治生活的若干准则》指出，党内真正实行（），才有可能建立起在党员和群众中有威信的强有力的领导班子。", "options": ["民主决策", "民主选举", "民主管理", "民主投票"], "answer": "B", "explanation": "", "uid": 134}, {"id": 35, "set": 2, "type": "multiple_choice", "question": "下列哪项是“增强国内大循环内生动力和可靠性”的直接举措？", "options": ["深入推进中国特色大国外交", "大力提振消费，扩大有效投资", "加强国防和军队现代化建设", "做好港澳工作和对台工作"], "answer": "B", "explanation": "", "uid": 135}, {"id": 36, "set": 2, "type": "multiple_choice", "question": "要坚持把（）作为依法治国的长期基础性工作，采取有力措施加强法制宣传教育。", "options": ["全民守法", "全民普法", "全民普法和守法", "全民法治观念"], "answer": "C", "explanation": "", "uid": 136}, {"id": 37, "set": 2, "type": "multiple_choice", "question": "（）是维护社会公平正义的最后一道防线。", "options": ["司法", "社会保障", "执法", "立法"], "answer": "A", "explanation": "", "uid": 137}, {"id": 38, "set": 2, "type": "multiple_choice", "question": "全会提出，要健全因地制宜发展新质生产力体制机制，推动哪些方面的突破和创新？", "options": ["仅技术革命性突破", "仅生产要素创新性配置", "仅产业深度转型升级", "技术革命性突破、生产要素创新性配置、产业深度转型升级"], "answer": "D", "explanation": "", "uid": 138}, {"id": 39, "set": 2, "type": "multiple_choice", "question": "干部是党的宝贵财富，必须既（）、严格管理、严格监督，又在政治上、思想上、工作上、生活上真诚关爱，鼓励干部干事创业、大胆作为。", "options": ["严肃党内政治生活", "严格教育", "严格约束", "严格要求"], "answer": "B", "explanation": "", "uid": 139}, {"id": 40, "set": 2, "type": "multiple_choice", "question": "各级（）负责《廉政准则》的贯彻实施。", "options": ["人大", "纪委", "党委(党组)", "政府"], "answer": "C", "explanation": "", "uid": 140}, {"id": 41, "set": 2, "type": "multiple_choice", "question": "《中国共产党纪律处分条例》规定，党员领导干部对于到任前已经存在且属于其职责范围内的问题，（），造成严重损害或者严重不良影响的，依照前款规定处理。", "options": ["消极回避", "敷衍应付", "推卸责任", "推诿扯皮"], "answer": "AC", "explanation": "", "uid": 141}, {"id": 42, "set": 2, "type": "multiple_choice", "question": "《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，聚焦发展全过程人民民主，坚持党的领导、人民当家作主、依法治国有机统一，推动（），社会主义法治国家建设达到更高水平。", "options": ["人民当家作主制度更加健全", "协商民主广泛多层制度化发展", "中国特色社会主义法治体系更加完善", "人民当家作主制度更加完善"], "answer": "ABC", "explanation": "", "uid": 142}, {"id": 43, "set": 2, "type": "multiple_choice", "question": "党的纪律主要包括政治纪律、组织纪律、（）、工作纪律和生活纪律。", "options": ["廉洁纪律", "干部纪律", "作风纪律", "群众纪律"], "answer": "AD", "explanation": "", "uid": 143}, {"id": 44, "set": 2, "type": "multiple_choice", "question": "下列对于党员的纪律处分的说法，正确的有（）。", "options": ["分为批评教育、警告、严重警告、留党察看和开除党籍五种纪律处分", "纪律处分的精神是“惩前毖后、治病救人”", "处分必须支部大会讨论决定", "严重触犯刑律的党员必须开除党籍"], "answer": "BCD", "explanation": "", "uid": 144}, {"id": 45, "set": 2, "type": "multiple_choice", "question": "党的二十届四中全会提出，要加快建设哪些强国？（）", "options": ["制造强国、质量强国", "航天强国、交通强国", "网络强国、数字强国", "海洋强国、文化强国"], "answer": "AB", "explanation": "", "uid": 145}, {"id": 46, "set": 2, "type": "multiple_choice", "question": "《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，发挥人民政协作为专门协商机构作用，健全（）的机制，加强人民政协反映社情民意、联系群众、服务人民机制建设。", "options": ["深度协商互动", "观点恰当阐述", "意见充分表达", "广泛凝聚共识"], "answer": "ACD", "explanation": "", "uid": 146}, {"id": 47, "set": 2, "type": "multiple_choice", "question": "党章规定，党的建设必须坚决实现以下基本要求（）。", "options": ["坚持党的基本路线", "坚持解放思想，实事求是，与时俱进，求真务实", "坚持全心全意为人民服务", "坚持民主集中制，坚持从严管党治党"], "answer": "ABCD", "explanation": "", "uid": 147}, {"id": 48, "set": 2, "type": "multiple_choice", "question": "厉行勤俭节约要严格遵守财经纪律，做到（）。", "options": ["严格执行住房、车辆配备等有关工作和生活待遇的规定", "严格控制 “三公” 经费支出", "杜绝铺张浪费", "节约使用办公用品"], "answer": "ABCD", "explanation": "", "uid": 148}, {"id": 49, "set": 2, "type": "multiple_choice", "question": "违反中央八项规定精神问题线索处置的原则有（）。", "options": ["及时受理", "规范处置", "快查快结", "严肃处理"], "answer": "ABCD", "explanation": "", "uid": 149}, {"id": 50, "set": 2, "type": "multiple_choice", "question": "必须统筹国内国际两个大局，始终做世界和平的（）、全球发展的（）、国际秩序的（）。", "options": ["建设者", "贡献者", "维护者", "遵循者"], "answer": "ABC", "explanation": "", "uid": 150}, {"id": 51, "set": 2, "type": "multiple_choice", "question": "《中共中央关于进一步全面深化改革、推进中国式现代化的决定》指出，健全国家经济社会发展规划制度体系，强化规划衔接落实机制，（）。", "options": ["发挥国家发展规划战略导向作用", "强化国土空间规划基础作用", "增强专项规划和区域规划实施支撑作用", "增强专项规划实施支撑作用"], "answer": "ABC", "explanation": "", "uid": 151}, {"id": 52, "set": 2, "type": "multiple_choice", "question": "《党史学习教育工作条例》规定，用好革命博物馆、纪念馆、党史馆、烈士纪念设施、革命旧址等红色资源，保护利用好革命文物，精心设计展览陈列、红色旅游线路、学习体验线路，加强（）。", "options": ["革命传统教育", "爱国主义教育", "思想道德教育", "传统文化教育"], "answer": "ABC", "explanation": "", "uid": 152}, {"id": 53, "set": 2, "type": "multiple_choice", "question": "习近平总书记指出，（），是五四运动以来我国发生的三大历史性事件，是近代以来实现中华民族伟大复兴的三大里程碑。", "options": ["建立中国共产党", "成立中华人民共和国", "推进改革开放和中国特色社会主义事业", "实现中华民族伟大复兴"], "answer": "ABC", "explanation": "", "uid": 153}, {"id": 54, "set": 2, "type": "multiple_choice", "question": "党对统一战线的领导主要是政治领导，即（）的领导。", "options": ["政治主张", "政治原则", "政治方向", "重大方针政策"], "answer": "BCD", "explanation": "", "uid": 154}, {"id": 55, "set": 2, "type": "multiple_choice", "question": "新时代十年的伟大变革，在（）上具有里程碑意义。", "options": ["党史", "新中国史", "改革开放史", "社会主义发展史 E、中华民族发展史"], "answer": "ABCDE", "explanation": "", "uid": 155}, {"id": 56, "set": 2, "type": "multiple_choice", "question": "党的十九大报告指出，实现伟大梦想，必须（）。", "options": ["进行伟大斗争", "建设伟大工程", "推进伟大事业", "高举伟大旗帜"], "answer": "ABC", "explanation": "", "uid": 156}, {"id": 57, "set": 2, "type": "multiple_choice", "question": "新时代中国青年要自觉树立和践行社会主义核心价值观，善于从中华民族传统美德中汲取道德滋养，从英雄人物和时代楷模的身上感受道德风范，从自身内省中提升道德修为，明大德、守公德、严私德，自觉抵制（）等错误思想，追求更有高度、更有境界、更有品位的人生，让清风正气、蓬勃朝气遍布全社会！", "options": ["拜金主义", "享乐主义", "极端个人主义", "历史虚无主义"], "answer": "ABCD", "explanation": "", "uid": 157}, {"id": 58, "set": 2, "type": "multiple_choice", "question": "我们要以识才的慧眼、爱才的诚意、用才的胆识、容才的雅量、聚才的良方，广开进贤之路，把党内和党外、国内和国外等各方面优秀人才吸引过来、凝聚起来，努力形成（）的良好局面。", "options": ["人人渴望成才", "人人努力成才", "人人皆可成才", "人人尽展其才"], "answer": "ABCD", "explanation": "", "uid": 158}, {"id": 59, "set": 2, "type": "multiple_choice", "question": "青年习近平是在怎样的家庭背景下到梁家河插队的？（）", "options": ["父亲习仲勋受到迫害，正在被审查关押", "母亲带着弟弟在干校劳动", "两位姐姐被下放到生产建设兵团", "大姐被迫害，正在被审查关押"], "answer": "ABC", "explanation": "", "uid": 159}, {"id": 60, "set": 2, "type": "multiple_choice", "question": "关于深化财税体制改革，全会提出了哪些措施？", "options": ["增加地方自主财力", "拓展地方税源", "合理扩大地方政府专项债券支持范围", "适当加强中央事权、提高中央财政支出比例"], "answer": "ABCD", "explanation": "", "uid": 160}, {"id": 61, "set": 2, "type": "true_false", "question": "我们要把研究和解决重大现实问题作为学习的根本出发点，使认认真真学习成为理论联系实际、学以致用，不断提高工作原则性、系统性、预见性和创造性的过程。", "options": [], "answer": true, "explanation": "", "uid": 161}, {"id": 62, "set": 2, "type": "true_false", "question": "党的二十届四中全会指出，要强化企业科技创新主体地位，推动创新资源向企业集聚，支持企业牵头组建创新联合体、更多承担国家科技攻关任务，鼓励企业加大基础研究投入，促进创新链产业链资金链人才链深度融合。", "options": [], "answer": true, "explanation": "", "uid": 162}, {"id": 63, "set": 2, "type": "true_false", "question": "党的二十届四中全会指出，要赋予省级政府统筹建设用地更大自主权，探索实施建设用地总量按规划期管控模式，实行统筹存量和增量综合供地。", "options": [], "answer": true, "explanation": "", "uid": 163}, {"id": 64, "set": 2, "type": "true_false", "question": "坚持党的政治路线和思想路线,是党内政治生活准则中最根本的一条。", "options": [], "answer": true, "explanation": "", "uid": 164}, {"id": 65, "set": 2, "type": "true_false", "question": "《中共中央关于进一步全面深化改革、推进中国式现代化的决议》指出：完善立德树人机制，推进大学、大专、职业技校思政课一体化改革创新，健全德智体美劳全面培养体系，提升教师教书育人能力，健全师德师风建设长效机制，深化教育评价改革。", "options": [], "answer": true, "explanation": "", "uid": 165}, {"id": 66, "set": 2, "type": "true_false", "question": "严格党的组织生活制度，民主生活会应当经常化，遇到重要或者普遍性问题应当及时召开。", "options": [], "answer": true, "explanation": "", "uid": 166}, {"id": 67, "set": 2, "type": "true_false", "question": "新民主主义理论包括新民主主义革命论和新民主主义社会论。", "options": [], "answer": true, "explanation": "", "uid": 167}, {"id": 68, "set": 2, "type": "true_false", "question": "党的二十大报告提出，继续推进实践基础上的理论创新，首先要把握好习近平新时代中国特色社会主义思想的世界观和方法论，坚持好、运用好贯穿其中的立场观点方法。", "options": [], "answer": true, "explanation": "", "uid": 168}, {"id": 69, "set": 2, "type": "true_false", "question": "人民立场是中国共产党的根本政治立场，是马克思主义政党区别于其他政党的显著标志。", "options": [], "answer": true, "explanation": "", "uid": 169}, {"id": 70, "set": 2, "type": "true_false", "question": "党的百年奋斗从根本上改变了中国人民的前途命运。", "options": [], "answer": true, "explanation": "", "uid": 170}, {"id": 71, "set": 2, "type": "true_false", "question": "1847年初，马克思恩格斯接受正义者同盟邀请加入该同盟并按照他们的主张对同盟进行根本性改造，组建第一个以科学社会主义为指导思想的国际无产阶级政党——共产主义者同盟。", "options": [], "answer": true, "explanation": "", "uid": 171}, {"id": 72, "set": 2, "type": "true_false", "question": "遵义会议深刻总结党的经验教训，集中解决当时具有决定意义的军事和组织问题，确立新的正确领导，实现伟大的历史转折。", "options": [], "answer": true, "explanation": "", "uid": 172}, {"id": 73, "set": 2, "type": "true_false", "question": "任何一个领导集体都要有一个核心，没有核心的领导是靠不住的。", "options": [], "answer": true, "explanation": "", "uid": 173}, {"id": 74, "set": 2, "type": "true_false", "question": "《中国共产党纪律处分条例》规定，对于经济方面共同违纪的，按照个人参与数额及其所起作用，分别给予处分。", "options": [], "answer": true, "explanation": "", "uid": 174}, {"id": 75, "set": 2, "type": "true_false", "question": "二十大党章规定，各级纪律检查委员会发现同级党的委员会委员有违犯党的纪律的行为，可以先进行初步核实，如果需要立案检查的，应当报告上一级纪律检查委员会，由上一级纪律检查委员会进行初步核实，需要审查的，由上一级纪律检查委员会报它的同级党的委员会批准。", "options": [], "answer": true, "explanation": "", "uid": 175}, {"id": 76, "set": 2, "type": "true_false", "question": "中国共产党在中国革命事业中的领导地位，是由党的纲领决定的。", "options": [], "answer": true, "explanation": "", "uid": 176}, {"id": 77, "set": 2, "type": "true_false", "question": "社会主义精神文明建设包括思想道德建设和科学文化建设两个方面。", "options": [], "answer": true, "explanation": "", "uid": 177}, {"id": 78, "set": 2, "type": "true_false", "question": "根据《中国共产党纪律处分条例》，相互利用职权或者职务上的影响为对方及其配偶、子女及其配偶等亲属、身边工作人员和其他特定关系人谋取利益搞权权交易的，违反了党的廉洁纪律。", "options": [], "answer": true, "explanation": "", "uid": 178}, {"id": 79, "set": 2, "type": "true_false", "question": "我们要用欣赏和赞许的眼光看待青年的创新创造，积极支持他们在人生中出彩，为青年取得的成就和成绩点赞、喝彩，让青春成为中华民族生气勃发、高歌猛进的持久风景，让青年英雄成为驱动中华民族加速迈向伟大复兴的蓬勃力量！", "options": [], "answer": true, "explanation": "", "uid": 179}, {"id": 80, "set": 2, "type": "true_false", "question": "中国梦是国家的梦、民族的梦，也是包括广大青年在内的每个中国人的梦。", "options": [], "answer": true, "explanation": "", "uid": 180}, {"id": 81, "set": 2, "type": "fill_blank", "question": "坚持不忘初心、继续前进，就要坚持中国特色社会主义道路自信、____、制度自信、文化自信，坚持党的基本路线不动摇，不断把中国特色社会主义伟大事业推向前进。", "options": [], "answer": "理论自信", "explanation": "", "uid": 181}, {"id": 82, "set": 2, "type": "fill_blank", "question": "党员如果没有正当理由，连续六个月不参加党的____或不交纳党费，或不做党所分配的工作，就被认为是自行脱党。", "options": [], "answer": "组织生活", "explanation": "", "uid": 182}, {"id": 83, "set": 2, "type": "fill_blank", "question": "要求入党的同志要能够经受住____的考验。", "options": [], "answer": "党组织", "explanation": "", "uid": 183}, {"id": 84, "set": 2, "type": "fill_blank", "question": "党禁止任何形式的____。", "options": [], "answer": "个人崇拜", "explanation": "", "uid": 184}, {"id": 85, "set": 2, "type": "fill_blank", "question": "申请入党，应遵循____原则。", "options": [], "answer": "自愿|入党自愿", "explanation": "", "uid": 185}, {"id": 86, "set": 2, "type": "fill_blank", "question": "马克思主义政治学的开山之作是《共产党宣言》。", "options": [], "answer": "", "explanation": "", "uid": 186}, {"id": 87, "set": 2, "type": "fill_blank", "question": "党的二十届四中全会指出，____是中国式现代化的鲜明底色。", "options": [], "answer": "绿色发展理念", "explanation": "", "uid": 187}, {"id": 88, "set": 2, "type": "fill_blank", "question": "党的二十届四中全会指出，要严守____，全面推进以国家公园为主体的自然保护地体系建设，有序设立新的国家公园。", "options": [], "answer": "生态保护红线", "explanation": "", "uid": 188}, {"id": 89, "set": 2, "type": "fill_blank", "question": "在长期实践中，我们党坚持把开展严肃认真的党内政治生活作为党的建设重要任务来抓，形成了以实事求是、理论联系实际、密切联系群众、____、民主集中制、严明党的纪律等为主要内容的党内政治生活基本规范。", "options": [], "answer": "批评和自我批评", "explanation": "", "uid": 189}, {"id": 90, "set": 2, "type": "fill_blank", "question": "《党史学习教育工作条例》规定，教育引导党员坚持在锤炼党性上力行、在____力行、在推动发展上力行，不断提高政治判断力、政治领悟力、政治执行力，增强斗争本领，把握历史主动。", "options": [], "answer": "为民服务上", "explanation": "", "uid": 190}, {"id": 91, "set": 2, "type": "fill_blank", "question": "新形势下加强和规范党内政治生活，必须以党章为根本遵循，坚持党的____、思想路线、组织路线、群众路线。", "options": [], "answer": "政治路线", "explanation": "", "uid": 191}, {"id": 92, "set": 2, "type": "fill_blank", "question": "进一步发展和壮大由全体社会主义劳动者、社会主义事业的____、拥护社会主义的爱国者、拥护祖国统一和致力于中华民族伟大复兴的爱国者组成的最广泛的爱国统一战线。", "options": [], "answer": "建设者", "explanation": "", "uid": 192}, {"id": 93, "set": 2, "type": "fill_blank", "question": "组织党员认真学习马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想，推进“两学一做”学习教育、____常态化制度化，学习党的路线、方针、政策和决议，学习党的基本知识，学习科学、文化、法律和业务知识。", "options": [], "answer": "党史学习教育", "explanation": "", "uid": 193}, {"id": 94, "set": 2, "type": "fill_blank", "question": "坚持党内谈话制度，认真开展____、诫勉谈话。", "options": [], "answer": "提醒谈话", "explanation": "", "uid": 194}, {"id": 95, "set": 2, "type": "fill_blank", "question": "坚持党的领导、人民当家作主、依法治国____，走中国特色社会主义政治发展道路，扩大社会主义民主，建设中国特色社会主义法治体系，建设社会主义法治国家，巩固人民民主专政，建设社会主义政治文明。", "options": [], "answer": "有机统一", "explanation": "", "uid": 195}, {"id": 96, "set": 2, "type": "fill_blank", "question": "纪委派驻纪检组对____负责，加强对被监督单位领导班子及其成员、其他领导干部的监督，发现问题应当及时向派出机关和被监督单位党组织报告，认真负责调查处置，对需要问责的提出建议。", "options": [], "answer": "派出机关", "explanation": "", "uid": 196}, {"id": 97, "set": 2, "type": "fill_blank", "question": "党内监督必须把____，运用监督执纪“四种形态”，经常开展批评和自我批评、约谈函询，让“红红脸、出出汗”成为常态。", "options": [], "answer": "纪律挺在前面", "explanation": "", "uid": 197}, {"id": 98, "set": 2, "type": "fill_blank", "question": "《党内监督条例》规定，党的地方各级委员会委员有权向上级党组织提出要求罢免或者撤换所在委员会和同级纪委中____的委员、常委。", "options": [], "answer": "不称职", "explanation": "", "uid": 198}, {"id": 99, "set": 2, "type": "fill_blank", "question": "《党章》明确，发展是我们党执政兴国的第一要务，必须坚持____的发展思想。", "options": [], "answer": "以人民为中心", "explanation": "", "uid": 199}, {"id": 100, "set": 2, "type": "fill_blank", "question": "____是党的根本组织原则，是党内政治生活正常开展的重要制度保障。", "options": [], "answer": "民主集中制", "explanation": "", "uid": 200}, {"id": 1, "set": 3, "type": "single_choice", "question": "二十届四中全会提出，要提升（）的传播力影响力。", "options": ["中华优秀传统文化", "中华文明", "中国故事", "汉语"], "answer": "B", "explanation": "", "uid": 201}, {"id": 2, "set": 3, "type": "single_choice", "question": "在现阶段，我国社会的主要矛盾是人民日益增长的（）需要和不平衡不充分的发展之间的矛盾。", "options": ["物质文化", "经济水平", "美好生活", "物质条件"], "answer": "C", "explanation": "", "uid": 202}, {"id": 3, "set": 3, "type": "single_choice", "question": "新形势下加强和规范党内政治生活，重点是（），关键是高级干部特别是中央委员会、中央政治局、中央政治局常务委员会的组成人员。", "options": ["党的各级代表大会代表", "各级领导干部", "各级领导机关和领导干部", "各级领导机关"], "answer": "C", "explanation": "", "uid": 203}, {"id": 4, "set": 3, "type": "single_choice", "question": "《党内监督条例》规定，罢免或撤换要求应当以（）提出，并有根据地陈述理由。", "options": ["书面形式", "法定形式", "口头形式", "书面形式署真实姓名"], "answer": "D", "explanation": "", "uid": 204}, {"id": 5, "set": 3, "type": "single_choice", "question": "党的二十大报告明确指出，我们坚持（）、尽锐出战，打赢了人类历史上规模最大的脱贫攻坚战，全国八百三十二个贫困县全部摘帽，近一亿农村贫困人口实现脱贫，九百六十多万贫困人口实现易地搬迁，历史性地解决了绝对贫困问题，为全球减贫事业作出了重大贡献。", "options": ["全面脱贫", "准确扶贫", "精准扶贫", "精确扶贫"], "answer": "C", "explanation": "", "uid": 205}, {"id": 6, "set": 3, "type": "single_choice", "question": "（）是历史的创造者，是决定党和国家前途命运的根本力量。", "options": ["群众", "军队", "英雄", "人民"], "answer": "D", "explanation": "", "uid": 206}, {"id": 7, "set": 3, "type": "single_choice", "question": "党要管党必须从（）管起，从严治党必须从（）严起。", "options": ["党内政治生活", "党的政治纪律", "党的纪律", "党的优良传统"], "answer": "A", "explanation": "", "uid": 207}, {"id": 8, "set": 3, "type": "single_choice", "question": "二十大报告指出：（），在党史、新中国史、改革开放史、社会主义发展史、中华民族发展史上具有里程碑意义。", "options": ["新时代十年的伟大变革", "新时代二十年的伟大变革", "新时代三十年的伟大变革", "新时代四十年的伟大变革"], "answer": "A", "explanation": "", "uid": 208}, {"id": 9, "set": 3, "type": "single_choice", "question": "纪律检查机关必须把维护党的（）放在首位，坚决纠正和查处上有政策、下有对策，有令不行、有禁不止，口是心非、阳奉阴违，搞团团伙伙、拉帮结派，欺骗组织、对抗组织等行为。", "options": ["政治纪律和政治规矩", "组织纪律", "廉洁纪律", "工作纪律"], "answer": "A", "explanation": "", "uid": 209}, {"id": 10, "set": 3, "type": "single_choice", "question": "中央政治局委员应当严格执行中央八项规定，自觉参加双重组织生活，如实向党中央报告（）。", "options": ["重大事项", "个人重要事项", "重要情况", "贯彻执行情况"], "answer": "B", "explanation": "", "uid": 210}, {"id": 11, "set": 3, "type": "single_choice", "question": "二十大党章规定，要全面贯彻习近平新时代中国特色社会主义思想，以（）为重点，着力培养忠诚干净担当的高素质干部，着力集聚爱国奉献的各方面优秀人才。", "options": ["干部队伍建设", "人才队伍建设", "组织体系建设", "人才体系建设"], "answer": "C", "explanation": "", "uid": 211}, {"id": 12, "set": 3, "type": "single_choice", "question": "党内监督必须突出党的领导机关和领导干部特别是（）。", "options": ["高级干部", "“关键少数”", "主要领导干部", "党的中央组织、省市区党委及其成员"], "answer": "C", "explanation": "", "uid": 212}, {"id": 13, "set": 3, "type": "single_choice", "question": "二十大党章规定，预备党员的预备期为（）年。", "options": ["一", "二", "三", "四"], "answer": "A", "explanation": "", "uid": 213}, {"id": 14, "set": 3, "type": "single_choice", "question": "《中国共产党纪律处分条例》规定，搞投机钻营，结交政治骗子或者被政治骗子利用的，情节严重的，给予（）或者开除党籍处分。", "options": ["严重警告", "撤销党内职务", "留党察看", "开除公职"], "answer": "C", "explanation": "", "uid": 214}, {"id": 15, "set": 3, "type": "single_choice", "question": "二十大党章规定，党积极推进（）制度改革。", "options": ["人事", "干部", "组织", "劳动"], "answer": "B", "explanation": "", "uid": 215}, {"id": 16, "set": 3, "type": "single_choice", "question": "党章规定，年龄和健康状况不适宜于继续担任工作的干部，应当按照国家的规定（）。", "options": ["退、离休", "辞职", "降职", "去职"], "answer": "A", "explanation": "", "uid": 216}, {"id": 17, "set": 3, "type": "single_choice", "question": "党选拔干部，坚持五湖四海、任人唯贤，坚持（），反对任人唯亲。", "options": ["事业为主，公道正派", "公道正直，事业为上", "事业为上、公道正派", "公道正派，事业为主"], "answer": "C", "explanation": "", "uid": 217}, {"id": 18, "set": 3, "type": "single_choice", "question": "中央八项规定要求，要改进调查研究，到基层调研要深入了解真实情况，总结经验、研究问题、解决困难、指导工作，向群众学习、向实践学习，多同群众座谈，多同干部谈心，多商量讨论，多解剖典型，多（）。", "options": ["听取汇报", "实地察看", "下发文件", "组织会议"], "answer": "B", "explanation": "", "uid": 218}, {"id": 19, "set": 3, "type": "single_choice", "question": "《党章》规定，对要求入党的积极分子进行教育和培养，要重视在生产、工作第一线和（）中发展党员。", "options": ["工人", "农民", "青年", "知识分子"], "answer": "C", "explanation": "", "uid": 219}, {"id": 20, "set": 3, "type": "single_choice", "question": "落实中央八项规定精神，要强化（），严肃查处违规违纪行为。", "options": ["监督执纪问责", "宣传教育", "制度建设", "干部管理"], "answer": "A", "explanation": "", "uid": 220}, {"id": 21, "set": 3, "type": "single_choice", "question": "习近平在党的二十大报告中指出，面对香港局势动荡变化，我们依照宪法和基本法有效实施对特别行政区的全面管治权，制定实施香港特别行政区维护国家安全法，落实“（）”原则，香港局势实现由乱到治的重大转折，深入推进粤港澳大湾区建设，支持香港、澳门发展经济、改善民生、保持稳定。", "options": ["一国两制", "港人治港", "爱国者治港", "独立自主"], "answer": "C", "explanation": "", "uid": 221}, {"id": 22, "set": 3, "type": "single_choice", "question": "中央书记处成员由中央政治局常务委员会（），中央委员会全体会议通过。", "options": ["任命", "提名", "推荐", "选举"], "answer": "B", "explanation": "", "uid": 222}, {"id": 23, "set": 3, "type": "single_choice", "question": "中央八项规定精神的落实有助于营造（）的政治生态。", "options": ["风清气正", "宽松自由", "紧张严肃", "活泼轻松"], "answer": "A", "explanation": "", "uid": 223}, {"id": 24, "set": 3, "type": "single_choice", "question": "中国共产党第二十次全国代表大会会期为（）。", "options": ["2022年10月16日至10月22日", "2022年10月16日至10月23日", "2022年10月15日至10月22日", "2022年10月15日至10月23日"], "answer": "A", "explanation": "", "uid": 224}, {"id": 25, "set": 3, "type": "single_choice", "question": "党员或者党员领导干部在其职责范围内，不履行或者不正确履行自己的职责，对造成的损失或者后果起决定性作用的，应当负（）。", "options": ["直接责任", "主要领导责任", "重要领导责任", "次要责任"], "answer": "A", "explanation": "", "uid": 225}, {"id": 26, "set": 3, "type": "single_choice", "question": "习近平2020年10月10日在中央党校（国家行政学院）中青年干部培训班开班式上指出，面对复杂形势和艰巨任务，我们要在危机中育先机、于变局中（）。", "options": ["开新局", "谋新篇", "谱新篇", "绘蓝图"], "answer": "A", "explanation": "", "uid": 226}, {"id": 27, "set": 3, "type": "single_choice", "question": "习近平总书记强调，要抓主要矛盾、抓矛盾的主要方面，坚持有理有利有节，合理选择斗争方式、把握斗争火候，在原则问题上寸步不让，在策略问题上（）。", "options": ["灵活多变", "灵活机动", "运用灵活", "灵活变化"], "answer": "B", "explanation": "", "uid": 227}, {"id": 28, "set": 3, "type": "single_choice", "question": "党风问题、（）是关系党生死存亡的问题。", "options": ["党同人民群众联系问题", "党的作风建设问题", "党内民主问题", "党的廉政建设问题"], "answer": "A", "explanation": "", "uid": 228}, {"id": 29, "set": 3, "type": "single_choice", "question": "十九大、十九届六中全会提出的“十个明确”、“十四个坚持”、“（）”概括了新时代中国特色社会主义思想的主要内容，必须长期坚持并不断丰富发展。", "options": ["十四个方面成就", "十三个方面成就", "十六个方面成就", "十五个方面成就"], "answer": "B", "explanation": "", "uid": 229}, {"id": 30, "set": 3, "type": "single_choice", "question": "党的二十大报告指出，要促进区域协调发展。深入实施区域协调发展战略、区域重大战略、主体功能区战略、新型城镇化战略，优化重大生产力布局，构建优势互补、高质量发展的（）布局和（）体系。", "options": ["区域经济；国土空间", "县域经济；城乡统筹", "现代化；高质量", "区域发展；多元互补"], "answer": "A", "explanation": "", "uid": 230}, {"id": 31, "set": 3, "type": "single_choice", "question": "延安时期，毛泽东同志在追悼张思德同志时发表的（）的演讲，深刻揭示了党群关系、干群关系、军民关系的真谛。", "options": ["《为人民服务》", "《论持久战》", "《星星之火可以燎原》", "《论十大关系》"], "answer": "A", "explanation": "", "uid": 231}, {"id": 32, "set": 3, "type": "single_choice", "question": "党的二十届四中全会报告指出，“十四五”时期我国发展历程是（）。", "options": ["平稳顺利、成绩斐然", "极不寻常、极不平凡", "挑战与机遇并存", "高速增长、结构优化"], "answer": "B", "explanation": "", "uid": 232}, {"id": 33, "set": 3, "type": "single_choice", "question": "1925年12月1日，毛泽东发表了著名的《中国社会各阶级的分析》一文。毛泽东在文章中开宗明义地指出（）这个问题是革命的首要问题。", "options": ["谁是我们的敌人？谁是我们的朋友？", "团结真正的朋友，攻击真正的敌人", "团结一切可以团结的人", "建立统一战线"], "answer": "A", "explanation": "", "uid": 233}, {"id": 34, "set": 3, "type": "single_choice", "question": "党的二十大报告强调，我们要坚持法治国家、法治政府、法治社会一体建设，全面推进（），全面推进国家各方面工作法治化。", "options": ["科学执法、公正司法、严格立法、全民守法", "科学立法、严格执法、公正司法、全民守法", "科学立法、严格司法、公正执法、全民守法", "科学司法、严格执法、公正立法、全民守法"], "answer": "B", "explanation": "", "uid": 234}, {"id": 35, "set": 3, "type": "single_choice", "question": "全会指出，进一步全面深化改革的总目标是（），推进国家治理体系和治理能力现代化。", "options": ["坚持和完善中国特色社会主义制度", "继续坚持和完善中国特色社会主义制度", "完善和发展中国特色社会主义制度", "继续完善和发展中国特色社会主义制度"], "answer": "C", "explanation": "", "uid": 235}, {"id": 36, "set": 3, "type": "single_choice", "question": "习近平在党史学习教育动员大会上指出，要坚持以（）和党中央有关精神为依据，准确把握党的历史发展的主题主线、主流本质，正确认识和科学评价党史上的重大事件、重要会议、重要人物。", "options": ["我们党关于历史问题的两个决议", "《关于建国以来党的若干历史问题的决议》", "十九大精神", "二十大精神"], "answer": "A", "explanation": "", "uid": 236}, {"id": 37, "set": 3, "type": "single_choice", "question": "（）是社会主义法治的根本要求，是全面推进依法治国题中应有之义。", "options": ["坚持中国特色社会主义", "坚持四项基本原则", "坚持以人民为中心", "坚持党的领导"], "answer": "D", "explanation": "", "uid": 237}, {"id": 38, "set": 3, "type": "single_choice", "question": "在小说《红岩》中（）说：“毒刑拷打，那是太小的考验。”", "options": ["江姐", "许云峰", "胡洁", "刘思扬"], "answer": "A", "explanation": "", "uid": 238}, {"id": 39, "set": 3, "type": "single_choice", "question": "二十届四中全会强调，要维护（）体制，拓展国际循环。", "options": ["双边贸易", "多边贸易", "区域贸易", "公平贸易"], "answer": "B", "explanation": "", "uid": 239}, {"id": 40, "set": 3, "type": "single_choice", "question": "近代，为了救国救民，无数仁人志士进行了可歌可泣的斗争，其中有以洪秀全为代表的（）的尝试。", "options": ["封建地主阶级", "资产阶级革命派", "资产阶级改良派", "农民阶级"], "answer": "D", "explanation": "", "uid": 240}, {"id": 41, "set": 3, "type": "multiple_choice", "question": "习近平总书记指出，要把反腐倡廉法规制度的笼子扎细扎密扎牢，必须做到（）。", "options": ["前后衔接", "左右联动", "上下配套", "系统集成"], "answer": "ABCD", "explanation": "", "uid": 241}, {"id": 42, "set": 3, "type": "multiple_choice", "question": "党的建设必须坚决实现的基本要求有：坚持党的基本路线，（）。", "options": ["坚持解放思想、实事求是，与时俱进，求真务实", "坚持全心全意为人民服务", "坚持民主集中制", "坚持从严管党治党"], "answer": "ABCD", "explanation": "", "uid": 242}, {"id": 43, "set": 3, "type": "multiple_choice", "question": "《中国共产党纪律处分条例》规定，私自（）第五十条、第五十一条所列内容之一的报刊、书籍、音像制品、电子读物，以及网络文本、图片、音频、视频资料等，情节严重的，给予警告、严重警告或者撤销党内职务处分。", "options": ["阅看", "浏览", "收听", "寄递"], "answer": "ABC", "explanation": "", "uid": 243}, {"id": 44, "set": 3, "type": "multiple_choice", "question": "我国全过程人民民主实现了（）相统一。", "options": ["过程民主和成果民主", "程序民主和实质民主", "直接民主和间接民主", "人民民主和国家意志"], "answer": "ABCD", "explanation": "", "uid": 244}, {"id": 45, "set": 3, "type": "multiple_choice", "question": "下列对于党员的纪律处分的说法，正确的有（）。", "options": ["分为批评教育、警告、严重警告、留党察看和开除党籍五种纪律处分", "纪律处分的精神是“惩前毖后、治病救人”", "处分必须支部大会讨论决定", "严重触犯刑律的党员必须开除党籍"], "answer": "BCD", "explanation": "", "uid": 245}, {"id": 46, "set": 3, "type": "multiple_choice", "question": "为促进区域协调发展，党的二十届四中全会提出要发挥其叠加效应的战略包括（）。", "options": ["区域协调发展战略", "区域重大战略", "主体功能区战略", "新型城镇化战略"], "answer": "ABCD", "explanation": "", "uid": 246}, {"id": 47, "set": 3, "type": "multiple_choice", "question": "党的思想路线是（）。", "options": ["一切从实际出发", "理论联系实际", "实事求是", "在实践中检验真理和发展真理"], "answer": "ABCD", "explanation": "", "uid": 247}, {"id": 48, "set": 3, "type": "multiple_choice", "question": "加强各级领导班子建设，培养选拔党和人民需要的好干部，培养和造就千百万社会主义事业接班人，从组织上保证党的基本理论、（）的贯彻落实。", "options": ["基本制度", "基本路线", "基本方略", "基本思路"], "answer": "BC", "explanation": "", "uid": 248}, {"id": 49, "set": 3, "type": "multiple_choice", "question": "《党章》总纲指出，（）是关系党生死存亡的问题。", "options": ["党风问题", "精神懈怠问题", "党同人民群众联系问题", "能力不足问题"], "answer": "AC", "explanation": "", "uid": 249}, {"id": 50, "set": 3, "type": "multiple_choice", "question": "党史学习教育工作的主要任务是（）。", "options": ["学史明理", "学史增信", "学史崇德", "学史力行"], "answer": "ABCD", "explanation": "", "uid": 250}, {"id": 51, "set": 3, "type": "multiple_choice", "question": "《党史学习教育工作条例》规定，全面系统学习党史，学习党在（）的历史。", "options": ["新民主主义革命时期", "社会主义革命和建设时期", "改革开放和社会主义现代化建设新时期", "中国特色社会主义新时代"], "answer": "ABCD", "explanation": "", "uid": 251}, {"id": 52, "set": 3, "type": "multiple_choice", "question": "党的二十届三中全会指出，加快推进新型工业化，培育壮大先进制造业集群，推动制造业（）发展。", "options": ["高端化", "智能化", "绿色化", "标准化"], "answer": "ABC", "explanation": "", "uid": 252}, {"id": 53, "set": 3, "type": "multiple_choice", "question": "我们要在总结实践经验的基础上，丰富和发展对外工作理念，使我国对外工作有鲜明的（）。", "options": ["中国特色", "中国风格", "中国气派", "中国文化"], "answer": "ABC", "explanation": "", "uid": 253}, {"id": 54, "set": 3, "type": "multiple_choice", "question": "党的纪律主要包括（）。", "options": ["政治纪律", "组织纪律", "廉洁纪律", "群众纪律 E、工作纪律 F、生活纪律"], "answer": "ABCDEF", "explanation": "", "uid": 254}, {"id": 55, "set": 3, "type": "multiple_choice", "question": "党的十九大报告指出，实现伟大梦想，必须（）。", "options": ["进行伟大斗争", "建设伟大工程", "推进伟大事业", "高举伟大旗帜"], "answer": "ABC", "explanation": "", "uid": 255}, {"id": 56, "set": 3, "type": "multiple_choice", "question": "习近平总书记围绕党的青年工作发表的一系列重要论述，深刻阐明了党的青年工作的（），深刻回答了新时代培养什么样的青年、怎样培养青年，建设什么样的共青团、怎样建设共青团等方向性、全局性、战略性重大课题，把我们党对青年工作的规律性认识提升到了新的高度，为做好新时代党的青年工作指明了前进方向、提供了根本遵循。", "options": ["地位作用", "目标任务", "职责使命", "实践要求"], "answer": "ABCD", "explanation": "", "uid": 256}, {"id": 57, "set": 3, "type": "multiple_choice", "question": "在实现中华民族伟大复兴的新征程上，（），迫切需要迎难而上、挺身而出的担当精神。", "options": ["应对重大挑战", "抵御重大风险", "克服重大阻力", "解决重大矛盾"], "answer": "ABCD", "explanation": "", "uid": 257}, {"id": 58, "set": 3, "type": "multiple_choice", "question": "我们要以识才的慧眼、爱才的诚意、用才的胆识、容才的雅量、聚才的良方，广开进贤之路，把党内和党外、国内和国外等各方面优秀人才吸引过来、凝聚起来，努力形成（）的良好局面。", "options": ["人人渴望成才", "人人努力成才", "人人皆可成才", "人人尽展其才"], "answer": "ABCD", "explanation": "", "uid": 258}, {"id": 59, "set": 3, "type": "multiple_choice", "question": "党组织应当保障监督对象的（）等相关权利。", "options": ["检举权", "控告权", "申辩权", "申诉权"], "answer": "CD", "explanation": "", "uid": 259}, {"id": 60, "set": 3, "type": "multiple_choice", "question": "全会提出，要健全推动经济高质量发展的哪些方面？", "options": ["体制机制", "促进新质生产力发展", "构建支持全面创新体制机制", "健全宏观经济治理体系"], "answer": "ABCD", "explanation": "", "uid": 260}, {"id": 61, "set": 3, "type": "multiple_choice", "question": "对马克思主义的信仰，对社会主义和共产主义的信念，是共产党人的政治灵魂，是共产党人经受住任何考验的精神支柱，也是共产党人自律的基础和首要着力点。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 261}, {"id": 62, "set": 3, "type": "multiple_choice", "question": "严格自律与他律，是干部健康发展并充分发挥作用的内在要求和必要条件。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 262}, {"id": 63, "set": 3, "type": "multiple_choice", "question": "党的二十届四中全会指出，坚持把解决好“三农”问题作为全党工作重中之重，促进城乡融合发展，持续巩固拓展脱贫攻坚成果，推动农村基本具备现代生活条件，加快建设农业强国。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 263}, {"id": 64, "set": 3, "type": "multiple_choice", "question": "必须坚持党员个人服从党的组织，少数服从多数，下级组织服从上级组织，全党各个组织和全体党员服从党的全国代表大会和中央委员会，核心是全党各个组织和全体党员服从党的全国代表大会和中央委员会。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 264}, {"id": 65, "set": 3, "type": "multiple_choice", "question": "《中共中央关于进一步全面深化改革、推进中国式现代化的决议》指出：必须统筹新型工业化、新型城镇化和乡村全面振兴，全面提高城乡规划、建设、治理融合水平，促进城乡要素平等交换、双向流动，缩小城乡差别，促进城市和农村共同繁荣发展。", "options": ["正确", "错误"], "answer": "B（错误）", "explanation": "", "uid": 265}, {"id": 66, "set": 3, "type": "multiple_choice", "question": "反对某个同志的某个意见，不等于反对这个同志，反对某个领导机关的某个同志，不等于反对这个组织，不等于反对领导，更不等于反对党。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 266}, {"id": 67, "set": 3, "type": "multiple_choice", "question": "在党的会议上可以有根据地批评党的任何组织和任何党员，揭露和纠正工作中存在的缺点和问题。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 267}, {"id": 68, "set": 3, "type": "multiple_choice", "question": "党的工作部门应当严格执行各项监督制度，加强职责范围内党内监督工作，既加强对本部门本单位的内部监督，又强化对本系统的日常监督。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 268}, {"id": 69, "set": 3, "type": "multiple_choice", "question": "二十大党章规定，党的各级代表大会的代表和委员会的产生，要体现选举人的意志。选举采用记名投票的方式。", "options": ["正确", "错误"], "answer": "B（错误）", "explanation": "", "uid": 269}, {"id": 70, "set": 3, "type": "multiple_choice", "question": "我们要不断提高党的领导水平和执政水平，提高拒腐防变和抵御风险的能力，不断增强自我净化、自我完善、自我革新、自我提高能力。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 270}, {"id": 71, "set": 3, "type": "multiple_choice", "question": "各级党组织和党员，必须在政治原则、政治立场、政治观点和路线、方针、政策上同党中央保持高度一致。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 271}, {"id": 72, "set": 3, "type": "multiple_choice", "question": "中华文明源远流长、博大精深，形成了中华民族独特的文明特征和文化标识。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 272}, {"id": 73, "set": 3, "type": "multiple_choice", "question": "特务们在江姐牢房对面的白墙上写着：“青春一去不复还，细细想想，认明此时与此地，切莫执迷。”", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 273}, {"id": 74, "set": 3, "type": "multiple_choice", "question": "我们必须坚定历史自信、文化自信，坚持古为今用、推陈出新，把马克思主义思想精髓同中华优秀传统文化精华贯通起来、同人民群众日用而不觉的共同价值观念融通起来，不断赋予科学理论鲜明的中国特色，不断夯实马克思主义中国化时代化的历史基础和群众基础，让马克思主义在中国牢牢扎根。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 274}, {"id": 75, "set": 3, "type": "multiple_choice", "question": "精简文件简报就是减少文件简报的数量，质量不重要。", "options": ["正确", "错误"], "answer": "B（错误）", "explanation": "", "uid": 275}, {"id": 76, "set": 3, "type": "multiple_choice", "question": "全面推进中国特色大国外交，推动构建人类命运共同体，坚定维护国际公平正义，毫不动摇反对任何单边主义、保护主义、霸凌行径。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 276}, {"id": 77, "set": 3, "type": "multiple_choice", "question": "“六个必须坚持”为推进习近平新时代中国特色社会主义思想创新指明了方向，提供了思路和框架。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 277}, {"id": 78, "set": 3, "type": "multiple_choice", "question": "党政军民学，东西南北中，人民是领导一切的。", "options": ["正确", "错误"], "answer": "B（错误）", "explanation": "", "uid": 278}, {"id": 79, "set": 3, "type": "multiple_choice", "question": "青年是祖国的未来、民族的希望，也是我们党的未来和希望。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 279}, {"id": 80, "set": 3, "type": "multiple_choice", "question": "人无德不立，品德是为人之本。", "options": ["正确", "错误"], "answer": "A（正确）", "explanation": "", "uid": 280}, {"id": 81, "set": 3, "type": "true_false", "question": "“三会一课”制度是指：定期召开支部党员大会、支部委员会、（），按时上好党课。", "options": [], "answer": false, "explanation": "", "uid": 281}, {"id": 82, "set": 3, "type": "true_false", "question": "“四个意识”：是指政治意识、（）、核心意识、看齐意识。这“四个意识”是2016年1月29日中共中央政治局会议最早提出来的。", "options": [], "answer": false, "explanation": "", "uid": 282}, {"id": 83, "set": 3, "type": "true_false", "question": "要求入党的同志要能够经受住（）的考验。", "options": [], "answer": false, "explanation": "", "uid": 283}, {"id": 84, "set": 3, "type": "true_false", "question": "按照党的思想建设的要求，党员不仅要在组织上入党，而且要在（）上入党。", "options": [], "answer": false, "explanation": "", "uid": 284}, {"id": 85, "set": 3, "type": "true_false", "question": "党的二十届四中全会指出，要严守（），全面推进以国家公园为主体的自然保护地体系建设，有序设立新的国家公园。", "options": [], "answer": false, "explanation": "", "uid": 285}, {"id": 86, "set": 3, "type": "true_false", "question": "党的二十届四中全会指出，弘扬全人类共同价值，推动建设持久和平、普遍安全、共同繁荣、开放包容、清洁美丽的世界，为构建（）作出中国贡献。", "options": [], "answer": false, "explanation": "", "uid": 286}, {"id": 87, "set": 3, "type": "true_false", "question": "党的二十届四中全会指出，全党全军全国各族人民要更加紧密地团结在以习近平同志为核心的党中央周围，为基本实现社会主义现代化而共同奋斗，不断开创以中国式现代化全面推进（）伟业新局面。", "options": [], "answer": false, "explanation": "", "uid": 287}, {"id": 88, "set": 3, "type": "true_false", "question": "各级党委（党组）原则上每（）年组织开展1次党史学习教育工作情况综合评估，充分运用评估结果，不断改进党史学习教育工作。", "options": [], "answer": false, "explanation": "", "uid": 288}, {"id": 89, "set": 3, "type": "true_false", "question": "深入推进党风廉政建设和反腐败斗争，以（）态度惩治腐败，构建不敢腐、不能腐、不想腐的有效机制。", "options": [], "answer": false, "explanation": "", "uid": 289}, {"id": 90, "set": 3, "type": "true_false", "question": "党章总纲指出，要抓紧时机，加快发展，实施科教兴国战略、人才强国战略、创新驱动发展战略、（）战略、区域协调发展战略、可持续发展战略、军民融合发展战略，充分发挥科学技术作为第一生产力的作用，依靠科技进步，提高劳动者素质，促进国民经济又好又快发展。", "options": [], "answer": false, "explanation": "", "uid": 290}, {"id": 91, "set": 3, "type": "fill_blank", "question": "现阶段我国社会的主要矛盾人民日益增长的（）和不平衡不充分的发展之间的矛盾。", "options": [], "answer": "美好生活需要", "explanation": "", "uid": 291}, {"id": 92, "set": 3, "type": "fill_blank", "question": "党领导人民在建设社会主义物质文明和（）的同时，努力建设社会主义精神文明。", "options": [], "answer": "政治文明", "explanation": "", "uid": 292}, {"id": 93, "set": 3, "type": "fill_blank", "question": "依靠科技进步，提高劳动者素质，促进国民经济更高质量、更有效率、更加公平、（）发展。", "options": [], "answer": "更可持续", "explanation": "", "uid": 293}, {"id": 94, "set": 3, "type": "fill_blank", "question": "“三会一课”制度是指党员必须参加（）、党小组会和上党课，党支部要定期召开支部委员会会议。", "options": [], "answer": "党员大会", "explanation": "", "uid": 294}, {"id": 95, "set": 3, "type": "fill_blank", "question": "中国共产党要领导全国各族人民实现“两个一百年”奋斗目标、实现中华民族伟大复兴的（），必须紧密围绕党的基本路线，坚持党要管党、全面从严治党，加强党的长期执政能力建设、先进性和纯洁性建设。", "options": [], "answer": "中国梦", "explanation": "", "uid": 295}, {"id": 96, "set": 3, "type": "fill_blank", "question": "（）是全党统一意志、统一行动、步调一致前进的重要保障，是党内政治生活的重要内容。", "options": [], "answer": "纪律严明", "explanation": "", "uid": 296}, {"id": 97, "set": 3, "type": "fill_blank", "question": "遵循共商共建共享原则，推进“（）”建设。", "options": [], "answer": "一带一路", "explanation": "", "uid": 297}, {"id": 98, "set": 3, "type": "fill_blank", "question": "人民立场是党的根本政治立场，（）是党的力量源泉。", "options": [], "answer": "人民群众", "explanation": "", "uid": 298}, {"id": 99, "set": 3, "type": "fill_blank", "question": "批评和（）是我们党强身治病、保持肌体健康的锐利武器，也是加强和规范党内政治生活的重要手段。", "options": [], "answer": "自我批评", "explanation": "", "uid": 299}, {"id": 100, "set": 3, "type": "fill_blank", "question": "坚持正确（）导向，是严肃党内政治生活的组织保证。", "options": [], "answer": "选人用人", "explanation": "", "uid": 300}];
-        let currentSet = 1;
-        let quizQuestions = [];
+        let questions = [];
+        let allQuestionsData = [];
         let currentIndex = 0;
         let userAnswers = {};
-        let browseFilter = 0;
+        let currentQuizType = 'all';
+        let currentSet = 'all';
+        let answerShown = false;
 
-        // 初始化
+        // 沉浸式做题的变量
+        let imQuestions = [];
+        let imCurrentIndex = 0;
+        let imUserAnswers = {};
+        let imCurrentSet = '1';
+
+        const API_BASE = '/api';
+
         function selectSet(set) {
             currentSet = set;
-            document.querySelectorAll('.set-btn').forEach((btn, idx) => {
-                btn.classList.toggle('active', (idx === 0 && set === 1) || (idx === 1 && set === 2) || (idx === 2 && set === 3) || (idx === 3 && set === 0));
-            });
-            // 修正按钮状态
-            const buttons = document.querySelectorAll('.set-btn');
-            buttons[0].classList.toggle('active', set === 1);
-            buttons[1].classList.toggle('active', set === 2);
-            buttons[2].classList.toggle('active', set === 3);
-            buttons[3].classList.toggle('active', set === 0);
+            document.querySelectorAll('.set-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('set-' + set).classList.add('active');
         }
 
-        // 开始答题
-        function startQuiz() {
-            if (currentSet === 0) {
-                quizQuestions = [...allQuestions];
+        function toggleAnswer() {
+            const q = questions[currentIndex];
+            const answerSection = document.getElementById('answer-section');
+            const showAnswerBtn = document.getElementById('show-answer-btn');
+            
+            if (answerShown) {
+                answerSection.classList.remove('show');
+                showAnswerBtn.textContent = '显示答案';
+                answerShown = false;
             } else {
-                quizQuestions = allQuestions.filter(q => q.set === currentSet);
+                let answerText = '';
+                
+                if (q.type === 'true_false') {
+                    answerText = q.answer ? '正确' : '错误';
+                } else if (q.type === 'fill_blank') {
+                    answerText = q.answer;
+                } else {
+                    answerText = q.answer;
+                }
+                
+                document.getElementById('answer-content').textContent = answerText;
+                answerSection.classList.add('show');
+                showAnswerBtn.textContent = '隐藏答案';
+                answerShown = true;
             }
-            // 打乱题目
-            for (let i = quizQuestions.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [quizQuestions[i], quizQuestions[j]] = [quizQuestions[j], quizQuestions[i];
-            }
+        }
+
+        async function startQuiz(type) {
+            currentQuizType = type;
             currentIndex = 0;
             userAnswers = {};
-            showMenu(false);
-            showQuiz(true);
-            showQuestion();
+            
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('browse').style.display = 'none';
+            
+            let url;
+            if (type === 'random') {
+                url = API_BASE + '/random?count=10&set=' + currentSet;
+            } else {
+                url = API_BASE + '/questions?type=' + type + '&set=' + currentSet;
+            }
+            
+            const response = await fetch(url);
+            questions = await response.json();
+            
+            displayQuestion();
         }
 
-        // 显示题目
-        function showQuestion() {
-            const q = quizQuestions[currentIndex];
-            const card = document.getElementById('questionCard');
+        function displayQuestion() {
+            const q = questions[currentIndex];
             
-            let html = `
-                <div class="question-number">
-                    第 ${currentIndex + 1} 题 / 共 ${quizQuestions.length} 题
-                    <span style="float:right;">
-                        ${q.set === 1 ? '第一套' : q.set === 2 ? '第二套' : '第三套'} · 
-                        ${q.type === 'single_choice' ? '单选题' : q.type === 'multiple_choice' ? '多选题' : q.type === 'true_false' ? '判断题' : '填空题'}
-                    </span>
-                </div>
-                <div class="question">${q.question}</div>
-            `;
-
-            if (q.type === 'single_choice' || q.type === 'multiple_choice') {
-                html += '<div class="options">';
-                q.options.forEach((opt, idx) => {
-                    const letter = String.fromCharCode(65 + idx);
-                    const selected = userAnswers[q.id] === letter;
-                    html += `<div class="option ${selected ? 'selected' : ''}" onclick="selectOption(${q.id}, '${letter}', this)">${letter}. ${opt}</div>`;
-                });
-                html += '</div>';
+            answerShown = false;
+            document.getElementById('answer-section').classList.remove('show');
+            document.getElementById('show-answer-btn').textContent = '显示答案';
+            
+            document.getElementById('q-number').textContent = '第 ' + (currentIndex + 1) + ' 题 / 共 ' + questions.length + ' 题';
+            
+            const typeNames = {
+                'single_choice': '单选题',
+                'multiple_choice': '多选题',
+                'true_false': '判断题',
+                'fill_blank': '填空题'
+            };
+            
+            const typeClass = {
+                'single_choice': 'type-single',
+                'multiple_choice': 'type-multiple',
+                'true_false': 'type-tf',
+                'fill_blank': 'type-fill'
+            };
+            
+            const typeEl = document.getElementById('q-type');
+            typeEl.textContent = typeNames[q.type];
+            typeEl.className = 'question-type ' + typeClass[q.type];
+            
+            const setEl = document.getElementById('q-set');
+            setEl.textContent = q.set ? '第' + q.set + '套' : '题目';
+            
+            document.getElementById('q-text').textContent = q.question;
+            
+            const optionsEl = document.getElementById('options');
+            optionsEl.innerHTML = '';
+            
+            const qId = q.uid || q.id;
+            
+            if (q.type === 'fill_blank') {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'fill-input';
+                input.placeholder = '请输入答案...';
+                input.value = userAnswers[qId] || '';
+                input.oninput = function(e) { userAnswers[qId] = e.target.value; };
+                optionsEl.appendChild(input);
+                
+                const checkBtn = document.createElement('button');
+                checkBtn.className = 'show-answer-btn';
+                checkBtn.textContent = '检查答案';
+                checkBtn.style.marginTop = '10px';
+                checkBtn.onclick = function() {
+                    checkFillAnswer(qId, input, q, optionsEl);
+                };
+                optionsEl.appendChild(checkBtn);
+                
+                const feedback = document.createElement('div');
+                feedback.id = 'fill-feedback-' + qId;
+                feedback.style.marginTop = '10px';
+                feedback.style.padding = '10px';
+                feedback.style.borderRadius = '8px';
+                feedback.style.display = 'none';
+                optionsEl.appendChild(feedback);
             } else if (q.type === 'true_false') {
-                html += '<div class="options">';
-                html += `<div class="option ${userAnswers[q.id] === true ? 'selected' : ''}" onclick="selectOption(${q.id}, true, this)">A. 正确</div>';
-                html += `<div class="option ${userAnswers[q.id] === false ? 'selected' : ''}" onclick="selectOption(${q.id}, false, this)">B. 错误</div>';
-                html += '</div>';
+                ['正确', '错误'].forEach((opt, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'option';
+                    div.textContent = opt;
+                    const val = i === 0;
+                    if (userAnswers[qId] === val) {
+                        div.classList.add('selected');
+                    }
+                    div.onclick = function() { selectOption(qId, val, div); };
+                    optionsEl.appendChild(div);
+                });
             } else {
-                html += `<input type="text" class="fill-input" id="fill-${q.id}" placeholder="请输入答案" value="${userAnswers[q.id] || ''}" oninput="userAnswers[${q.id}] = this.value">`;
-                html += `<div class="buttons" style="margin-top: 15px;">
-                    <button class="show-answer-btn" onclick="checkFillAnswer(${q.id}, this)">检查答案</button>
-                </div>`;
-                html += `<div class="fill-feedback" id="fill-feedback-${q.id}"></div>`;
+                const labels = ['A', 'B', 'C', 'D'];
+                q.options.forEach((opt, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'option';
+                    div.textContent = labels[i] + '. ' + opt;
+                    if (q.type === 'multiple_choice') {
+                        // 多选题：检查是否在已选数组中
+                        if (Array.isArray(userAnswers[qId]) && userAnswers[qId].includes(labels[i])) {
+                            div.classList.add('selected');
+                        }
+                    } else {
+                        // 单选题：检查是否相等
+                        if (userAnswers[qId] === labels[i]) {
+                            div.classList.add('selected');
+                        }
+                    }
+                    div.onclick = function() { selectOption(qId, labels[i], div); };
+                    optionsEl.appendChild(div);
+                });
             }
-
-            // 显示答案按钮
-            html += `<div class="answer-display" id="answer-${q.id}">正确答案：${q.answer}</div>`;
-
-            card.innerHTML = html;
+            
+            document.getElementById('btn-prev').style.display = currentIndex > 0 ? 'block' : 'none';
+            
+            if (currentIndex === questions.length - 1) {
+                document.getElementById('btn-next').style.display = 'none';
+                document.getElementById('btn-submit').style.display = 'block';
+            } else {
+                document.getElementById('btn-next').style.display = 'block';
+                document.getElementById('btn-submit').style.display = 'none';
+            }
         }
 
-        // 选择选项
-        function selectOption(qid, value, el) {
-            userAnswers[qid] = value;
-            const q = quizQuestions.find(x => x.id === qid);
+        function selectOption(qId, value, el) {
+            const q = questions[currentIndex];
             
-            const siblings = el.parentElement.children;
-            for (let sibling of siblings) {
-                sibling.classList.remove('selected', 'correct', 'wrong');
+            if (q.type === 'multiple_choice') {
+                // 多选题：切换选中状态
+                if (!Array.isArray(userAnswers[qId])) {
+                    userAnswers[qId] = [];
+                }
+                const idx = userAnswers[qId].indexOf(value);
+                if (idx === -1) {
+                    userAnswers[qId].push(value);
+                    el.classList.add('selected');
+                } else {
+                    userAnswers[qId].splice(idx, 1);
+                    el.classList.remove('selected');
+                }
+                
+                // 验证答案
+                const userAnswer = userAnswers[qId].sort().join('');
+                const correctAnswer = String(q.answer).toUpperCase().split('').sort().join('');
+                const isCorrect = userAnswer === correctAnswer;
+                
+                // 清除之前的状态
+                const siblings = el.parentElement.children;
+                const labels = ['A', 'B', 'C', 'D'];
+                for (let i = 0; i < siblings.length; i++) {
+                    const sibling = siblings[i];
+                    sibling.classList.remove('correct', 'wrong');
+                    if (userAnswers[qId].includes(labels[i])) {
+                        sibling.classList.add('selected');
+                    } else {
+                        sibling.classList.remove('selected');
+                    }
+                }
+                
+                if (isCorrect) {
+                    // 全部正确，显示为绿色
+                    for (let i = 0; i < siblings.length; i++) {
+                        if (userAnswers[qId].includes(labels[i])) {
+                            siblings[i].classList.remove('selected');
+                            siblings[i].classList.add('correct');
+                        }
+                    }
+                } else {
+                    // 只要有选错的，显示红色，并显示正确答案
+                    showCorrectAnswer(q, el.parentElement);
+                    for (let i = 0; i < siblings.length; i++) {
+                        if (userAnswers[qId].includes(labels[i])) {
+                            siblings[i].classList.remove('selected');
+                            if (String(q.answer).toUpperCase().includes(labels[i])) {
+                                siblings[i].classList.add('correct');
+                            } else {
+                                siblings[i].classList.add('wrong');
+                            }
+                        }
+                    }
+                }
+            } else {
+                // 单选题/判断题：只能选一个
+                userAnswers[qId] = value;
+                
+                const siblings = el.parentElement.children;
+                for (let sibling of siblings) {
+                    sibling.classList.remove('selected', 'correct', 'wrong');
+                }
+                el.classList.add('selected');
+                
+                let isCorrect = false;
+                if (q.type === 'true_false') {
+                    isCorrect = (value === true && q.answer === true) || (value === false && q.answer === false);
+                } else {
+                    isCorrect = value.toUpperCase() === String(q.answer).toUpperCase();
+                }
+                
+                if (isCorrect) {
+                    el.classList.remove('selected');
+                    el.classList.add('correct');
+                } else {
+                    el.classList.remove('selected');
+                    el.classList.add('wrong');
+                    showCorrectAnswer(q, el.parentElement);
+                }
             }
-            el.classList.add('selected');
-            
-            let isCorrect = false;
+        }
+        
+        function showCorrectAnswer(q, optionsContainer) {
             if (q.type === 'true_false') {
-                isCorrect = (value === true && q.answer === true) || (value === false && q.answer === false);
+                const options = optionsContainer.children;
+                const correctIndex = q.answer ? 0 : 1;
+                if (options[correctIndex]) {
+                    options[correctIndex].classList.add('correct');
+                }
             } else {
-                isCorrect = value.toUpperCase() === String(q.answer).toUpperCase();
-            }
-            
-            if (isCorrect) {
-                el.classList.remove('selected');
-                el.classList.add('correct');
-            } else {
-                el.classList.remove('selected');
-                el.classList.add('wrong');
-                showCorrectAnswer(q, el.parentElement);
+                const labels = ['A', 'B', 'C', 'D'];
+                const answerStr = String(q.answer).toUpperCase();
+                const options = optionsContainer.children;
+                for (let i = 0; i < options.length; i++) {
+                    if (answerStr.includes(labels[i])) {
+                        options[i].classList.add('correct');
+                    }
+                }
             }
         }
-
-        // 显示正确答案
-        function showCorrectAnswer(q, container) {
-            const answerDiv = document.createElement('div');
-            answerDiv.className = 'answer-display';
-            answerDiv.style.display = 'block';
-            answerDiv.textContent = '正确答案：' + q.answer;
-            container.appendChild(answerDiv);
-        }
-
-        // 检查填空答案
-        function checkFillAnswer(qid, btn) {
-            const input = document.getElementById('fill-' + qid);
-            const feedback = document.getElementById('fill-feedback-' + qid);
-            const q = quizQuestions.find(x => x.id === qid);
+        
+        function checkFillAnswer(qId, input, q, container) {
+            const feedback = document.getElementById('fill-feedback-' + qId);
             const userAnswer = input.value.trim();
             const correctAnswer = String(q.answer || '').trim();
             
@@ -623,128 +1073,438 @@
             }
         }
 
-        // 上一题
         function prevQuestion() {
             if (currentIndex > 0) {
                 currentIndex--;
-                showQuestion();
+                displayQuestion();
             }
         }
 
-        // 下一题
         function nextQuestion() {
-            if (currentIndex < quizQuestions.length - 1) {
+            if (currentIndex < questions.length - 1) {
                 currentIndex++;
-                showQuestion();
-            } else {
-                calculateResult();
+                displayQuestion();
             }
         }
 
-        // 查看答案
-        function showResult() {
-            const q = quizQuestions[currentIndex];
-            const answerDiv = document.getElementById(`answer-${q.id}`);
-            if (answerDiv) {
-                answerDiv.style.display = 'block';
-            }
-        }
-
-        // 计算结果
-        function calculateResult() {
-            let correct = 0;
-            quizQuestions.forEach(q => {
-                const userAns = userAnswers[q.id];
-                if (q.type === 'true_false') {
-                    if ((userAns === true && q.answer === true) || (userAns === false && q.answer === false)) {
-                        correct++;
-                    }
-                } else {
-                    if (String(userAns || '').toUpperCase() === String(q.answer).toUpperCase()) {
-                        correct++;
-                    }
-                }
+        async function submitQuiz() {
+            const response = await fetch(API_BASE + '/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ answers: userAnswers })
             });
-            document.getElementById('scoreDisplay').textContent = `${correct} / ${quizQuestions.length}`;
-            const percent = Math.round((correct / quizQuestions.length) * 100);
+            
+            const result = await response.json();
+            showResults(result);
+        }
+
+        function showResults(result) {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+            
+            document.getElementById('score-display').textContent = result.score + '/' + result.total;
+            
+            const percentage = Math.round((result.score / result.total) * 100);
             let text = '';
-            if (percent >= 90) text = '🎉 太棒了！';
-            else if (percent >= 70) text = '👍 不错！继续加油！';
-            else if (percent >= 60) text = '💪 及格了，继续努力！';
-            else text = '📚 还需要多练习哦！';
-            document.getElementById('resultText').textContent = text;
-            showQuiz(false);
-            showResultDiv(true);
-        }
-
-        // 开始浏览
-        function startBrowse() {
-            showMenu(false);
-            showBrowse(true);
-            renderBrowseList();
-        }
-
-        // 渲染浏览列表
-        function renderBrowseList() {
-            let questionsToShow;
-            if (currentSet === 0) {
-                questionsToShow = [...allQuestions];
-            } else {
-                questionsToShow = allQuestions.filter(q => q.set === currentSet);
-            }
-            if (browseFilter !== 0) {
-                questionsToShow = questionsToShow.filter(q => q.type === browseFilter);
-            }
-            const list = document.getElementById('browseList');
-            let html = '';
-            questionsToShow.forEach(q => {
-                html += '<div class="browse-item">';
-                html += `<div class="browse-question">【${q.set === 1 ? '第一套' : q.set === 2 ? '第二套' : '第三套'} · ${q.type === 'single_choice' ? '单选题' : q.type === 'multiple_choice' ? '多选题' : q.type === 'true_false' ? '判断题' : '填空题'}】${q.question}</div>`;
-                if (q.type === 'single_choice' || q.type === 'multiple_choice') {
-                    html += '<div class="browse-options">';
-                    q.options.forEach((opt, idx) => {
-                        const letter = String.fromCharCode(65 + idx);
-                        html += `<div class="browse-option">${letter}. ${opt}</div>`;
-                    });
-                    html += '</div>';
-                }
-                html += `<div class="browse-answer">正确答案：${q.answer}</div>`;
-                html += '</div>';
+            if (percentage >= 90) text = '太棒了！成绩优秀！';
+            else if (percentage >= 70) text = '不错！继续努力！';
+            else if (percentage >= 60) text = '及格了，但还需要加强！';
+            else text = '需要多练习哦！';
+            document.getElementById('score-text').textContent = text;
+            
+            const detailsEl = document.getElementById('result-details');
+            detailsEl.innerHTML = '<h3 style="margin-bottom: 15px;">答题详情</h3>';
+            
+            result.results.forEach((res, index) => {
+                const q = questions.find(x => (x.uid || x.id) === res.id);
+                const div = document.createElement('div');
+                div.className = 'result-item ' + (res.correct ? 'result-correct' : 'result-wrong');
+                div.innerHTML = '<strong>第 ' + (index + 1) + ' 题（第' + res.set + '套）</strong>' + q.question + '<br><em>你的答案：' + (res.user_answer || '未作答') + ' | 正确答案：' + res.correct_answer + '</em>';
+                detailsEl.appendChild(div);
             });
-            list.innerHTML = html;
-        }
-
-        // 过滤浏览
-        function filterBrowse(type) {
-            browseFilter = type;
-            document.querySelectorAll('.filter-btn').forEach((btn, idx) => {
-                btn.classList.toggle('active', (idx === 0 && type === 0) || (idx === 1 && type === 'single_choice') || (idx === 2 && type === 'multiple_choice') || (idx === 3 && type === 'true_false') || (idx === 4 && type === 'fill_blank'));
-            });
-            renderBrowseList();
-        }
-
-        // 显示/隐藏界面
-        function showMenu(show) {
-            document.getElementById('menu').classList.toggle('hidden', !show);
-        }
-
-        function showQuiz(show) {
-            document.getElementById('quiz').classList.toggle('hidden', !show);
-        }
-
-        function showResultDiv(show) {
-            document.getElementById('result').classList.toggle('hidden', !show);
-        }
-
-        function showBrowse(show) {
-            document.getElementById('browse').classList.toggle('hidden', !show);
         }
 
         function backToMenu() {
-            showQuiz(false);
-            showResultDiv(false);
-            showBrowse(false);
-            showMenu(true);
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('browse').style.display = 'none';
+            document.getElementById('immersive').style.display = 'none';
+            document.getElementById('im-results').style.display = 'none';
+        }
+
+        // ========== 沉浸式做题函数 ==========
+        async function startImmersive(set) {
+            imCurrentSet = set;
+            imCurrentIndex = 0;
+            imUserAnswers = {};
+
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('immersive').style.display = 'block';
+            document.getElementById('im-results').style.display = 'none';
+
+            // 获取指定套的100题
+            const response = await fetch(API_BASE + '/questions?type=all&set=' + set);
+            imQuestions = await response.json();
+
+            // 渲染题目列表
+            renderImQuestionGrid();
+
+            imDisplayQuestion();
+        }
+
+        // 渲染题目列表
+        function renderImQuestionGrid() {
+            const grid = document.getElementById('im-question-grid');
+            grid.innerHTML = '';
+            
+            imQuestions.forEach((q, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'question-dot';
+                dot.textContent = index + 1;
+                dot.onclick = () => imGoToQuestion(index);
+                grid.appendChild(dot);
+            });
+            
+            // 更新题目状态
+            updateImQuestionGrid();
+        }
+
+        // 更新题目列表状态
+        function updateImQuestionGrid() {
+            const dots = document.querySelectorAll('.question-dot');
+            
+            dots.forEach((dot, index) => {
+                dot.classList.remove('answered', 'current');
+                
+                const q = imQuestions[index];
+                const qId = q.uid || q.id;
+                const isAnswered = imUserAnswers[qId] !== undefined && 
+                    (Array.isArray(imUserAnswers[qId]) ? imUserAnswers[qId].length > 0 : imUserAnswers[qId] !== '');
+                
+                if (isAnswered) {
+                    dot.classList.add('answered');
+                }
+                
+                if (index === imCurrentIndex) {
+                    dot.classList.add('current');
+                }
+            });
+        }
+
+        // 跳转到指定题目
+        function imGoToQuestion(index) {
+            imCurrentIndex = index;
+            imDisplayQuestion();
+        }
+
+        function imDisplayQuestion() {
+            const q = imQuestions[imCurrentIndex];
+            
+            document.getElementById('im-q-number').textContent = '第 ' + (imCurrentIndex + 1) + ' 题 / 共 ' + imQuestions.length + ' 题';
+
+            const typeNames = {
+                'single_choice': '单选题',
+                'multiple_choice': '多选题',
+                'true_false': '判断题',
+                'fill_blank': '填空题'
+            };
+
+            const typeClass = {
+                'single_choice': 'type-single',
+                'multiple_choice': 'type-multiple',
+                'true_false': 'type-tf',
+                'fill_blank': 'type-fill'
+            };
+
+            const typeEl = document.getElementById('im-q-type');
+            typeEl.textContent = typeNames[q.type];
+            typeEl.className = 'question-type ' + typeClass[q.type];
+
+            const setEl = document.getElementById('im-q-set');
+            setEl.textContent = '第' + q.set + '套';
+
+            document.getElementById('im-q-text').textContent = q.question;
+
+            const optionsEl = document.getElementById('im-options');
+            optionsEl.innerHTML = '';
+
+            const qId = q.uid || q.id;
+
+            if (q.type === 'fill_blank') {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'fill-input';
+                input.placeholder = '请输入答案...';
+                input.value = imUserAnswers[qId] || '';
+                input.oninput = function(e) { 
+                    imUserAnswers[qId] = e.target.value; 
+                    updateImQuestionGrid();
+                };
+                optionsEl.appendChild(input);
+            } else if (q.type === 'true_false') {
+                ['正确', '错误'].forEach((opt, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'option';
+                    div.textContent = opt;
+                    const val = i === 0;
+                    if (imUserAnswers[qId] === val) {
+                        div.classList.add('selected');
+                    }
+                    div.onclick = function() { imSelectOption(qId, val, div); };
+                    optionsEl.appendChild(div);
+                });
+            } else {
+                const labels = ['A', 'B', 'C', 'D'];
+                q.options.forEach((opt, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'option';
+                    div.textContent = labels[i] + '. ' + opt;
+                    if (q.type === 'multiple_choice') {
+                        // 多选题：检查是否在已选数组中
+                        if (Array.isArray(imUserAnswers[qId]) && imUserAnswers[qId].includes(labels[i])) {
+                            div.classList.add('selected');
+                        }
+                    } else {
+                        // 单选题：检查是否相等
+                        if (imUserAnswers[qId] === labels[i]) {
+                            div.classList.add('selected');
+                        }
+                    }
+                    div.onclick = function() { imSelectOption(qId, labels[i], div); };
+                    optionsEl.appendChild(div);
+                });
+            }
+
+            document.getElementById('im-btn-prev').style.display = imCurrentIndex > 0 ? 'block' : 'none';
+            document.getElementById('im-btn-next').style.display = imCurrentIndex < imQuestions.length - 1 ? 'block' : 'none';
+            
+            // 更新题目列表状态
+            updateImQuestionGrid();
+        }
+
+        function imSelectOption(qId, value, el) {
+            const q = imQuestions[imCurrentIndex];
+            
+            if (q.type === 'multiple_choice') {
+                // 多选题：切换选中状态
+                if (!Array.isArray(imUserAnswers[qId])) {
+                    imUserAnswers[qId] = [];
+                }
+                const idx = imUserAnswers[qId].indexOf(value);
+                if (idx === -1) {
+                    imUserAnswers[qId].push(value);
+                } else {
+                    imUserAnswers[qId].splice(idx, 1);
+                }
+                
+                // 重新渲染所有选项的选中状态
+                const labels = ['A', 'B', 'C', 'D'];
+                const siblings = el.parentElement.children;
+                for (let i = 0; i < siblings.length; i++) {
+                    const sibling = siblings[i];
+                    if (imUserAnswers[qId].includes(labels[i])) {
+                        sibling.classList.add('selected');
+                    } else {
+                        sibling.classList.remove('selected');
+                    }
+                }
+            } else {
+                // 单选题/判断题：只能选一个
+                imUserAnswers[qId] = value;
+                
+                const siblings = el.parentElement.children;
+                for (let sibling of siblings) {
+                    sibling.classList.remove('selected');
+                }
+                el.classList.add('selected');
+            }
+            
+            // 更新题目列表状态
+            updateImQuestionGrid();
+        }
+
+        function imPrevQuestion() {
+            if (imCurrentIndex > 0) {
+                imCurrentIndex--;
+                imDisplayQuestion();
+            }
+        }
+
+        function imNextQuestion() {
+            if (imCurrentIndex < imQuestions.length - 1) {
+                imCurrentIndex++;
+                imDisplayQuestion();
+            }
+        }
+
+        function imSubmitQuiz() {
+            // 直接在客户端计算结果
+            let correct = 0;
+            const results = [];
+
+            imQuestions.forEach((q, index) => {
+                const qId = q.uid || q.id;
+                let userAnswer = imUserAnswers[qId];
+                let isCorrect = false;
+
+                if (q.type === 'true_false') {
+                    isCorrect = (userAnswer === true && q.answer === true) || (userAnswer === false && q.answer === false);
+                } else if (q.type === 'multiple_choice') {
+                    // 多选题：将用户答案和正确答案都排序后比较
+                    const userAnswerStr = Array.isArray(userAnswer) ? userAnswer.sort().join('') : String(userAnswer || '').toUpperCase();
+                    const correctAnswerStr = String(q.answer).toUpperCase().split('').sort().join('');
+                    isCorrect = userAnswerStr === correctAnswerStr;
+                    // 转换用户答案为字符串形式显示
+                    userAnswer = Array.isArray(userAnswer) ? userAnswer.join('') : userAnswer;
+                } else {
+                    // 单选题/填空题
+                    isCorrect = String(userAnswer || '').toUpperCase() === String(q.answer).toUpperCase();
+                }
+
+                if (isCorrect) {
+                    correct++;
+                }
+
+                results.push({
+                    id: qId,
+                    correct: isCorrect,
+                    user_answer: userAnswer,
+                    correct_answer: q.type === 'true_false' ? (q.answer ? '正确' : '错误') : q.answer,
+                    question: q.question,
+                    set: q.set
+                });
+            });
+
+            imShowResults({
+                score: correct,
+                total: imQuestions.length,
+                results: results
+            });
+        }
+
+        function imShowResults(result) {
+            document.getElementById('immersive').style.display = 'none';
+            document.getElementById('im-results').style.display = 'block';
+
+            document.getElementById('im-score-display').textContent = result.score + '/' + result.total;
+
+            const percentage = Math.round((result.score / result.total) * 100);
+            let text = '';
+            if (percentage >= 90) text = '太棒了！成绩优秀！';
+            else if (percentage >= 70) text = '不错！继续努力！';
+            else if (percentage >= 60) text = '及格了，但还需要加强！';
+            else text = '需要多练习哦！';
+            document.getElementById('im-score-text').textContent = text;
+
+            const detailsEl = document.getElementById('im-result-details');
+            detailsEl.innerHTML = '<h3 style="margin-bottom: 15px;">答题详情</h3>';
+
+            result.results.forEach((res, index) => {
+                const div = document.createElement('div');
+                div.className = 'result-item ' + (res.correct ? 'result-correct' : 'result-wrong');
+                div.innerHTML = '<strong>第 ' + (index + 1) + ' 题（第' + res.set + '套）</strong>' + res.question + '<br><em>你的答案：' + (res.user_answer || '未作答') + ' | 正确答案：' + res.correct_answer + '</em>';
+                detailsEl.appendChild(div);
+            });
+        }
+
+        function imRestartQuiz() {
+            startImmersive(imCurrentSet);
+        }
+
+        function restartQuiz() {
+            startQuiz(currentQuizType);
+        }
+
+        async function startBrowse() {
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('browse').style.display = 'block';
+            
+            const response = await fetch(API_BASE + '/questions?type=all');
+            allQuestionsData = await response.json();
+            
+            filterBrowseQuestions();
+        }
+
+        function filterBrowseQuestions() {
+            const setFilter = document.getElementById('browse-set-filter').value;
+            const typeFilter = document.getElementById('browse-type-filter').value;
+            
+            let filtered = allQuestionsData;
+            
+            if (setFilter !== 'all') {
+                filtered = filtered.filter(q => q.set == setFilter);
+            }
+            
+            if (typeFilter !== 'all') {
+                filtered = filtered.filter(q => q.type === typeFilter);
+            }
+            
+            renderBrowseQuestions(filtered);
+        }
+
+        function renderBrowseQuestions(questionsToRender) {
+            const listEl = document.getElementById('questions-list');
+            listEl.innerHTML = '';
+            
+            if (questionsToRender.length === 0) {
+                listEl.innerHTML = '<div style="text-align: center; padding: 40px; color: #999;">没有找到符合条件的题目</div>';
+                return;
+            }
+            
+            const typeNames = {
+                'single_choice': '单选题',
+                'multiple_choice': '多选题',
+                'true_false': '判断题',
+                'fill_blank': '填空题'
+            };
+            
+            const typeColors = {
+                'single_choice': '#11998e',
+                'multiple_choice': '#eb3349',
+                'true_false': '#f093fb',
+                'fill_blank': '#4facfe'
+            };
+            
+            questionsToRender.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = 'browse-question-card';
+                
+                let answerText = '';
+                if (q.type === 'true_false') {
+                    answerText = q.answer ? '正确' : '错误';
+                } else if (q.type === 'fill_blank') {
+                    answerText = q.answer;
+                } else {
+                    answerText = q.answer;
+                }
+                
+                let optionsHtml = '';
+                if (q.type !== 'fill_blank' && q.options && q.options.length > 0) {
+                    const labels = ['A', 'B', 'C', 'D'];
+                    optionsHtml = '<div class="browse-options">';
+                    q.options.forEach((opt, i) => {
+                        const isCorrect = q.type !== 'true_false' ? 
+                            (q.answer || '').includes(labels[i]) :
+                            (i === 0 && q.answer) || (i === 1 && !q.answer);
+                        optionsHtml += '<div class="browse-option ' + (isCorrect ? 'correct' : '') + '">' + labels[i] + '. ' + opt + '</div>';
+                    });
+                    optionsHtml += '</div>';
+                } else if (q.type === 'true_false') {
+                    optionsHtml = '<div class="browse-options">';
+                    optionsHtml += '<div class="browse-option ' + (q.answer ? 'correct' : '') + '">正确</div>';
+                    optionsHtml += '<div class="browse-option ' + (!q.answer ? 'correct' : '') + '">错误</div>';
+                    optionsHtml += '</div>';
+                }
+                
+                card.innerHTML = '<div class="browse-question-header"><div class="browse-question-number">第 ' + (index + 1) + ' 题（第' + q.set + '套 原编号' + q.id + '）</div><div class="browse-question-badges"><span class="browse-badge" style="background: ' + typeColors[q.type] + '">' + typeNames[q.type] + '</span></div></div><div class="browse-question-text">' + q.question + '</div>' + optionsHtml + '<div class="browse-answer-box"><div class="browse-answer-label">正确答案</div><div class="browse-answer-text">' + answerText + '</div></div>';
+                
+                listEl.appendChild(card);
+            });
         }
     </script>
 </body>
