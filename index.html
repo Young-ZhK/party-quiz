@@ -1685,9 +1685,13 @@
         }
         document.getElementById('recite-answer-content').textContent = answerDisplay;
         
-        document.getElementById('recite-answer').style.display = 'none';
-        document.getElementById('recite-toggle-btn').textContent = '显示答案';
-        reciteAnswerShown = false;
+        if (reciteAnswerShown) {
+            document.getElementById('recite-answer').style.display = 'block';
+            document.getElementById('recite-toggle-btn').textContent = '隐藏答案';
+        } else {
+            document.getElementById('recite-answer').style.display = 'none';
+            document.getElementById('recite-toggle-btn').textContent = '显示答案';
+        }
     }
     
     function toggleReciteAnswer() {
