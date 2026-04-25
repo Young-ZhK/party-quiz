@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速搜题 - 300题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .search-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .search-input-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .search-input {
+            flex: 1;
+            padding: 16px 22px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.15em;
+            transition: all 0.3s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .search-btn {
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.15em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+        .stats {
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+        }
+        .results {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: none;
+        }
+        .results h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .result-item {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+        .result-item:hover {
+            box-shadow: 0 4px 15px rgba(102,126,234,0.2);
+            transform: translateX(5px);
+        }
+        .result-header {
+            margin-bottom: 12px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .badge-set {
+            background: #667eea;
+            color: white;
+        }
+        .badge-type {
+            background: #f5576c;
+            color: white;
+        }
+        .result-question {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .result-answer {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.15em;
+            padding: 10px 15px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .no-results {
+            text-align: center;
+            color: #999;
+            font-size: 1.2em;
+            padding: 40px;
+        }
+        @media (max-width: 768px) {
+            .search-input-wrapper {
+                flex-direction: column;
+            }
+            .search-btn {
+                width: 100%;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 快速搜题 - 300题</h1>
+            <p>输入题目中的关键词，立即找到答案！</p>
+        </div>
+        
+        <div class="search-box">
+            <div class="search-input-wrapper">
+                <input type="text" id="search-input" class="search-input" placeholder="输入关键词搜索...（按回车搜索）" autofocus>
+                <button class="search-btn" onclick="searchQuestions()">🔍 搜索</button>
+            </div>
+            <div class="stats">
+                题库共 <span id="total-count">0</span> 道题
+            </div>
+        </div>
+        
+        <div id="search-results" class="results"></div>
+    </div>
+    
+    <script>
+        // 题目数据
+        const allQuestions = [QUESTIONS_DATA_HERE];
+        
+        document.getElementById('total-count').textContent = allQuestions.length;
+        
+        function searchQuestions() {
+            const keyword = document.getElementById('search-input').value.trim().toLowerCase();
+            const container = document.getElementById('search-results');
+            
+            if (!keyword) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            let results = [];
+            for (const q of allQuestions) {
+                const questionText = q.question.toLowerCase();
+                const answerText = String(q.answer).toLowerCase();
+                
+                if (questionText.includes(keyword) || answerText.includes(keyword)) {
+                    results.push(q);
+                }
+            }
+            
+            if (results.length === 0) {
+                container.innerHTML = `
+                    <h2>搜索结果</h2>
+                    <div class="no-results">
+                        😔 未找到相关题目<br>
+                        试试其他关键词？
+                    </div>
+                `;
+            } else {
+                let html = `<h2>搜索结果 (共 ${results.length} 道题)</h2>`;
+                
+                for (const q of results) {
+                    let setName = q.set === 1 ? '第一套' : q.set === 2 ? '第二套' : '第三套';
+                    let typeName = '';
+                    if (q.type === 'single_choice') typeName = '单选';
+                    else if (q.type === 'multiple_choice') typeName = '多选';
+                    else if (q.type === 'true_false') typeName = '判断';
+                    else if (q.type === 'fill_blank') typeName = '填空';
+                    
+                    let answerDisplay = q.type === 'true_false' ? (q.answer ? '正确' : '错误') : q.answer;
+                    
+                    html += `<div class="result-item">
+                        <div class="result-header">
+                            <span class="badge badge-set">${setName}</span>
+                            <span class="badge badge-type">${typeName}</span>
+                        </div>
+                        <div class="result-question">${q.question}</div>
+                        <div class="result-answer">✅ 答案：${answerDisplay}</div>
+                    </div>`;
+                }
+                container.innerHTML = html;
+            }
+            
+            container.style.display = 'block';
+        }
+        
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchQuestions();
+            }
+        });
+    </script>
+</body>
+</html>

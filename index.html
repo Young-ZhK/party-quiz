@@ -40,6 +40,78 @@
             opacity: 0.9;
         }
         
+        /* 搜索框样式 */
+        .search-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .search-btn {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .search-results {
+            margin-top: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .search-item {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .search-item-question {
+            font-size: 1.05em;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .search-item-answer {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        
         .menu {
             background: white;
             border-radius: 15px;
@@ -619,7 +691,17 @@
     <div class="container">
         <div class="header">
             <h1>党旗飘飘</h1>
-            <p>入党积极分子发展对象理论测试（共300题）</p>
+            <p>入党积极分子发展对象理论测试（共800题）</p>
+        </div>
+        
+        <!-- 搜索框区域 -->
+        <div id="search-container" class="search-container">
+            <h2 style="margin: 0 0 15px 0; color: #333; font-size: 1.3em;">🔍 快速搜题（不切页面）</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" class="search-input" placeholder="输入关键词搜索题目或答案...（按回车搜索）" onkeypress="handleSearchKey(event)">
+                <button class="search-btn" onclick="searchQuestions()">搜索</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
         </div>
         
         <div id="menu" class="menu">
@@ -629,6 +711,11 @@
                 <button class="set-btn" id="set-1" onclick="selectSet('1')">第一套（100题）</button>
                 <button class="set-btn" id="set-2" onclick="selectSet('2')">第二套（100题）</button>
                 <button class="set-btn" id="set-3" onclick="selectSet('3')">第三套（100题）</button>
+                <button class="set-btn" id="set-4" onclick="selectSet('4')">第四套（100题）</button>
+                <button class="set-btn" id="set-5" onclick="selectSet('5')">第五套（100题）</button>
+                <button class="set-btn" id="set-6" onclick="selectSet('6')">第六套（100题）</button>
+                <button class="set-btn" id="set-7" onclick="selectSet('7')">第七套（100题）</button>
+                <button class="set-btn" id="set-8" onclick="selectSet('8')">第八套（100题）</button>
             </div>
             
             <h2>选择答题模式</h2>
@@ -644,6 +731,9 @@
             <h2 style="margin-top: 30px;">其他功能</h2>
             <div class="menu-buttons">
                 <button class="menu-btn btn-browse" onclick="startBrowse()">浏览题目和答案</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);" onclick="startReciteMode()">📖 背诵模式</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);" onclick="showWrongQuestions()">❌ 错题本</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #f9ca24 0%, #f0932b 100%);" onclick="showStarredQuestions()">⭐ 重点题</button>
             </div>
             
             <h2 style="margin-top: 30px;">🎯 沉浸式做题</h2>
@@ -652,10 +742,15 @@
                 <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('1')">第一套100题</button>
                 <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('2')">第二套100题</button>
                 <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('3')">第三套100题</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('4')">第四套100题</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('5')">第五套100题</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('6')">第六套100题</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('7')">第七套100题</button>
+                <button class="menu-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="startImmersive('8')">第八套100题</button>
             </div>
         </div>
         
-        <div id="quiz" class="quiz-container">
+        <div id="quiz" class="quiz-container" style="display: none;">
             <div class="back-arrow" onclick="backToMenu()"></div>
             <div class="progress">
                 <span class="question-number" id="q-number">第 1 题 / 共 100 题</span>
@@ -684,7 +779,7 @@
             </div>
         </div>
         
-        <div id="results" class="result-container">
+        <div id="results" class="result-container" style="display: none;">
             <div class="back-arrow" onclick="backToMenu()"></div>
             <h2>答题完成！</h2>
             <div class="score-display" id="score-display">0/100</div>
@@ -696,7 +791,7 @@
             </div>
         </div>
         
-        <div id="browse" class="browse-container">
+        <div id="browse" class="browse-container" style="display: none;">
             <div class="back-arrow" onclick="backToMenu()"></div>
             <div class="browse-header">
                 <div class="browse-title">题目浏览</div>
@@ -706,6 +801,9 @@
                         <option value="1">第一套</option>
                         <option value="2">第二套</option>
                         <option value="3">第三套</option>
+                        <option value="4">第四套</option>
+                        <option value="5">第五套</option>
+                        <option value="6">第六套</option>
                     </select>
                     <select class="filter-select" id="browse-type-filter" onchange="filterBrowseQuestions()">
                         <option value="all">全部题型</option>
@@ -722,7 +820,7 @@
             </div>
         </div>
 
-        <div id="immersive">
+        <div id="immersive" style="display: none;">
             <div class="back-arrow" onclick="backToMenu()"></div>
             <div class="immersive-container">
                 <div class="immersive-main">
@@ -755,7 +853,7 @@
             </div>
         </div>
 
-        <div id="im-results" class="result-container">
+        <div id="im-results" class="result-container" style="display: none;">
             <div class="back-arrow" onclick="backToMenu()"></div>
             <h2>答题完成！</h2>
             <div class="score-display" id="im-score-display">0/100</div>
@@ -766,9 +864,70 @@
                 <button class="nav-btn btn-submit" onclick="imRestartQuiz()">再来一次</button>
             </div>
         </div>
+
+        <!-- 背诵模式 -->
+        <div id="recite" class="browse-container" style="display: none;">
+            <div class="back-arrow" onclick="backToMenu()"></div>
+            <div class="browse-header">
+                <div class="browse-title">📖 背诵模式</div>
+                <div class="browse-filters">
+                    <select class="filter-select" id="recite-set-filter" onchange="startReciteMode()">
+                        <option value="all">全部题目集</option>
+                        <option value="1">第一套</option>
+                        <option value="2">第二套</option>
+                        <option value="3">第三套</option>
+                        <option value="4">第四套</option>
+                        <option value="5">第五套</option>
+                        <option value="6">第六套</option>
+                        <option value="7">第七套</option>
+                        <option value="8">第八套</option>
+                    </select>
+                </div>
+            </div>
+            <div id="recite-content" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div id="recite-number" style="font-weight: bold; color: #667eea;">第 1 题</div>
+                    <button id="recite-star-btn" onclick="toggleReciteStar()" style="background: none; border: none; font-size: 1.5em; cursor: pointer;">⭐</button>
+                </div>
+                <div id="recite-question" style="font-size: 1.3em; margin-bottom: 20px; color: #333;"></div>
+                <div id="recite-options" style="margin-bottom: 20px;"></div>
+                <button id="recite-toggle-btn" onclick="toggleReciteAnswer()" style="width: 100%; padding: 15px; font-size: 1.1em; border: none; border-radius: 10px; cursor: pointer; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-weight: bold;">显示答案</button>
+                <div id="recite-answer" style="display: none; margin-top: 20px; padding: 20px; background: #e8f5e9; border-radius: 10px;">
+                    <div style="font-weight: bold; color: #2e7d32; margin-bottom: 10px;">✅ 正确答案</div>
+                    <div id="recite-answer-content" style="font-size: 1.2em;"></div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button onclick="prevRecite()" style="flex: 1; padding: 12px; font-size: 1em; border: 2px solid #667eea; border-radius: 10px; background: white; color: #667eea; cursor: pointer;">上一题</button>
+                    <button onclick="nextRecite()" style="flex: 1; padding: 12px; font-size: 1em; border: none; border-radius: 10px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; cursor: pointer;">下一题</button>
+                </div>
+                <div style="text-align: center; margin-top: 20px; color: #999;">进度：<span id="recite-progress">1/100</span></div>
+            </div>
+        </div>
+
+        <!-- 错题本和重点题 -->
+        <div id="special-list" class="browse-container" style="display: none;">
+            <div class="back-arrow" onclick="backToMenu()"></div>
+            <div class="browse-header">
+                <div class="browse-title" id="special-title">❌ 错题本</div>
+            </div>
+            <div id="special-list-content" style="max-height: 70vh; overflow-y: auto;"></div>
+        </div>
     </div>
 
     <script>
+        // ========== 页面初始化 ==========
+        window.onload = function() {
+            // 确保只显示菜单，隐藏所有其他容器
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('browse').style.display = 'none';
+            document.getElementById('immersive').style.display = 'none';
+            document.getElementById('im-results').style.display = 'none';
+            document.getElementById('recite').style.display = 'none';
+            document.getElementById('special-list').style.display = 'none';
+        };
+        
         let questions = [];
         let allQuestionsData = [];
         let currentIndex = 0;
@@ -776,6 +935,143 @@
         let currentQuizType = 'all';
         let currentSet = 'all';
         let answerShown = false;
+
+        // ========== 错题本和重点题 ==========
+        let wrongQuestions = JSON.parse(localStorage.getItem('wrongQuestions') || '[]');
+        let starredQuestions = JSON.parse(localStorage.getItem('starredQuestions') || '[]');
+        let reciteQuestions = [];
+        let reciteIndex = 0;
+        let reciteAnswerShown = false;
+        let specialListType = '';
+        
+        function saveWrongQuestions() {
+            localStorage.setItem('wrongQuestions', JSON.stringify(wrongQuestions));
+        }
+        
+        function saveStarredQuestions() {
+            localStorage.setItem('starredQuestions', JSON.stringify(starredQuestions));
+        }
+        
+        function addToWrongQuestions(qId) {
+            if (!wrongQuestions.includes(qId)) {
+                wrongQuestions.push(qId);
+                saveWrongQuestions();
+            }
+        }
+        
+        function removeFromWrongQuestions(qId) {
+            const idx = wrongQuestions.indexOf(qId);
+            if (idx !== -1) {
+                wrongQuestions.splice(idx, 1);
+                saveWrongQuestions();
+            }
+        }
+        
+        function isQuestionStarred(qId) {
+            return starredQuestions.includes(qId);
+        }
+        
+        function toggleReciteStar() {
+            const q = reciteQuestions[reciteIndex];
+            if (!q) return;
+            const wasStarred = toggleStar(q.uid);
+            document.getElementById('recite-star-btn').textContent = wasStarred ? '⭐' : '☆';
+        }
+        
+        function toggleStar(qId) {
+            const idx = starredQuestions.indexOf(qId);
+            if (idx === -1) {
+                starredQuestions.push(qId);
+            } else {
+                starredQuestions.splice(idx, 1);
+            }
+            saveStarredQuestions();
+            return idx === -1;
+        }
+
+        // ========== 搜索功能 ==========
+        function handleSearchKey(event) {
+            if (event.key === 'Enter') {
+                searchQuestions();
+            }
+        }
+
+        function searchQuestions() {
+            const keyword = document.getElementById('search-input').value.trim().toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            
+            if (!keyword) {
+                resultsContainer.style.display = 'none';
+                return;
+            }
+            
+            let results = [];
+            
+            // 搜索所有题目
+            for (const q of allQuestionsData) {
+                const questionText = q.question.toLowerCase();
+                const answerText = String(q.answer).toLowerCase();
+                
+                // 如果关键词在题目或答案中匹配到
+                if (questionText.includes(keyword) || answerText.includes(keyword)) {
+                    results.push(q);
+                }
+            }
+            
+            // 显示搜索结果
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<p style="text-align: center; color: #666; font-size: 1.1em;">没有找到相关题目 😔</p>';
+            } else {
+                let html = '';
+                for (const q of results) {
+                    // 显示题目集和题型
+                    let setName = '';
+                    if (q.set === 1) setName = '第一套';
+                    else if (q.set === 2) setName = '第二套';
+                    else if (q.set === 3) setName = '第三套';
+                    else if (q.set === 4) setName = '第四套';
+                    else if (q.set === 5) setName = '第五套';
+                    else if (q.set === 6) setName = '第六套';
+                    else if (q.set === 7) setName = '第七套';
+                    else if (q.set === 8) setName = '第八套';
+                    
+                    let typeName = '';
+                    if (q.type === 'single_choice') typeName = '单选题';
+                    else if (q.type === 'multiple_choice') typeName = '多选题';
+                    else if (q.type === 'true_false') typeName = '判断题';
+                    else if (q.type === 'fill_blank') typeName = '填空题';
+                    
+                    // 格式化答案显示
+                    let answerDisplay = '';
+                    if (q.type === 'true_false') {
+                        answerDisplay = q.answer ? '正确' : '错误';
+                    } else {
+                        answerDisplay = q.answer;
+                    }
+                    
+                    html += '<div class="search-item">';
+                    html += `<div style="margin-bottom: 8px;"><span style="background: #667eea; color: white; padding: 3px 10px; border-radius: 5px; font-size: 0.9em; margin-right: 8px;">${setName}</span><span style="background: #f5576c; color: white; padding: 3px 10px; border-radius: 5px; font-size: 0.9em;">${typeName}</span></div>`;
+                    html += `<div class="search-item-question">${q.question}</div>`;
+                    
+                    // 如果是选择题，显示选项
+                    if (q.options && q.options.length > 0) {
+                        html += '<div style="margin: 10px 0;">';
+                        const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+                        for (let i = 0; i < q.options.length; i++) {
+                            html += `<div style="margin: 5px 0; color: #555;">${labels[i]}. ${q.options[i]}</div>`;
+                        }
+                        html += '</div>';
+                    }
+                    
+                    html += `<div class="search-item-answer">✅ 正确答案：${answerDisplay}</div>`;
+                    html += '</div>';
+                }
+                
+                resultsContainer.innerHTML = html;
+            }
+            
+            resultsContainer.style.display = 'block';
+        }
 
         // 沉浸式做题的变量
         let imQuestions = [];
@@ -916,7 +1212,7 @@
                     optionsEl.appendChild(div);
                 });
             } else {
-                const labels = ['A', 'B', 'C', 'D'];
+                const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
                 q.options.forEach((opt, i) => {
                     const div = document.createElement('div');
                     div.className = 'option';
@@ -1119,9 +1415,58 @@
             
             result.results.forEach((res, index) => {
                 const q = questions.find(x => (x.uid || x.id) === res.id);
+                // 自动记录错题
+                if (!res.correct && q) {
+                    addToWrongQuestions(q.uid || q.id);
+                }
+                let optionsHtml = '';
+                let userAnswerWithOption = res.user_answer || '未作答';
+                let correctAnswerWithOption = res.correct_answer;
+
+                if (q && q.type !== 'fill_blank' && q.type !== 'true_false' && q.options && q.options.length > 0) {
+                    const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+                    optionsHtml = '<div style="font-size: 0.9em; margin-top: 8px; color: #666;">';
+                    
+                    q.options.forEach((opt, i) => {
+                        const label = labels[i] || String.fromCharCode(65 + i);
+                        optionsHtml += `<div style="margin: 4px 0;">${label}. ${opt}</div>`;
+                    });
+                    optionsHtml += '</div>';
+
+                    // 用户答案附加选项内容
+                    if (res.user_answer && typeof res.user_answer === 'string') {
+                        let userOptions = [];
+                        for (const char of res.user_answer.toUpperCase()) {
+                            const idx = labels.indexOf(char);
+                            if (idx !== -1 && q.options[idx]) {
+                                userOptions.push(`${char}. ${q.options[idx]}`);
+                            }
+                        }
+                        if (userOptions.length > 0) {
+                            userAnswerWithOption = `<strong>${res.user_answer}</strong>（${userOptions.join('；')}）`;
+                        }
+                    }
+
+                    // 正确答案附加选项内容
+                    if (res.correct_answer && typeof res.correct_answer === 'string') {
+                        let correctOptions = [];
+                        for (const char of res.correct_answer.toUpperCase()) {
+                            const idx = labels.indexOf(char);
+                            if (idx !== -1 && q.options[idx]) {
+                                correctOptions.push(`${char}. ${q.options[idx]}`);
+                            }
+                        }
+                        if (correctOptions.length > 0) {
+                            correctAnswerWithOption = `<strong>${res.correct_answer}</strong>（${correctOptions.join('；')}）`;
+                        }
+                    }
+                }
+
                 const div = document.createElement('div');
                 div.className = 'result-item ' + (res.correct ? 'result-correct' : 'result-wrong');
-                div.innerHTML = '<strong>第 ' + (index + 1) + ' 题（第' + res.set + '套）</strong>' + q.question + '<br><em>你的答案：' + (res.user_answer || '未作答') + ' | 正确答案：' + res.correct_answer + '</em>';
+                div.innerHTML = '<strong>第 ' + (index + 1) + ' 题（第' + res.set + '套）</strong>' + q.question + 
+                    optionsHtml +
+                    '<br><em>你的答案：' + userAnswerWithOption + ' | 正确答案：' + correctAnswerWithOption + '</em>';
                 detailsEl.appendChild(div);
             });
         }
@@ -1133,6 +1478,8 @@
             document.getElementById('browse').style.display = 'none';
             document.getElementById('immersive').style.display = 'none';
             document.getElementById('im-results').style.display = 'none';
+            document.getElementById('recite').style.display = 'none';
+            document.getElementById('special-list').style.display = 'none';
         }
 
         // ========== 沉浸式做题函数 ==========
@@ -1257,7 +1604,7 @@
                     optionsEl.appendChild(div);
                 });
             } else {
-                const labels = ['A', 'B', 'C', 'D'];
+                const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
                 q.options.forEach((opt, i) => {
                     const div = document.createElement('div');
                     div.className = 'option';
@@ -1403,9 +1750,59 @@
             detailsEl.innerHTML = '<h3 style="margin-bottom: 15px;">答题详情</h3>';
 
             result.results.forEach((res, index) => {
+                const q = imQuestions[index];
+                // 自动记录错题
+                if (!res.correct) {
+                    addToWrongQuestions(q.uid || q.id);
+                }
+                let optionsHtml = '';
+                let userAnswerWithOption = res.user_answer || '未作答';
+                let correctAnswerWithOption = res.correct_answer;
+
+                if (q.type !== 'fill_blank' && q.type !== 'true_false' && q.options && q.options.length > 0) {
+                    const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+                    optionsHtml = '<div style="font-size: 0.9em; margin-top: 8px; color: #666;">';
+                    
+                    q.options.forEach((opt, i) => {
+                        const label = labels[i] || String.fromCharCode(65 + i);
+                        optionsHtml += `<div style="margin: 4px 0;">${label}. ${opt}</div>`;
+                    });
+                    optionsHtml += '</div>';
+
+                    // 用户答案附加选项内容
+                    if (res.user_answer && typeof res.user_answer === 'string') {
+                        let userOptions = [];
+                        for (const char of res.user_answer.toUpperCase()) {
+                            const idx = labels.indexOf(char);
+                            if (idx !== -1 && q.options[idx]) {
+                                userOptions.push(`${char}. ${q.options[idx]}`);
+                            }
+                        }
+                        if (userOptions.length > 0) {
+                            userAnswerWithOption = `<strong>${res.user_answer}</strong>（${userOptions.join('；')}）`;
+                        }
+                    }
+
+                    // 正确答案附加选项内容
+                    if (res.correct_answer && typeof res.correct_answer === 'string') {
+                        let correctOptions = [];
+                        for (const char of res.correct_answer.toUpperCase()) {
+                            const idx = labels.indexOf(char);
+                            if (idx !== -1 && q.options[idx]) {
+                                correctOptions.push(`${char}. ${q.options[idx]}`);
+                            }
+                        }
+                        if (correctOptions.length > 0) {
+                            correctAnswerWithOption = `<strong>${res.correct_answer}</strong>（${correctOptions.join('；')}）`;
+                        }
+                    }
+                }
+
                 const div = document.createElement('div');
                 div.className = 'result-item ' + (res.correct ? 'result-correct' : 'result-wrong');
-                div.innerHTML = '<strong>第 ' + (index + 1) + ' 题（第' + res.set + '套）</strong>' + res.question + '<br><em>你的答案：' + (res.user_answer || '未作答') + ' | 正确答案：' + res.correct_answer + '</em>';
+                div.innerHTML = '<strong>第 ' + (index + 1) + ' 题（第' + res.set + '套）</strong>' + res.question + 
+                    optionsHtml +
+                    '<br><em>你的答案：' + userAnswerWithOption + ' | 正确答案：' + correctAnswerWithOption + '</em>';
                 detailsEl.appendChild(div);
             });
         }
@@ -1485,7 +1882,7 @@
                 
                 let optionsHtml = '';
                 if (q.type !== 'fill_blank' && q.options && q.options.length > 0) {
-                    const labels = ['A', 'B', 'C', 'D'];
+                    const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
                     optionsHtml = '<div class="browse-options">';
                     q.options.forEach((opt, i) => {
                         const isCorrect = q.type !== 'true_false' ? 
@@ -1505,6 +1902,206 @@
                 
                 listEl.appendChild(card);
             });
+        }
+
+        // ========== 背诵模式功能 ==========
+        async function startReciteMode() {
+            const setFilter = document.getElementById('recite-set-filter').value;
+            
+            // 如果还没有获取过题目数据，先从API获取
+            if (allQuestionsData.length === 0) {
+                const response = await fetch(API_BASE + '/questions?type=all');
+                allQuestionsData = await response.json();
+            }
+            
+            reciteQuestions = [];
+            for (const q of allQuestionsData) {
+                if (setFilter === 'all' || String(q.set) === setFilter) {
+                    reciteQuestions.push(q);
+                }
+            }
+            
+            reciteIndex = 0;
+            reciteAnswerShown = false;
+            
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('recite').style.display = 'block';
+            
+            renderReciteQuestion();
+        }
+        
+        function renderReciteQuestion() {
+            const q = reciteQuestions[reciteIndex];
+            if (!q) return;
+            
+            document.getElementById('recite-number').textContent = `第 ${reciteIndex + 1} 题（第${q.set}套）`;
+            document.getElementById('recite-question').textContent = q.question;
+            document.getElementById('recite-star-btn').textContent = isQuestionStarred(q.uid) ? '⭐' : '☆';
+            document.getElementById('recite-progress').textContent = `${reciteIndex + 1}/${reciteQuestions.length}`;
+            
+            // 显示选项
+            let optionsHtml = '';
+            if (q.options && q.options.length > 0) {
+                const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+                for (let i = 0; i < q.options.length; i++) {
+                    optionsHtml += `<div style="margin: 8px 0; padding: 12px; background: #f5f5f5; border-radius: 8px;">${labels[i]}. ${q.options[i]}</div>`;
+                }
+            } else if (q.type === 'true_false') {
+                optionsHtml += `<div style="margin: 8px 0; padding: 12px; background: #f5f5f5; border-radius: 8px;">正确</div>`;
+                optionsHtml += `<div style="margin: 8px 0; padding: 12px; background: #f5f5f5; border-radius: 8px;">错误</div>`;
+            }
+            document.getElementById('recite-options').innerHTML = optionsHtml;
+            
+            // 根据之前的状态决定是否显示答案
+            if (reciteAnswerShown) {
+                document.getElementById('recite-answer').style.display = 'block';
+                document.getElementById('recite-toggle-btn').textContent = '隐藏答案';
+                document.getElementById('recite-toggle-btn').style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+            } else {
+                document.getElementById('recite-answer').style.display = 'none';
+                document.getElementById('recite-toggle-btn').textContent = '显示答案';
+                document.getElementById('recite-toggle-btn').style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+            
+            // 显示正确答案
+            let answerText = '';
+            if (q.type === 'true_false') {
+                answerText = q.answer ? '正确' : '错误';
+            } else {
+                answerText = q.answer;
+            }
+            document.getElementById('recite-answer-content').textContent = answerText;
+        }
+        
+        function toggleReciteAnswer() {
+            reciteAnswerShown = !reciteAnswerShown;
+            if (reciteAnswerShown) {
+                document.getElementById('recite-answer').style.display = 'block';
+                document.getElementById('recite-toggle-btn').textContent = '隐藏答案';
+                document.getElementById('recite-toggle-btn').style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+            } else {
+                document.getElementById('recite-answer').style.display = 'none';
+                document.getElementById('recite-toggle-btn').textContent = '显示答案';
+                document.getElementById('recite-toggle-btn').style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        }
+        
+        function prevRecite() {
+            if (reciteIndex > 0) {
+                reciteIndex--;
+                renderReciteQuestion();
+            }
+        }
+        
+        function nextRecite() {
+            if (reciteIndex < reciteQuestions.length - 1) {
+                reciteIndex++;
+                renderReciteQuestion();
+            }
+        }
+
+        // ========== 错题本和重点题功能 ==========
+        async function showWrongQuestions() {
+            specialListType = 'wrong';
+            // 如果还没有获取过题目数据，先从API获取
+            if (allQuestionsData.length === 0) {
+                const response = await fetch(API_BASE + '/questions?type=all');
+                allQuestionsData = await response.json();
+            }
+            document.getElementById('special-title').textContent = `❌ 错题本（${wrongQuestions.length}题）`;
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('special-list').style.display = 'block';
+            renderSpecialList();
+        }
+        
+        async function showStarredQuestions() {
+            specialListType = 'starred';
+            // 如果还没有获取过题目数据，先从API获取
+            if (allQuestionsData.length === 0) {
+                const response = await fetch(API_BASE + '/questions?type=all');
+                allQuestionsData = await response.json();
+            }
+            document.getElementById('special-title').textContent = `⭐ 重点题（${starredQuestions.length}题）`;
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('special-list').style.display = 'block';
+            renderSpecialList();
+        }
+        
+        function renderSpecialList() {
+            const listEl = document.getElementById('special-list-content');
+            listEl.innerHTML = '';
+            
+            let targetIds = specialListType === 'wrong' ? wrongQuestions : starredQuestions;
+            let questionsToRender = allQuestionsData.filter(q => targetIds.includes(q.uid));
+            
+            if (questionsToRender.length === 0) {
+                listEl.innerHTML = `<div style="text-align: center; padding: 60px; color: #999; font-size: 1.2em;">
+                    ${specialListType === 'wrong' ? '还没有错题！继续加油！' : '还没有标记重点题！'}
+                </div>`;
+                return;
+            }
+            
+            const typeNames = {
+                'single_choice': '单选题',
+                'multiple_choice': '多选题',
+                'true_false': '判断题',
+                'fill_blank': '填空题'
+            };
+            
+            const typeColors = {
+                'single_choice': '#11998e',
+                'multiple_choice': '#eb3349',
+                'true_false': '#f093fb',
+                'fill_blank': '#4facfe'
+            };
+            
+            questionsToRender.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = 'browse-question-card';
+                card.style.position = 'relative';
+                
+                let answerText = '';
+                if (q.type === 'true_false') {
+                    answerText = q.answer ? '正确' : '错误';
+                } else {
+                    answerText = q.answer;
+                }
+                
+                let optionsHtml = '';
+                if (q.type !== 'fill_blank' && q.options && q.options.length > 0) {
+                    const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+                    optionsHtml = '<div class="browse-options">';
+                    q.options.forEach((opt, i) => {
+                        const isCorrect = q.type !== 'true_false' ? 
+                            (q.answer || '').includes(labels[i]) :
+                            (i === 0 && q.answer) || (i === 1 && !q.answer);
+                        optionsHtml += '<div class="browse-option ' + (isCorrect ? 'correct' : '') + '">' + labels[i] + '. ' + opt + '</div>';
+                    });
+                    optionsHtml += '</div>';
+                } else if (q.type === 'true_false') {
+                    optionsHtml = '<div class="browse-options">';
+                    optionsHtml += '<div class="browse-option ' + (q.answer ? 'correct' : '') + '">正确</div>';
+                    optionsHtml += '<div class="browse-option ' + (!q.answer ? 'correct' : '') + '">错误</div>';
+                    optionsHtml += '</div>';
+                }
+                
+                const removeBtnText = specialListType === 'wrong' ? '移除错题' : '取消重点';
+                const removeBtnColor = specialListType === 'wrong' ? '#ff6b6b' : '#f9ca24';
+                
+                card.innerHTML = '<div class="browse-question-header"><div class="browse-question-number">第 ' + (index + 1) + ' 题（第' + q.set + '套）</div><div class="browse-question-badges"><span class="browse-badge" style="background: ' + typeColors[q.type] + '">' + typeNames[q.type] + '</span></div></div><div class="browse-question-text">' + q.question + '</div>' + optionsHtml + '<div class="browse-answer-box"><div class="browse-answer-label">正确答案</div><div class="browse-answer-text">' + answerText + '</div></div><div style="margin-top: 15px; text-align: right;"><button onclick="removeFromList(' + q.uid + ')" style="padding: 8px 16px; border: none; border-radius: 8px; background: ' + removeBtnColor + '; color: white; cursor: pointer;">' + removeBtnText + '</button></div>';
+                
+                listEl.appendChild(card);
+            });
+        }
+        
+        function removeFromList(qId) {
+            if (specialListType === 'wrong') {
+                removeFromWrongQuestions(qId);
+                showWrongQuestions();
+            } else {
+                toggleStar(qId);
+                showStarredQuestions();
+            }
         }
     </script>
 </body>

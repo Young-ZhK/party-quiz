@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>党旗飘飘 - 搜题工具 - 一键安装</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 30px;
+            margin: 0;
+        }
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+        }
+        .card h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.6em;
+        }
+        .step {
+            margin: 20px 0;
+            padding-left: 28px;
+            position: relative;
+            line-height: 1.9;
+            color: #444;
+        }
+        .step::before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            background: #4a90d9;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 7px;
+        }
+        .bookmarklet-box {
+            background: #f8f9ff;
+            border: 2px dashed #4a90d9;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin: 25px 0;
+        }
+        .bookmarklet-btn {
+            display: inline-block;
+            background: #4a90d9;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .note strong { color: #856404; }
+        .code-box {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 18px;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .copy-btn {
+            background: #4a90d9;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .copy-btn:hover {
+            background: #3a7bc8;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 党旗飘飘 - 搜题工具</h1>
+        
+        <div class="card">
+            <h2>✨ 方法一：一键复制代码（最简单）</h2>
+            
+            <div class="step">
+                点击下方「一键复制」
+            </div>
+            
+            <button class="copy-btn" onclick="copyCode()">📋 一键复制完整代码</button>
+            <span id="copy-msg"></span>
+            
+            <div class="step" style="margin-top: 20px;">
+                在浏览器书签栏<strong>右键</strong> → 点击「添加书签」或「添加页」
+            </div>
+            
+            <div class="step">
+                名称填：<strong>快速搜题</strong>
+            </div>
+            
+            <div class="step">
+                网址（URL）那栏，刚才复制的代码粘贴进去
+            </div>
+            
+            <div class="step">
+                保存！以后在任何网页点一下书签就出来了！
+            </div>
+            
+            <div class="note">
+                <strong>提示：</strong> Chrome/Edge按 <strong>Ctrl + Shift + B</strong> 显示书签栏
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>💡 功能说明</h2>
+            <ul style="line-height: 2; color: #555;">
+                <li>✅ 可拖动（按住标题栏）</li>
+                <li>✅ 可最小化（点击「−」）</li>
+                <li>✅ 永远在最上层</li>
+                <li>✅ 包含完整300道题</li>
+                <li>✅ 任何网页都能用</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        let fullCode = "";
+        
+        async function loadCode() {
+            try {
+                const response = await fetch('console-code.txt');
+                fullCode = await response.text();
+                // 转换成一行
+                fullCode = fullCode.replace(/\n/g, '').replace(/\r/g, '');
+                if (!fullCode.startsWith('javascript:')) {
+                    fullCode = 'javascript:' + fullCode;
+                }
+                console.log("代码已加载！");
+            } catch (e) {
+                console.error(e);
+                alert("加载失败，请手动打开 console-code.txt 复制！");
+            }
+        }
+        
+        function copyCode() {
+            if (!fullCode) {
+                alert("还在加载中，稍等...");
+                return;
+            }
+            navigator.clipboard.writeText(fullCode).then(() => {
+                const msg = document.getElementById('copy-msg');
+                msg.textContent = ' 复制成功！去添加书签吧！';
+                msg.className = 'success';
+                setTimeout(() => msg.textContent = '', 5000);
+            });
+        }
+        
+        loadCode();
+    </script>
+</body>
+</html>

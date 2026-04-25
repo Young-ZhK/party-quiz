@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜题工具 - 使用说明</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 30px;
+            margin: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.3em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .method-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .method-card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+        .step {
+            margin: 18px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.8;
+        }
+        .step::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .code-box {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .copy-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .copy-btn:hover {
+            background: #5568d3;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .note strong { color: #856404; }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .file-list {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .file-list h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .file-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .file-item:last-child {
+            border-bottom: none;
+        }
+        .file-name {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .file-desc {
+            color: #666;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 党旗飘飘 - 搜题工具使用说明</h1>
+        
+        <div class="method-card">
+            <h2>方法一：控制台运行（推荐）</h2>
+            <p style="color: #666; margin-bottom: 20px;">最简单，不用添加书签！</p>
+            
+            <div class="step">
+                打开任意网页（比如你的考试网站）
+            </div>
+            <div class="step">
+                按 <strong>F12</strong> 键，打开开发者工具
+            </div>
+            <div class="step">
+                点击 <strong>Console</strong>（控制台）标签
+            </div>
+            <div class="step">
+                复制下面的全部代码
+            </div>
+            
+            <div class="code-box" id="code-to-copy">
+正在加载代码...
+            </div>
+            
+            <button class="copy-btn" onclick="copyCode()">📋 一键复制</button>
+            <span id="copy-msg"></span>
+            
+            <div class="step" style="margin-top: 25px;">
+                粘贴到控制台，按 <strong>回车</strong>
+            </div>
+            <div class="step">
+                右上角就出现搜题悬浮窗了！
+            </div>
+            
+            <div class="note">
+                <strong>提示：</strong> 如果下次还要用，再复制粘贴一次就行！
+            </div>
+        </div>
+        
+        <div class="method-card">
+            <h2>方法二：浏览器书签</h2>
+            <p style="color: #666; margin-bottom: 20px;">一次添加，永久使用！</p>
+            
+            <p style="margin-bottom: 15px;">看这个文件：<span class="file-name">bookmarklet-install.html</span></p>
+            <p style="color: #666;">里面有完整的书签安装教程！</p>
+        </div>
+        
+        <div class="method-card">
+            <h2>方法三：单独打开页面</h2>
+            <p style="color: #666; margin-bottom: 20px;">最稳定，不用搞复杂的！</p>
+            
+            <div class="file-list">
+                <h3>📂 可用文件</h3>
+                <div class="file-item">
+                    <span class="file-name">floating-search.html</span>
+                    <span class="file-desc">悬浮窗版（推荐）</span>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">complete-search.html</span>
+                    <span class="file-desc">普通搜索版</span>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">index.html</span>
+                    <span class="file-desc">完整刷题功能</span>
+                </div>
+            </div>
+            
+            <p style="color: #666;">直接双击这些文件打开就能用！</p>
+        </div>
+        
+    </div>
+    
+    <script>
+        // 读取代码文件
+        async function loadCode() {
+            try {
+                const response = await fetch('console-code.txt');
+                const code = await response.text();
+                document.getElementById('code-to-copy').textContent = code;
+            } catch (e) {
+                document.getElementById('code-to-copy').textContent = '请打开 console-code.txt 文件查看';
+            }
+        }
+        
+        function copyCode() {
+            const codeText = document.getElementById('code-to-copy').textContent;
+            navigator.clipboard.writeText(codeText).then(() => {
+                const msg = document.getElementById('copy-msg');
+                msg.textContent = ' ✅ 复制成功！';
+                msg.className = 'success';
+                setTimeout(() => msg.textContent = '', 3000);
+            });
+        }
+        
+        loadCode();
+    </script>
+</body>
+</html>
