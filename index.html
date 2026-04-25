@@ -1645,11 +1645,6 @@
             reciteQuestions = allQuestionsData.filter(q => q.set === parseInt(setVal));
         }
         
-        for (let i = reciteQuestions.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [reciteQuestions[i], reciteQuestions[j]] = [reciteQuestions[j], reciteQuestions[i]];
-        }
-        
         reciteIndex = 0;
         reciteAnswerShown = false;
         
